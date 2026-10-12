@@ -1,0 +1,2258 @@
+{
+ "1": {
+  "id": 1,
+  "key": "masterball",
+  "en": "Master Ball",
+  "zh": "大师球"
+ },
+ "2": {
+  "id": 2,
+  "key": "ultraball",
+  "en": "Ultra Ball",
+  "zh": "高级球"
+ },
+ "3": {
+  "id": 3,
+  "key": "greatball",
+  "en": "Great Ball",
+  "zh": "超级球"
+ },
+ "4": {
+  "id": 4,
+  "key": "pokeball",
+  "en": "Poke Ball",
+  "zh": "精灵球"
+ },
+ "5": {
+  "id": 5,
+  "key": "safariball",
+  "en": "Safari Ball",
+  "zh": "狩猎球"
+ },
+ "6": {
+  "id": 6,
+  "key": "netball",
+  "en": "Net Ball",
+  "zh": "捕网球"
+ },
+ "7": {
+  "id": 7,
+  "key": "diveball",
+  "en": "Dive Ball",
+  "zh": "潜水球"
+ },
+ "8": {
+  "id": 8,
+  "key": "nestball",
+  "en": "Nest Ball",
+  "zh": "巢穴球"
+ },
+ "9": {
+  "id": 9,
+  "key": "repeatball",
+  "en": "Repeat Ball",
+  "zh": "重复球"
+ },
+ "10": {
+  "id": 10,
+  "key": "timerball",
+  "en": "Timer Ball",
+  "zh": "计时球"
+ },
+ "11": {
+  "id": 11,
+  "key": "luxuryball",
+  "en": "Luxury Ball",
+  "zh": "豪华球"
+ },
+ "12": {
+  "id": 12,
+  "key": "premierball",
+  "en": "Premier Ball",
+  "zh": "纪念球"
+ },
+ "13": {
+  "id": 13,
+  "key": "potion",
+  "en": "POTION",
+  "zh": "伤药"
+ },
+ "14": {
+  "id": 14,
+  "key": "antidote",
+  "en": "ANTIDOTE",
+  "zh": "解毒药"
+ },
+ "15": {
+  "id": 15,
+  "key": "burnheal",
+  "en": "BURN HEAL",
+  "zh": "灼伤药"
+ },
+ "16": {
+  "id": 16,
+  "key": "iceheal",
+  "en": "ICE HEAL",
+  "zh": "解冻药"
+ },
+ "17": {
+  "id": 17,
+  "key": "awakening",
+  "en": "AWAKENING",
+  "zh": "解眠药"
+ },
+ "18": {
+  "id": 18,
+  "key": "paralyzeheal",
+  "en": "PARALYZE HEAL",
+  "zh": "解麻药"
+ },
+ "19": {
+  "id": 19,
+  "key": "fullrestore",
+  "en": "FULL RESTORE",
+  "zh": "全复药"
+ },
+ "20": {
+  "id": 20,
+  "key": "maxpotion",
+  "en": "MAX POTION",
+  "zh": "全满药"
+ },
+ "21": {
+  "id": 21,
+  "key": "hyperpotion",
+  "en": "HYPER POTION",
+  "zh": "厉害伤药"
+ },
+ "22": {
+  "id": 22,
+  "key": "superpotion",
+  "en": "SUPER POTION",
+  "zh": "好伤药"
+ },
+ "23": {
+  "id": 23,
+  "key": "fullheal",
+  "en": "FULL HEAL",
+  "zh": "万灵药"
+ },
+ "24": {
+  "id": 24,
+  "key": "revive",
+  "en": "REVIVE",
+  "zh": "活力碎片"
+ },
+ "25": {
+  "id": 25,
+  "key": "maxrevive",
+  "en": "MAX REVIVE",
+  "zh": "活力块"
+ },
+ "26": {
+  "id": 26,
+  "key": "freshwater",
+  "en": "FRESH WATER",
+  "zh": "美味之水"
+ },
+ "27": {
+  "id": 27,
+  "key": "sodapop",
+  "en": "SODA POP",
+  "zh": "劲爽汽水"
+ },
+ "28": {
+  "id": 28,
+  "key": "lemonade",
+  "en": "LEMONADE",
+  "zh": "果汁牛奶"
+ },
+ "29": {
+  "id": 29,
+  "key": "moomoomilk",
+  "en": "MOOMOO MILK",
+  "zh": "哞哞鲜奶"
+ },
+ "30": {
+  "id": 30,
+  "key": "energypowder",
+  "en": "ENERGY POWDER",
+  "zh": "元气粉"
+ },
+ "31": {
+  "id": 31,
+  "key": "energyroot",
+  "en": "ENERGY ROOT",
+  "zh": "元气根"
+ },
+ "32": {
+  "id": 32,
+  "key": "healpowder",
+  "en": "HEAL POWDER",
+  "zh": "万能粉"
+ },
+ "33": {
+  "id": 33,
+  "key": "revivalherb",
+  "en": "REVIVAL HERB",
+  "zh": "复活草"
+ },
+ "34": {
+  "id": 34,
+  "key": "ether",
+  "en": "ETHER",
+  "zh": "ＰＰ单项小补剂"
+ },
+ "35": {
+  "id": 35,
+  "key": "maxether",
+  "en": "MAX ETHER",
+  "zh": "ＰＰ单项全补剂"
+ },
+ "36": {
+  "id": 36,
+  "key": "elixir",
+  "en": "ELIXIR",
+  "zh": "ＰＰ多项小补剂"
+ },
+ "37": {
+  "id": 37,
+  "key": "maxelixir",
+  "en": "MAX ELIXIR",
+  "zh": "ＰＰ多项全补剂"
+ },
+ "38": {
+  "id": 38,
+  "key": "lavacookie",
+  "en": "LAVA COOKIE",
+  "zh": "釜炎仙贝"
+ },
+ "39": {
+  "id": 39,
+  "key": "blueflute",
+  "en": "BLUE FLUTE",
+  "zh": "蓝色玻璃哨"
+ },
+ "40": {
+  "id": 40,
+  "key": "yellowflute",
+  "en": "YELLOW FLUTE",
+  "zh": "黄色玻璃哨"
+ },
+ "41": {
+  "id": 41,
+  "key": "redflute",
+  "en": "RED FLUTE",
+  "zh": "红色玻璃哨"
+ },
+ "42": {
+  "id": 42,
+  "key": "blackflute",
+  "en": "BLACK FLUTE",
+  "zh": "黑色玻璃哨"
+ },
+ "43": {
+  "id": 43,
+  "key": "whiteflute",
+  "en": "WHITE FLUTE",
+  "zh": "白色玻璃哨"
+ },
+ "44": {
+  "id": 44,
+  "key": "berryjuice",
+  "en": "Berry Juice",
+  "zh": "树果汁"
+ },
+ "45": {
+  "id": 45,
+  "key": "sacredash",
+  "en": "SACRED ASH",
+  "zh": "圣灰"
+ },
+ "46": {
+  "id": 46,
+  "key": "shoalsalt",
+  "en": "SHOAL SALT",
+  "zh": "浅滩海盐"
+ },
+ "47": {
+  "id": 47,
+  "key": "shoalshell",
+  "en": "SHOAL SHELL",
+  "zh": "浅滩贝壳"
+ },
+ "48": {
+  "id": 48,
+  "key": "redshard",
+  "en": "RED SHARD",
+  "zh": "红色碎片"
+ },
+ "49": {
+  "id": 49,
+  "key": "blueshard",
+  "en": "BLUE SHARD",
+  "zh": "蓝色碎片"
+ },
+ "50": {
+  "id": 50,
+  "key": "yellowshard",
+  "en": "YELLOW SHARD",
+  "zh": "黄色碎片"
+ },
+ "51": {
+  "id": 51,
+  "key": "greenshard",
+  "en": "GREEN SHARD",
+  "zh": "绿色碎片"
+ },
+ "52": {
+  "id": 52,
+  "key": "034",
+  "en": "034",
+  "zh": "034"
+ },
+ "53": {
+  "id": 53,
+  "key": "035",
+  "en": "035",
+  "zh": "035"
+ },
+ "54": {
+  "id": 54,
+  "key": "036",
+  "en": "036",
+  "zh": "036"
+ },
+ "55": {
+  "id": 55,
+  "key": "037",
+  "en": "037",
+  "zh": "037"
+ },
+ "56": {
+  "id": 56,
+  "key": "038",
+  "en": "038",
+  "zh": "038"
+ },
+ "57": {
+  "id": 57,
+  "key": "039",
+  "en": "039",
+  "zh": "039"
+ },
+ "58": {
+  "id": 58,
+  "key": "03a",
+  "en": "03A",
+  "zh": "03a"
+ },
+ "59": {
+  "id": 59,
+  "key": "03b",
+  "en": "03B",
+  "zh": "03b"
+ },
+ "60": {
+  "id": 60,
+  "key": "03c",
+  "en": "03C",
+  "zh": "03c"
+ },
+ "61": {
+  "id": 61,
+  "key": "03d",
+  "en": "03D",
+  "zh": "03d"
+ },
+ "62": {
+  "id": 62,
+  "key": "03e",
+  "en": "03E",
+  "zh": "03e"
+ },
+ "63": {
+  "id": 63,
+  "key": "hpup",
+  "en": "HP UP",
+  "zh": "ＨＰ增强剂"
+ },
+ "64": {
+  "id": 64,
+  "key": "protein",
+  "en": "PROTEIN",
+  "zh": "攻击增强剂"
+ },
+ "65": {
+  "id": 65,
+  "key": "iron",
+  "en": "IRON",
+  "zh": "防御增强剂"
+ },
+ "66": {
+  "id": 66,
+  "key": "carbos",
+  "en": "CARBOS",
+  "zh": "速度增强剂"
+ },
+ "67": {
+  "id": 67,
+  "key": "calcium",
+  "en": "CALCIUM",
+  "zh": "特攻增强剂"
+ },
+ "68": {
+  "id": 68,
+  "key": "rarecandy",
+  "en": "RARE CANDY",
+  "zh": "神奇糖果"
+ },
+ "69": {
+  "id": 69,
+  "key": "ppup",
+  "en": "PP UP",
+  "zh": "ＰＰ提升剂"
+ },
+ "70": {
+  "id": 70,
+  "key": "zinc",
+  "en": "ZINC",
+  "zh": "特防增强剂"
+ },
+ "71": {
+  "id": 71,
+  "key": "ppmax",
+  "en": "PP MAX",
+  "zh": "ＰＰ极限提升剂"
+ },
+ "72": {
+  "id": 72,
+  "key": "048",
+  "en": "048",
+  "zh": "048"
+ },
+ "73": {
+  "id": 73,
+  "key": "guardspec",
+  "en": "GUARD SPEC",
+  "zh": "能力防守"
+ },
+ "74": {
+  "id": 74,
+  "key": "direhit",
+  "en": "DIRE HIT",
+  "zh": "要害攻击"
+ },
+ "75": {
+  "id": 75,
+  "key": "xattack",
+  "en": "X ATTACK",
+  "zh": "力量强化"
+ },
+ "76": {
+  "id": 76,
+  "key": "xdefend",
+  "en": "X DEFEND",
+  "zh": "xdefend"
+ },
+ "77": {
+  "id": 77,
+  "key": "xspeed",
+  "en": "X SPEED",
+  "zh": "速度强化"
+ },
+ "78": {
+  "id": 78,
+  "key": "xaccuracy",
+  "en": "X ACCURACY",
+  "zh": "命中强化"
+ },
+ "79": {
+  "id": 79,
+  "key": "xspecial",
+  "en": "X SPECIAL",
+  "zh": "xspecial"
+ },
+ "80": {
+  "id": 80,
+  "key": "pokedoll",
+  "en": "POKE DOLL",
+  "zh": "皮皮玩偶"
+ },
+ "81": {
+  "id": 81,
+  "key": "fluffytail",
+  "en": "FLUFFY TAIL",
+  "zh": "向尾喵的尾巴"
+ },
+ "82": {
+  "id": 82,
+  "key": "052",
+  "en": "052",
+  "zh": "052"
+ },
+ "83": {
+  "id": 83,
+  "key": "superrepel",
+  "en": "SUPER REPEL",
+  "zh": "白银喷雾"
+ },
+ "84": {
+  "id": 84,
+  "key": "maxrepel",
+  "en": "MAX REPEL",
+  "zh": "黄金喷雾"
+ },
+ "85": {
+  "id": 85,
+  "key": "escaperope",
+  "en": "ESCAPE ROPE",
+  "zh": "离洞绳"
+ },
+ "86": {
+  "id": 86,
+  "key": "repel",
+  "en": "REPEL",
+  "zh": "除虫喷雾"
+ },
+ "87": {
+  "id": 87,
+  "key": "057",
+  "en": "057",
+  "zh": "057"
+ },
+ "88": {
+  "id": 88,
+  "key": "058",
+  "en": "058",
+  "zh": "058"
+ },
+ "89": {
+  "id": 89,
+  "key": "059",
+  "en": "059",
+  "zh": "059"
+ },
+ "90": {
+  "id": 90,
+  "key": "05a",
+  "en": "05A",
+  "zh": "05a"
+ },
+ "91": {
+  "id": 91,
+  "key": "05b",
+  "en": "05B",
+  "zh": "05b"
+ },
+ "92": {
+  "id": 92,
+  "key": "05c",
+  "en": "05C",
+  "zh": "05c"
+ },
+ "93": {
+  "id": 93,
+  "key": "sunstone",
+  "en": "Sun Stone",
+  "zh": "日之石"
+ },
+ "94": {
+  "id": 94,
+  "key": "moonstone",
+  "en": "Moon Stone",
+  "zh": "月之石"
+ },
+ "95": {
+  "id": 95,
+  "key": "firestone",
+  "en": "Fire Stone",
+  "zh": "火之石"
+ },
+ "96": {
+  "id": 96,
+  "key": "thunderstone",
+  "en": "Thunder Stone",
+  "zh": "雷之石"
+ },
+ "97": {
+  "id": 97,
+  "key": "waterstone",
+  "en": "Water Stone",
+  "zh": "水之石"
+ },
+ "98": {
+  "id": 98,
+  "key": "leafstone",
+  "en": "Leaf Stone",
+  "zh": "叶之石"
+ },
+ "99": {
+  "id": 99,
+  "key": "063",
+  "en": "063",
+  "zh": "063"
+ },
+ "100": {
+  "id": 100,
+  "key": "064",
+  "en": "064",
+  "zh": "064"
+ },
+ "101": {
+  "id": 101,
+  "key": "065",
+  "en": "065",
+  "zh": "065"
+ },
+ "102": {
+  "id": 102,
+  "key": "066",
+  "en": "066",
+  "zh": "066"
+ },
+ "103": {
+  "id": 103,
+  "key": "tinymushroom",
+  "en": "TINY MUSHROOM",
+  "zh": "小蘑菇"
+ },
+ "104": {
+  "id": 104,
+  "key": "bigmushroom",
+  "en": "BIG MUSHROOM",
+  "zh": "大蘑菇"
+ },
+ "105": {
+  "id": 105,
+  "key": "069",
+  "en": "069",
+  "zh": "069"
+ },
+ "106": {
+  "id": 106,
+  "key": "pearl",
+  "en": "PEARL",
+  "zh": "珍珠"
+ },
+ "107": {
+  "id": 107,
+  "key": "bigpearl",
+  "en": "BIG PEARL",
+  "zh": "大珍珠"
+ },
+ "108": {
+  "id": 108,
+  "key": "stardust",
+  "en": "STARDUST",
+  "zh": "星星沙子"
+ },
+ "109": {
+  "id": 109,
+  "key": "starpiece",
+  "en": "STAR PIECE",
+  "zh": "星星碎片"
+ },
+ "110": {
+  "id": 110,
+  "key": "nugget",
+  "en": "NUGGET",
+  "zh": "金珠"
+ },
+ "111": {
+  "id": 111,
+  "key": "heartscale",
+  "en": "HEART SCALE",
+  "zh": "心之鳞片"
+ },
+ "112": {
+  "id": 112,
+  "key": "070",
+  "en": "070",
+  "zh": "070"
+ },
+ "113": {
+  "id": 113,
+  "key": "071",
+  "en": "071",
+  "zh": "071"
+ },
+ "114": {
+  "id": 114,
+  "key": "072",
+  "en": "072",
+  "zh": "072"
+ },
+ "115": {
+  "id": 115,
+  "key": "073",
+  "en": "073",
+  "zh": "073"
+ },
+ "116": {
+  "id": 116,
+  "key": "074",
+  "en": "074",
+  "zh": "074"
+ },
+ "117": {
+  "id": 117,
+  "key": "075",
+  "en": "075",
+  "zh": "075"
+ },
+ "118": {
+  "id": 118,
+  "key": "076",
+  "en": "076",
+  "zh": "076"
+ },
+ "119": {
+  "id": 119,
+  "key": "077",
+  "en": "077",
+  "zh": "077"
+ },
+ "120": {
+  "id": 120,
+  "key": "078",
+  "en": "078",
+  "zh": "078"
+ },
+ "121": {
+  "id": 121,
+  "key": "orangemail",
+  "en": "ORANGE MAIL",
+  "zh": "orangemail"
+ },
+ "122": {
+  "id": 122,
+  "key": "harbormail",
+  "en": "HARBOR MAIL",
+  "zh": "harbormail"
+ },
+ "123": {
+  "id": 123,
+  "key": "glittermail",
+  "en": "GLITTER MAIL",
+  "zh": "glittermail"
+ },
+ "124": {
+  "id": 124,
+  "key": "mechmail",
+  "en": "MECH MAIL",
+  "zh": "mechmail"
+ },
+ "125": {
+  "id": 125,
+  "key": "woodmail",
+  "en": "WOOD MAIL",
+  "zh": "woodmail"
+ },
+ "126": {
+  "id": 126,
+  "key": "wavemail",
+  "en": "WAVE MAIL",
+  "zh": "wavemail"
+ },
+ "127": {
+  "id": 127,
+  "key": "beadmail",
+  "en": "BEAD MAIL",
+  "zh": "beadmail"
+ },
+ "128": {
+  "id": 128,
+  "key": "shadowmail",
+  "en": "SHADOW MAIL",
+  "zh": "shadowmail"
+ },
+ "129": {
+  "id": 129,
+  "key": "tropicmail",
+  "en": "TROPIC MAIL",
+  "zh": "tropicmail"
+ },
+ "130": {
+  "id": 130,
+  "key": "dreammail",
+  "en": "DREAM MAIL",
+  "zh": "dreammail"
+ },
+ "131": {
+  "id": 131,
+  "key": "fabmail",
+  "en": "FAB MAIL",
+  "zh": "fabmail"
+ },
+ "132": {
+  "id": 132,
+  "key": "retromail",
+  "en": "RETRO MAIL",
+  "zh": "retromail"
+ },
+ "133": {
+  "id": 133,
+  "key": "cheriberry",
+  "en": "Cheri Berry",
+  "zh": "樱子果"
+ },
+ "134": {
+  "id": 134,
+  "key": "chestoberry",
+  "en": "Chesto Berry",
+  "zh": "零余果"
+ },
+ "135": {
+  "id": 135,
+  "key": "pechaberry",
+  "en": "Pecha Berry",
+  "zh": "桃桃果"
+ },
+ "136": {
+  "id": 136,
+  "key": "rawstberry",
+  "en": "Rawst Berry",
+  "zh": "莓莓果"
+ },
+ "137": {
+  "id": 137,
+  "key": "aspearberry",
+  "en": "Aspear Berry",
+  "zh": "利木果"
+ },
+ "138": {
+  "id": 138,
+  "key": "leppaberry",
+  "en": "Leppa Berry",
+  "zh": "苹野果"
+ },
+ "139": {
+  "id": 139,
+  "key": "oranberry",
+  "en": "Oran Berry",
+  "zh": "橙橙果"
+ },
+ "140": {
+  "id": 140,
+  "key": "persimberry",
+  "en": "Persim Berry",
+  "zh": "柿仔果"
+ },
+ "141": {
+  "id": 141,
+  "key": "lumberry",
+  "en": "Lum Berry",
+  "zh": "木子果"
+ },
+ "142": {
+  "id": 142,
+  "key": "sitrusberry",
+  "en": "Sitrus Berry",
+  "zh": "文柚果"
+ },
+ "143": {
+  "id": 143,
+  "key": "figyberry",
+  "en": "Figy Berry",
+  "zh": "勿花果"
+ },
+ "144": {
+  "id": 144,
+  "key": "wikiberry",
+  "en": "Wiki Berry",
+  "zh": "异奇果"
+ },
+ "145": {
+  "id": 145,
+  "key": "magoberry",
+  "en": "Mago Berry",
+  "zh": "芒芒果"
+ },
+ "146": {
+  "id": 146,
+  "key": "aguavberry",
+  "en": "Aguav Berry",
+  "zh": "乐芭果"
+ },
+ "147": {
+  "id": 147,
+  "key": "iapapaberry",
+  "en": "Iapapa Berry",
+  "zh": "芭亚果"
+ },
+ "148": {
+  "id": 148,
+  "key": "razzberry",
+  "en": "Razz Berry",
+  "zh": "蔓莓果"
+ },
+ "149": {
+  "id": 149,
+  "key": "blukberry",
+  "en": "Bluk Berry",
+  "zh": "墨莓果"
+ },
+ "150": {
+  "id": 150,
+  "key": "nanabberry",
+  "en": "Nanab Berry",
+  "zh": "蕉香果"
+ },
+ "151": {
+  "id": 151,
+  "key": "wepearberry",
+  "en": "Wepear Berry",
+  "zh": "西梨果"
+ },
+ "152": {
+  "id": 152,
+  "key": "pinapberry",
+  "en": "Pinap Berry",
+  "zh": "凰梨果"
+ },
+ "153": {
+  "id": 153,
+  "key": "pomegberry",
+  "en": "Pomeg Berry",
+  "zh": "榴石果"
+ },
+ "154": {
+  "id": 154,
+  "key": "kelpsyberry",
+  "en": "Kelpsy Berry",
+  "zh": "藻根果"
+ },
+ "155": {
+  "id": 155,
+  "key": "qualotberry",
+  "en": "Qualot Berry",
+  "zh": "比巴果"
+ },
+ "156": {
+  "id": 156,
+  "key": "hondewberry",
+  "en": "Hondew Berry",
+  "zh": "哈密果"
+ },
+ "157": {
+  "id": 157,
+  "key": "grepaberry",
+  "en": "Grepa Berry",
+  "zh": "萄葡果"
+ },
+ "158": {
+  "id": 158,
+  "key": "tamatoberry",
+  "en": "Tamato Berry",
+  "zh": "茄番果"
+ },
+ "159": {
+  "id": 159,
+  "key": "cornnberry",
+  "en": "Cornn Berry",
+  "zh": "玉黍果"
+ },
+ "160": {
+  "id": 160,
+  "key": "magostberry",
+  "en": "Magost Berry",
+  "zh": "岳竹果"
+ },
+ "161": {
+  "id": 161,
+  "key": "rabutaberry",
+  "en": "Rabuta Berry",
+  "zh": "茸丹果"
+ },
+ "162": {
+  "id": 162,
+  "key": "nomelberry",
+  "en": "Nomel Berry",
+  "zh": "檬柠果"
+ },
+ "163": {
+  "id": 163,
+  "key": "spelonberry",
+  "en": "Spelon Berry",
+  "zh": "刺角果"
+ },
+ "164": {
+  "id": 164,
+  "key": "pamtreberry",
+  "en": "Pamtre Berry",
+  "zh": "椰木果"
+ },
+ "165": {
+  "id": 165,
+  "key": "watmelberry",
+  "en": "Watmel Berry",
+  "zh": "瓜西果"
+ },
+ "166": {
+  "id": 166,
+  "key": "durinberry",
+  "en": "Durin Berry",
+  "zh": "金枕果"
+ },
+ "167": {
+  "id": 167,
+  "key": "belueberry",
+  "en": "Belue Berry",
+  "zh": "靛莓果"
+ },
+ "168": {
+  "id": 168,
+  "key": "liechiberry",
+  "en": "Liechi Berry",
+  "zh": "枝荔果"
+ },
+ "169": {
+  "id": 169,
+  "key": "ganlonberry",
+  "en": "Ganlon Berry",
+  "zh": "龙睛果"
+ },
+ "170": {
+  "id": 170,
+  "key": "salacberry",
+  "en": "Salac Berry",
+  "zh": "沙鳞果"
+ },
+ "171": {
+  "id": 171,
+  "key": "petayaberry",
+  "en": "Petaya Berry",
+  "zh": "龙火果"
+ },
+ "172": {
+  "id": 172,
+  "key": "apicotberry",
+  "en": "Apicot Berry",
+  "zh": "杏仔果"
+ },
+ "173": {
+  "id": 173,
+  "key": "lansatberry",
+  "en": "Lansat Berry",
+  "zh": "兰萨果"
+ },
+ "174": {
+  "id": 174,
+  "key": "starfberry",
+  "en": "Starf Berry",
+  "zh": "星桃果"
+ },
+ "175": {
+  "id": 175,
+  "key": "enigmaberry",
+  "en": "Enigma Berry",
+  "zh": "谜芝果"
+ },
+ "176": {
+  "id": 176,
+  "key": "unusedberry1",
+  "en": "UNUSED BERRY 1",
+  "zh": "unusedberry1"
+ },
+ "177": {
+  "id": 177,
+  "key": "unusedberry2",
+  "en": "UNUSED BERRY 2",
+  "zh": "unusedberry2"
+ },
+ "178": {
+  "id": 178,
+  "key": "unusedberry3",
+  "en": "UNUSED BERRY 3",
+  "zh": "unusedberry3"
+ },
+ "179": {
+  "id": 179,
+  "key": "brightpowder",
+  "en": "Bright Powder",
+  "zh": "光粉"
+ },
+ "180": {
+  "id": 180,
+  "key": "whiteherb",
+  "en": "White Herb",
+  "zh": "白色香草"
+ },
+ "181": {
+  "id": 181,
+  "key": "machobrace",
+  "en": "Macho Brace",
+  "zh": "强制锻炼器"
+ },
+ "182": {
+  "id": 182,
+  "key": "expshare",
+  "en": "EXP SHARE",
+  "zh": "学习装置"
+ },
+ "183": {
+  "id": 183,
+  "key": "quickclaw",
+  "en": "Quick Claw",
+  "zh": "先制之爪"
+ },
+ "184": {
+  "id": 184,
+  "key": "soothebell",
+  "en": "SOOTHE BELL",
+  "zh": "安抚之铃"
+ },
+ "185": {
+  "id": 185,
+  "key": "mentalherb",
+  "en": "Mental Herb",
+  "zh": "心灵香草"
+ },
+ "186": {
+  "id": 186,
+  "key": "choiceband",
+  "en": "Choice Band",
+  "zh": "讲究头带"
+ },
+ "187": {
+  "id": 187,
+  "key": "kingsrock",
+  "en": "King's Rock",
+  "zh": "王者之证"
+ },
+ "188": {
+  "id": 188,
+  "key": "silverpowder",
+  "en": "Silver Powder",
+  "zh": "银粉"
+ },
+ "189": {
+  "id": 189,
+  "key": "amuletcoin",
+  "en": "AMULET COIN",
+  "zh": "护符金币"
+ },
+ "190": {
+  "id": 190,
+  "key": "cleansetag",
+  "en": "CLEANSE TAG",
+  "zh": "洁净之符"
+ },
+ "191": {
+  "id": 191,
+  "key": "souldew",
+  "en": "Soul Dew",
+  "zh": "心之水滴"
+ },
+ "192": {
+  "id": 192,
+  "key": "deepseatooth",
+  "en": "Deep Sea Tooth",
+  "zh": "深海之牙"
+ },
+ "193": {
+  "id": 193,
+  "key": "deepseascale",
+  "en": "Deep Sea Scale",
+  "zh": "深海鳞片"
+ },
+ "194": {
+  "id": 194,
+  "key": "smokeball",
+  "en": "SMOKE BALL",
+  "zh": "烟雾球"
+ },
+ "195": {
+  "id": 195,
+  "key": "everstone",
+  "en": "EVERSTONE",
+  "zh": "不变之石"
+ },
+ "196": {
+  "id": 196,
+  "key": "focusband",
+  "en": "Focus Band",
+  "zh": "气势头带"
+ },
+ "197": {
+  "id": 197,
+  "key": "luckyegg",
+  "en": "LUCKY EGG",
+  "zh": "幸运蛋"
+ },
+ "198": {
+  "id": 198,
+  "key": "scopelens",
+  "en": "Scope Lens",
+  "zh": "焦点镜"
+ },
+ "199": {
+  "id": 199,
+  "key": "metalcoat",
+  "en": "Metal Coat",
+  "zh": "金属膜"
+ },
+ "200": {
+  "id": 200,
+  "key": "leftovers",
+  "en": "Leftovers",
+  "zh": "吃剩的东西"
+ },
+ "201": {
+  "id": 201,
+  "key": "dragonscale",
+  "en": "Dragon Scale",
+  "zh": "龙之鳞片"
+ },
+ "202": {
+  "id": 202,
+  "key": "lightball",
+  "en": "Light Ball",
+  "zh": "电气球"
+ },
+ "203": {
+  "id": 203,
+  "key": "softsand",
+  "en": "Soft Sand",
+  "zh": "柔软沙子"
+ },
+ "204": {
+  "id": 204,
+  "key": "hardstone",
+  "en": "Hard Stone",
+  "zh": "硬石头"
+ },
+ "205": {
+  "id": 205,
+  "key": "miracleseed",
+  "en": "Miracle Seed",
+  "zh": "奇迹种子"
+ },
+ "206": {
+  "id": 206,
+  "key": "blackglasses",
+  "en": "Black Glasses",
+  "zh": "黑色眼镜"
+ },
+ "207": {
+  "id": 207,
+  "key": "blackbelt",
+  "en": "Black Belt",
+  "zh": "黑带"
+ },
+ "208": {
+  "id": 208,
+  "key": "magnet",
+  "en": "Magnet",
+  "zh": "磁铁"
+ },
+ "209": {
+  "id": 209,
+  "key": "mysticwater",
+  "en": "Mystic Water",
+  "zh": "神秘水滴"
+ },
+ "210": {
+  "id": 210,
+  "key": "sharpbeak",
+  "en": "Sharp Beak",
+  "zh": "锐利鸟嘴"
+ },
+ "211": {
+  "id": 211,
+  "key": "poisonbarb",
+  "en": "Poison Barb",
+  "zh": "毒针"
+ },
+ "212": {
+  "id": 212,
+  "key": "nevermeltice",
+  "en": "Never-Melt Ice",
+  "zh": "不融冰"
+ },
+ "213": {
+  "id": 213,
+  "key": "spelltag",
+  "en": "Spell Tag",
+  "zh": "诅咒之符"
+ },
+ "214": {
+  "id": 214,
+  "key": "twistedspoon",
+  "en": "Twisted Spoon",
+  "zh": "弯曲的汤匙"
+ },
+ "215": {
+  "id": 215,
+  "key": "charcoal",
+  "en": "Charcoal",
+  "zh": "木炭"
+ },
+ "216": {
+  "id": 216,
+  "key": "dragonfang",
+  "en": "Dragon Fang",
+  "zh": "龙之牙"
+ },
+ "217": {
+  "id": 217,
+  "key": "silkscarf",
+  "en": "Silk Scarf",
+  "zh": "丝绸围巾"
+ },
+ "218": {
+  "id": 218,
+  "key": "upgrade",
+  "en": "Up-Grade",
+  "zh": "升级数据"
+ },
+ "219": {
+  "id": 219,
+  "key": "shellbell",
+  "en": "Shell Bell",
+  "zh": "贝壳之铃"
+ },
+ "220": {
+  "id": 220,
+  "key": "seaincense",
+  "en": "Sea Incense",
+  "zh": "海潮薰香"
+ },
+ "221": {
+  "id": 221,
+  "key": "laxincense",
+  "en": "Lax Incense",
+  "zh": "悠闲薰香"
+ },
+ "222": {
+  "id": 222,
+  "key": "luckypunch",
+  "en": "Lucky Punch",
+  "zh": "吉利拳"
+ },
+ "223": {
+  "id": 223,
+  "key": "metalpowder",
+  "en": "Metal Powder",
+  "zh": "金属粉"
+ },
+ "224": {
+  "id": 224,
+  "key": "thickclub",
+  "en": "Thick Club",
+  "zh": "粗骨头"
+ },
+ "225": {
+  "id": 225,
+  "key": "stick",
+  "en": "Stick",
+  "zh": "大葱"
+ },
+ "226": {
+  "id": 226,
+  "key": "0e2",
+  "en": "0E2",
+  "zh": "0e2"
+ },
+ "227": {
+  "id": 227,
+  "key": "0e3",
+  "en": "0E3",
+  "zh": "0e3"
+ },
+ "228": {
+  "id": 228,
+  "key": "0e4",
+  "en": "0E4",
+  "zh": "0e4"
+ },
+ "229": {
+  "id": 229,
+  "key": "0e5",
+  "en": "0E5",
+  "zh": "0e5"
+ },
+ "230": {
+  "id": 230,
+  "key": "0e6",
+  "en": "0E6",
+  "zh": "0e6"
+ },
+ "231": {
+  "id": 231,
+  "key": "0e7",
+  "en": "0E7",
+  "zh": "0e7"
+ },
+ "232": {
+  "id": 232,
+  "key": "0e8",
+  "en": "0E8",
+  "zh": "0e8"
+ },
+ "233": {
+  "id": 233,
+  "key": "0e9",
+  "en": "0E9",
+  "zh": "0e9"
+ },
+ "234": {
+  "id": 234,
+  "key": "0ea",
+  "en": "0EA",
+  "zh": "0ea"
+ },
+ "235": {
+  "id": 235,
+  "key": "0eb",
+  "en": "0EB",
+  "zh": "0eb"
+ },
+ "236": {
+  "id": 236,
+  "key": "0ec",
+  "en": "0EC",
+  "zh": "0ec"
+ },
+ "237": {
+  "id": 237,
+  "key": "0ed",
+  "en": "0ED",
+  "zh": "0ed"
+ },
+ "238": {
+  "id": 238,
+  "key": "0ee",
+  "en": "0EE",
+  "zh": "0ee"
+ },
+ "239": {
+  "id": 239,
+  "key": "0ef",
+  "en": "0EF",
+  "zh": "0ef"
+ },
+ "240": {
+  "id": 240,
+  "key": "0f0",
+  "en": "0F0",
+  "zh": "0f0"
+ },
+ "241": {
+  "id": 241,
+  "key": "0f1",
+  "en": "0F1",
+  "zh": "0f1"
+ },
+ "242": {
+  "id": 242,
+  "key": "0f2",
+  "en": "0F2",
+  "zh": "0f2"
+ },
+ "243": {
+  "id": 243,
+  "key": "0f3",
+  "en": "0F3",
+  "zh": "0f3"
+ },
+ "244": {
+  "id": 244,
+  "key": "0f4",
+  "en": "0F4",
+  "zh": "0f4"
+ },
+ "245": {
+  "id": 245,
+  "key": "0f5",
+  "en": "0F5",
+  "zh": "0f5"
+ },
+ "246": {
+  "id": 246,
+  "key": "0f6",
+  "en": "0F6",
+  "zh": "0f6"
+ },
+ "247": {
+  "id": 247,
+  "key": "0f7",
+  "en": "0F7",
+  "zh": "0f7"
+ },
+ "248": {
+  "id": 248,
+  "key": "0f8",
+  "en": "0F8",
+  "zh": "0f8"
+ },
+ "249": {
+  "id": 249,
+  "key": "0f9",
+  "en": "0F9",
+  "zh": "0f9"
+ },
+ "250": {
+  "id": 250,
+  "key": "0fa",
+  "en": "0FA",
+  "zh": "0fa"
+ },
+ "251": {
+  "id": 251,
+  "key": "0fb",
+  "en": "0FB",
+  "zh": "0fb"
+ },
+ "252": {
+  "id": 252,
+  "key": "0fc",
+  "en": "0FC",
+  "zh": "0fc"
+ },
+ "253": {
+  "id": 253,
+  "key": "0fd",
+  "en": "0FD",
+  "zh": "0fd"
+ },
+ "254": {
+  "id": 254,
+  "key": "redscarf",
+  "en": "RED SCARF",
+  "zh": "红色头巾"
+ },
+ "255": {
+  "id": 255,
+  "key": "bluescarf",
+  "en": "BLUE SCARF",
+  "zh": "蓝色头巾"
+ },
+ "256": {
+  "id": 256,
+  "key": "pinkscarf",
+  "en": "PINK SCARF",
+  "zh": "粉红头巾"
+ },
+ "257": {
+  "id": 257,
+  "key": "greenscarf",
+  "en": "GREEN SCARF",
+  "zh": "绿色头巾"
+ },
+ "258": {
+  "id": 258,
+  "key": "yellowscarf",
+  "en": "YELLOW SCARF",
+  "zh": "黄色头巾"
+ },
+ "259": {
+  "id": 259,
+  "key": "machbike",
+  "en": "MACH BIKE",
+  "zh": "音速自行车"
+ },
+ "260": {
+  "id": 260,
+  "key": "coincase",
+  "en": "COIN CASE",
+  "zh": "代币盒"
+ },
+ "261": {
+  "id": 261,
+  "key": "itemfinder",
+  "en": "ITEMFINDER",
+  "zh": "itemfinder"
+ },
+ "262": {
+  "id": 262,
+  "key": "oldrod",
+  "en": "OLD ROD",
+  "zh": "破旧钓竿"
+ },
+ "263": {
+  "id": 263,
+  "key": "goodrod",
+  "en": "GOOD ROD",
+  "zh": "好钓竿"
+ },
+ "264": {
+  "id": 264,
+  "key": "superrod",
+  "en": "SUPER ROD",
+  "zh": "厉害钓竿"
+ },
+ "265": {
+  "id": 265,
+  "key": "ssticket",
+  "en": "SS TICKET",
+  "zh": "船票"
+ },
+ "266": {
+  "id": 266,
+  "key": "contestpass",
+  "en": "CONTEST PASS",
+  "zh": "华丽大赛参加证"
+ },
+ "267": {
+  "id": 267,
+  "key": "10b",
+  "en": "10B",
+  "zh": "10b"
+ },
+ "268": {
+  "id": 268,
+  "key": "wailmerpail",
+  "en": "WAILMER PAIL",
+  "zh": "吼吼鲸喷壶"
+ },
+ "269": {
+  "id": 269,
+  "key": "devongoods",
+  "en": "DEVON GOODS",
+  "zh": "devongoods"
+ },
+ "270": {
+  "id": 270,
+  "key": "sootsack",
+  "en": "SOOT SACK",
+  "zh": "集灰袋"
+ },
+ "271": {
+  "id": 271,
+  "key": "basementkey",
+  "en": "BASEMENT KEY",
+  "zh": "地下钥匙"
+ },
+ "272": {
+  "id": 272,
+  "key": "acrobike",
+  "en": "ACRO BIKE",
+  "zh": "越野自行车"
+ },
+ "273": {
+  "id": 273,
+  "key": "pokeblockcase",
+  "en": "POKEBLOCK CASE",
+  "zh": "pokeblockcase"
+ },
+ "274": {
+  "id": 274,
+  "key": "letter",
+  "en": "LETTER",
+  "zh": "给大吾的信"
+ },
+ "275": {
+  "id": 275,
+  "key": "eonticket",
+  "en": "EON TICKET",
+  "zh": "无限船票"
+ },
+ "276": {
+  "id": 276,
+  "key": "redorb",
+  "en": "Red Orb",
+  "zh": "朱红色宝珠"
+ },
+ "277": {
+  "id": 277,
+  "key": "blueorb",
+  "en": "Blue Orb",
+  "zh": "靛蓝色宝珠"
+ },
+ "278": {
+  "id": 278,
+  "key": "scanner",
+  "en": "SCANNER",
+  "zh": "探测器"
+ },
+ "279": {
+  "id": 279,
+  "key": "gogoggles",
+  "en": "GO GOGGLES",
+  "zh": "ＧＯＧＯ护目镜"
+ },
+ "280": {
+  "id": 280,
+  "key": "meteorite",
+  "en": "METEORITE",
+  "zh": "陨石"
+ },
+ "281": {
+  "id": 281,
+  "key": "room1key",
+  "en": "ROOM 1 KEY",
+  "zh": "room1key"
+ },
+ "282": {
+  "id": 282,
+  "key": "room2key",
+  "en": "ROOM 2 KEY",
+  "zh": "room2key"
+ },
+ "283": {
+  "id": 283,
+  "key": "room4key",
+  "en": "ROOM 4 KEY",
+  "zh": "room4key"
+ },
+ "284": {
+  "id": 284,
+  "key": "room6key",
+  "en": "ROOM 6 KEY",
+  "zh": "room6key"
+ },
+ "285": {
+  "id": 285,
+  "key": "storagekey",
+  "en": "STORAGE KEY",
+  "zh": "仓库钥匙"
+ },
+ "286": {
+  "id": 286,
+  "key": "rootfossil",
+  "en": "Root Fossil",
+  "zh": "根状化石"
+ },
+ "287": {
+  "id": 287,
+  "key": "clawfossil",
+  "en": "Claw Fossil",
+  "zh": "爪子化石"
+ },
+ "288": {
+  "id": 288,
+  "key": "devonscope",
+  "en": "DEVON SCOPE",
+  "zh": "得文侦测镜"
+ },
+ "289": {
+  "id": 289,
+  "key": "tm01",
+  "en": "TM01",
+  "zh": "招式学习器０１"
+ },
+ "290": {
+  "id": 290,
+  "key": "tm02",
+  "en": "TM02",
+  "zh": "招式学习器０２"
+ },
+ "291": {
+  "id": 291,
+  "key": "tm03",
+  "en": "TM03",
+  "zh": "招式学习器０３"
+ },
+ "292": {
+  "id": 292,
+  "key": "tm04",
+  "en": "TM04",
+  "zh": "招式学习器０４"
+ },
+ "293": {
+  "id": 293,
+  "key": "tm05",
+  "en": "TM05",
+  "zh": "招式学习器０５"
+ },
+ "294": {
+  "id": 294,
+  "key": "tm06",
+  "en": "TM06",
+  "zh": "招式学习器０６"
+ },
+ "295": {
+  "id": 295,
+  "key": "tm07",
+  "en": "TM07",
+  "zh": "招式学习器０７"
+ },
+ "296": {
+  "id": 296,
+  "key": "tm08",
+  "en": "TM08",
+  "zh": "招式学习器０８"
+ },
+ "297": {
+  "id": 297,
+  "key": "tm09",
+  "en": "TM09",
+  "zh": "招式学习器０９"
+ },
+ "298": {
+  "id": 298,
+  "key": "tm10",
+  "en": "TM10",
+  "zh": "招式学习器１０"
+ },
+ "299": {
+  "id": 299,
+  "key": "tm11",
+  "en": "TM11",
+  "zh": "招式学习器１１"
+ },
+ "300": {
+  "id": 300,
+  "key": "tm12",
+  "en": "TM12",
+  "zh": "招式学习器１２"
+ },
+ "301": {
+  "id": 301,
+  "key": "tm13",
+  "en": "TM13",
+  "zh": "招式学习器１３"
+ },
+ "302": {
+  "id": 302,
+  "key": "tm14",
+  "en": "TM14",
+  "zh": "招式学习器１４"
+ },
+ "303": {
+  "id": 303,
+  "key": "tm15",
+  "en": "TM15",
+  "zh": "招式学习器１５"
+ },
+ "304": {
+  "id": 304,
+  "key": "tm16",
+  "en": "TM16",
+  "zh": "招式学习器１６"
+ },
+ "305": {
+  "id": 305,
+  "key": "tm17",
+  "en": "TM17",
+  "zh": "招式学习器１７"
+ },
+ "306": {
+  "id": 306,
+  "key": "tm18",
+  "en": "TM18",
+  "zh": "招式学习器１８"
+ },
+ "307": {
+  "id": 307,
+  "key": "tm19",
+  "en": "TM19",
+  "zh": "招式学习器１９"
+ },
+ "308": {
+  "id": 308,
+  "key": "tm20",
+  "en": "TM20",
+  "zh": "招式学习器２０"
+ },
+ "309": {
+  "id": 309,
+  "key": "tm21",
+  "en": "TM21",
+  "zh": "招式学习器２１"
+ },
+ "310": {
+  "id": 310,
+  "key": "tm22",
+  "en": "TM22",
+  "zh": "招式学习器２２"
+ },
+ "311": {
+  "id": 311,
+  "key": "tm23",
+  "en": "TM23",
+  "zh": "招式学习器２３"
+ },
+ "312": {
+  "id": 312,
+  "key": "tm24",
+  "en": "TM24",
+  "zh": "招式学习器２４"
+ },
+ "313": {
+  "id": 313,
+  "key": "tm25",
+  "en": "TM25",
+  "zh": "招式学习器２５"
+ },
+ "314": {
+  "id": 314,
+  "key": "tm26",
+  "en": "TM26",
+  "zh": "招式学习器２６"
+ },
+ "315": {
+  "id": 315,
+  "key": "tm27",
+  "en": "TM27",
+  "zh": "招式学习器２７"
+ },
+ "316": {
+  "id": 316,
+  "key": "tm28",
+  "en": "TM28",
+  "zh": "招式学习器２８"
+ },
+ "317": {
+  "id": 317,
+  "key": "tm29",
+  "en": "TM29",
+  "zh": "招式学习器２９"
+ },
+ "318": {
+  "id": 318,
+  "key": "tm30",
+  "en": "TM30",
+  "zh": "招式学习器３０"
+ },
+ "319": {
+  "id": 319,
+  "key": "tm31",
+  "en": "TM31",
+  "zh": "招式学习器３１"
+ },
+ "320": {
+  "id": 320,
+  "key": "tm32",
+  "en": "TM32",
+  "zh": "招式学习器３２"
+ },
+ "321": {
+  "id": 321,
+  "key": "tm33",
+  "en": "TM33",
+  "zh": "招式学习器３３"
+ },
+ "322": {
+  "id": 322,
+  "key": "tm34",
+  "en": "TM34",
+  "zh": "招式学习器３４"
+ },
+ "323": {
+  "id": 323,
+  "key": "tm35",
+  "en": "TM35",
+  "zh": "招式学习器３５"
+ },
+ "324": {
+  "id": 324,
+  "key": "tm36",
+  "en": "TM36",
+  "zh": "招式学习器３６"
+ },
+ "325": {
+  "id": 325,
+  "key": "tm37",
+  "en": "TM37",
+  "zh": "招式学习器３７"
+ },
+ "326": {
+  "id": 326,
+  "key": "tm38",
+  "en": "TM38",
+  "zh": "招式学习器３８"
+ },
+ "327": {
+  "id": 327,
+  "key": "tm39",
+  "en": "TM39",
+  "zh": "招式学习器３９"
+ },
+ "328": {
+  "id": 328,
+  "key": "tm40",
+  "en": "TM40",
+  "zh": "招式学习器４０"
+ },
+ "329": {
+  "id": 329,
+  "key": "tm41",
+  "en": "TM41",
+  "zh": "招式学习器４１"
+ },
+ "330": {
+  "id": 330,
+  "key": "tm42",
+  "en": "TM42",
+  "zh": "招式学习器４２"
+ },
+ "331": {
+  "id": 331,
+  "key": "tm43",
+  "en": "TM43",
+  "zh": "招式学习器４３"
+ },
+ "332": {
+  "id": 332,
+  "key": "tm44",
+  "en": "TM44",
+  "zh": "招式学习器４４"
+ },
+ "333": {
+  "id": 333,
+  "key": "tm45",
+  "en": "TM45",
+  "zh": "招式学习器４５"
+ },
+ "334": {
+  "id": 334,
+  "key": "tm46",
+  "en": "TM46",
+  "zh": "招式学习器４６"
+ },
+ "335": {
+  "id": 335,
+  "key": "tm47",
+  "en": "TM47",
+  "zh": "招式学习器４７"
+ },
+ "336": {
+  "id": 336,
+  "key": "tm48",
+  "en": "TM48",
+  "zh": "招式学习器４８"
+ },
+ "337": {
+  "id": 337,
+  "key": "tm49",
+  "en": "TM49",
+  "zh": "招式学习器４９"
+ },
+ "338": {
+  "id": 338,
+  "key": "tm50",
+  "en": "TM50",
+  "zh": "招式学习器５０"
+ },
+ "339": {
+  "id": 339,
+  "key": "hm01",
+  "en": "HM01",
+  "zh": "秘传学习器０１"
+ },
+ "340": {
+  "id": 340,
+  "key": "hm02",
+  "en": "HM02",
+  "zh": "秘传学习器０２"
+ },
+ "341": {
+  "id": 341,
+  "key": "hm03",
+  "en": "HM03",
+  "zh": "秘传学习器０３"
+ },
+ "342": {
+  "id": 342,
+  "key": "hm04",
+  "en": "HM04",
+  "zh": "秘传学习器０４"
+ },
+ "343": {
+  "id": 343,
+  "key": "hm05",
+  "en": "HM05",
+  "zh": "秘传学习器０５"
+ },
+ "344": {
+  "id": 344,
+  "key": "hm06",
+  "en": "HM06",
+  "zh": "秘传学习器０６"
+ },
+ "345": {
+  "id": 345,
+  "key": "hm07",
+  "en": "HM07",
+  "zh": "秘传学习器０７"
+ },
+ "346": {
+  "id": 346,
+  "key": "hm08",
+  "en": "HM08",
+  "zh": "hm08"
+ },
+ "347": {
+  "id": 347,
+  "key": "15b",
+  "en": "15B",
+  "zh": "15b"
+ },
+ "348": {
+  "id": 348,
+  "key": "15c",
+  "en": "15C",
+  "zh": "15c"
+ },
+ "349": {
+  "id": 349,
+  "key": "oaksparcel",
+  "en": "OAKS PARCEL",
+  "zh": "oaksparcel"
+ },
+ "350": {
+  "id": 350,
+  "key": "pokeflute",
+  "en": "POKE FLUTE",
+  "zh": "宝可梦之笛"
+ },
+ "351": {
+  "id": 351,
+  "key": "secretkey",
+  "en": "SECRET KEY",
+  "zh": "秘密钥匙"
+ },
+ "352": {
+  "id": 352,
+  "key": "bikevoucher",
+  "en": "BIKE VOUCHER",
+  "zh": "bikevoucher"
+ },
+ "353": {
+  "id": 353,
+  "key": "goldteeth",
+  "en": "GOLD TEETH",
+  "zh": "金假牙"
+ },
+ "354": {
+  "id": 354,
+  "key": "oldamber",
+  "en": "Old Amber",
+  "zh": "秘密琥珀"
+ },
+ "355": {
+  "id": 355,
+  "key": "cardkey",
+  "en": "CARD KEY",
+  "zh": "钥匙卡"
+ },
+ "356": {
+  "id": 356,
+  "key": "liftkey",
+  "en": "LIFT KEY",
+  "zh": "电梯钥匙"
+ },
+ "357": {
+  "id": 357,
+  "key": "helixfossil",
+  "en": "Helix Fossil",
+  "zh": "贝壳化石"
+ },
+ "358": {
+  "id": 358,
+  "key": "domefossil",
+  "en": "Dome Fossil",
+  "zh": "甲壳化石"
+ },
+ "359": {
+  "id": 359,
+  "key": "silphscope",
+  "en": "SILPH SCOPE",
+  "zh": "西尔佛检视镜"
+ },
+ "360": {
+  "id": 360,
+  "key": "bicycle",
+  "en": "BICYCLE",
+  "zh": "bicycle"
+ },
+ "361": {
+  "id": 361,
+  "key": "townmap",
+  "en": "TOWN MAP",
+  "zh": "城镇地图"
+ },
+ "362": {
+  "id": 362,
+  "key": "vsseeker",
+  "en": "VS SEEKER",
+  "zh": "对战搜寻器"
+ },
+ "363": {
+  "id": 363,
+  "key": "famechecker",
+  "en": "FAME CHECKER",
+  "zh": "famechecker"
+ },
+ "364": {
+  "id": 364,
+  "key": "tmcase",
+  "en": "TM CASE",
+  "zh": "招式学习器盒"
+ },
+ "365": {
+  "id": 365,
+  "key": "berrypouch",
+  "en": "BERRY POUCH",
+  "zh": "berrypouch"
+ },
+ "366": {
+  "id": 366,
+  "key": "teachytv",
+  "en": "TEACHY TV",
+  "zh": "teachytv"
+ },
+ "367": {
+  "id": 367,
+  "key": "tripass",
+  "en": "TRI PASS",
+  "zh": "tripass"
+ },
+ "368": {
+  "id": 368,
+  "key": "rainbowpass",
+  "en": "RAINBOW PASS",
+  "zh": "rainbowpass"
+ },
+ "369": {
+  "id": 369,
+  "key": "tea",
+  "en": "TEA",
+  "zh": "茶"
+ },
+ "370": {
+  "id": 370,
+  "key": "mysticticket",
+  "en": "MYSTIC TICKET",
+  "zh": "mysticticket"
+ },
+ "371": {
+  "id": 371,
+  "key": "auroraticket",
+  "en": "AURORA TICKET",
+  "zh": "auroraticket"
+ },
+ "372": {
+  "id": 372,
+  "key": "powderjar",
+  "en": "POWDER JAR",
+  "zh": "powderjar"
+ },
+ "373": {
+  "id": 373,
+  "key": "ruby",
+  "en": "RUBY",
+  "zh": "ruby"
+ },
+ "374": {
+  "id": 374,
+  "key": "sapphire",
+  "en": "SAPPHIRE",
+  "zh": "sapphire"
+ },
+ "375": {
+  "id": 375,
+  "key": "magmaemblem",
+  "en": "MAGMA EMBLEM",
+  "zh": "magmaemblem"
+ },
+ "376": {
+  "id": 376,
+  "key": "oldseamap",
+  "en": "OLD SEA MAP",
+  "zh": "oldseamap"
+ }
+}

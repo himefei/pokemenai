@@ -1,0 +1,8708 @@
+{
+ "1": {
+  "id": 1,
+  "key": "bulbasaur",
+  "en": "Bulbasaur",
+  "zh": "妙蛙种子",
+  "national": 1,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 49,
+   "def": 49,
+   "spa": 65,
+   "spd": 65,
+   "spe": 45
+  },
+  "abilities": [
+   "Overgrow"
+  ]
+ },
+ "2": {
+  "id": 2,
+  "key": "ivysaur",
+  "en": "Ivysaur",
+  "zh": "妙蛙草",
+  "national": 2,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 62,
+   "def": 63,
+   "spa": 80,
+   "spd": 80,
+   "spe": 60
+  },
+  "abilities": [
+   "Overgrow"
+  ]
+ },
+ "3": {
+  "id": 3,
+  "key": "venusaur",
+  "en": "Venusaur",
+  "zh": "妙蛙花",
+  "national": 3,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 82,
+   "def": 83,
+   "spa": 100,
+   "spd": 100,
+   "spe": 80
+  },
+  "abilities": [
+   "Overgrow"
+  ]
+ },
+ "4": {
+  "id": 4,
+  "key": "charmander",
+  "en": "Charmander",
+  "zh": "小火龙",
+  "national": 4,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 39,
+   "atk": 52,
+   "def": 43,
+   "spa": 60,
+   "spd": 50,
+   "spe": 65
+  },
+  "abilities": [
+   "Blaze"
+  ]
+ },
+ "5": {
+  "id": 5,
+  "key": "charmeleon",
+  "en": "Charmeleon",
+  "zh": "火恐龙",
+  "national": 5,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 58,
+   "atk": 64,
+   "def": 58,
+   "spa": 80,
+   "spd": 65,
+   "spe": 80
+  },
+  "abilities": [
+   "Blaze"
+  ]
+ },
+ "6": {
+  "id": 6,
+  "key": "charizard",
+  "en": "Charizard",
+  "zh": "喷火龙",
+  "national": 6,
+  "types": [
+   10,
+   2
+  ],
+  "base": {
+   "hp": 78,
+   "atk": 84,
+   "def": 78,
+   "spa": 109,
+   "spd": 85,
+   "spe": 100
+  },
+  "abilities": [
+   "Blaze"
+  ]
+ },
+ "7": {
+  "id": 7,
+  "key": "squirtle",
+  "en": "Squirtle",
+  "zh": "杰尼龟",
+  "national": 7,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 44,
+   "atk": 48,
+   "def": 65,
+   "spa": 50,
+   "spd": 64,
+   "spe": 43
+  },
+  "abilities": [
+   "Torrent"
+  ]
+ },
+ "8": {
+  "id": 8,
+  "key": "wartortle",
+  "en": "Wartortle",
+  "zh": "卡咪龟",
+  "national": 8,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 59,
+   "atk": 63,
+   "def": 80,
+   "spa": 65,
+   "spd": 80,
+   "spe": 58
+  },
+  "abilities": [
+   "Torrent"
+  ]
+ },
+ "9": {
+  "id": 9,
+  "key": "blastoise",
+  "en": "Blastoise",
+  "zh": "水箭龟",
+  "national": 9,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 79,
+   "atk": 83,
+   "def": 100,
+   "spa": 85,
+   "spd": 105,
+   "spe": 78
+  },
+  "abilities": [
+   "Torrent"
+  ]
+ },
+ "10": {
+  "id": 10,
+  "key": "caterpie",
+  "en": "Caterpie",
+  "zh": "绿毛虫",
+  "national": 10,
+  "types": [
+   6,
+   6
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 30,
+   "def": 35,
+   "spa": 20,
+   "spd": 20,
+   "spe": 45
+  },
+  "abilities": [
+   "Shield Dust"
+  ]
+ },
+ "11": {
+  "id": 11,
+  "key": "metapod",
+  "en": "Metapod",
+  "zh": "铁甲蛹",
+  "national": 11,
+  "types": [
+   6,
+   6
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 20,
+   "def": 55,
+   "spa": 25,
+   "spd": 25,
+   "spe": 30
+  },
+  "abilities": [
+   "Shed Skin"
+  ]
+ },
+ "12": {
+  "id": 12,
+  "key": "butterfree",
+  "en": "Butterfree",
+  "zh": "巴大蝶",
+  "national": 12,
+  "types": [
+   6,
+   2
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 45,
+   "def": 50,
+   "spa": 80,
+   "spd": 80,
+   "spe": 70
+  },
+  "abilities": [
+   "Compound Eyes"
+  ]
+ },
+ "13": {
+  "id": 13,
+  "key": "weedle",
+  "en": "Weedle",
+  "zh": "独角虫",
+  "national": 13,
+  "types": [
+   6,
+   3
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 35,
+   "def": 30,
+   "spa": 20,
+   "spd": 20,
+   "spe": 50
+  },
+  "abilities": [
+   "Shield Dust"
+  ]
+ },
+ "14": {
+  "id": 14,
+  "key": "kakuna",
+  "en": "Kakuna",
+  "zh": "铁壳蛹",
+  "national": 14,
+  "types": [
+   6,
+   3
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 25,
+   "def": 50,
+   "spa": 25,
+   "spd": 25,
+   "spe": 35
+  },
+  "abilities": [
+   "Shed Skin"
+  ]
+ },
+ "15": {
+  "id": 15,
+  "key": "beedrill",
+  "en": "Beedrill",
+  "zh": "大针蜂",
+  "national": 15,
+  "types": [
+   6,
+   3
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 80,
+   "def": 40,
+   "spa": 45,
+   "spd": 80,
+   "spe": 75
+  },
+  "abilities": [
+   "Swarm"
+  ]
+ },
+ "16": {
+  "id": 16,
+  "key": "pidgey",
+  "en": "Pidgey",
+  "zh": "波波",
+  "national": 16,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 45,
+   "def": 40,
+   "spa": 35,
+   "spd": 35,
+   "spe": 56
+  },
+  "abilities": [
+   "Keen Eye",
+   "Tangled Feet"
+  ]
+ },
+ "17": {
+  "id": 17,
+  "key": "pidgeotto",
+  "en": "Pidgeotto",
+  "zh": "比比鸟",
+  "national": 17,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 63,
+   "atk": 60,
+   "def": 55,
+   "spa": 50,
+   "spd": 50,
+   "spe": 71
+  },
+  "abilities": [
+   "Keen Eye",
+   "Tangled Feet"
+  ]
+ },
+ "18": {
+  "id": 18,
+  "key": "pidgeot",
+  "en": "Pidgeot",
+  "zh": "大比鸟",
+  "national": 18,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 83,
+   "atk": 80,
+   "def": 75,
+   "spa": 70,
+   "spd": 70,
+   "spe": 91
+  },
+  "abilities": [
+   "Keen Eye",
+   "Tangled Feet"
+  ]
+ },
+ "19": {
+  "id": 19,
+  "key": "rattata",
+  "en": "Rattata",
+  "zh": "小拉达",
+  "national": 19,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 56,
+   "def": 35,
+   "spa": 25,
+   "spd": 35,
+   "spe": 72
+  },
+  "abilities": [
+   "Run Away",
+   "Guts"
+  ]
+ },
+ "20": {
+  "id": 20,
+  "key": "raticate",
+  "en": "Raticate",
+  "zh": "拉达",
+  "national": 20,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 81,
+   "def": 60,
+   "spa": 50,
+   "spd": 70,
+   "spe": 97
+  },
+  "abilities": [
+   "Run Away",
+   "Guts"
+  ]
+ },
+ "21": {
+  "id": 21,
+  "key": "spearow",
+  "en": "Spearow",
+  "zh": "烈雀",
+  "national": 21,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 60,
+   "def": 30,
+   "spa": 31,
+   "spd": 31,
+   "spe": 70
+  },
+  "abilities": [
+   "Keen Eye"
+  ]
+ },
+ "22": {
+  "id": 22,
+  "key": "fearow",
+  "en": "Fearow",
+  "zh": "大嘴雀",
+  "national": 22,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 90,
+   "def": 65,
+   "spa": 61,
+   "spd": 61,
+   "spe": 100
+  },
+  "abilities": [
+   "Keen Eye"
+  ]
+ },
+ "23": {
+  "id": 23,
+  "key": "ekans",
+  "en": "Ekans",
+  "zh": "阿柏蛇",
+  "national": 23,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 60,
+   "def": 44,
+   "spa": 40,
+   "spd": 54,
+   "spe": 55
+  },
+  "abilities": [
+   "Intimidate",
+   "Shed Skin"
+  ]
+ },
+ "24": {
+  "id": 24,
+  "key": "arbok",
+  "en": "Arbok",
+  "zh": "阿柏怪",
+  "national": 24,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 85,
+   "def": 69,
+   "spa": 65,
+   "spd": 79,
+   "spe": 80
+  },
+  "abilities": [
+   "Intimidate",
+   "Shed Skin"
+  ]
+ },
+ "25": {
+  "id": 25,
+  "key": "pikachu",
+  "en": "Pikachu",
+  "zh": "皮卡丘",
+  "national": 25,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 55,
+   "def": 30,
+   "spa": 50,
+   "spd": 40,
+   "spe": 90
+  },
+  "abilities": [
+   "Static"
+  ]
+ },
+ "26": {
+  "id": 26,
+  "key": "raichu",
+  "en": "Raichu",
+  "zh": "雷丘",
+  "national": 26,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 90,
+   "def": 55,
+   "spa": 90,
+   "spd": 80,
+   "spe": 100
+  },
+  "abilities": [
+   "Static"
+  ]
+ },
+ "27": {
+  "id": 27,
+  "key": "sandshrew",
+  "en": "Sandshrew",
+  "zh": "穿山鼠",
+  "national": 27,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 75,
+   "def": 85,
+   "spa": 20,
+   "spd": 30,
+   "spe": 40
+  },
+  "abilities": [
+   "Sand Veil"
+  ]
+ },
+ "28": {
+  "id": 28,
+  "key": "sandslash",
+  "en": "Sandslash",
+  "zh": "穿山王",
+  "national": 28,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 100,
+   "def": 110,
+   "spa": 45,
+   "spd": 55,
+   "spe": 65
+  },
+  "abilities": [
+   "Sand Veil"
+  ]
+ },
+ "29": {
+  "id": 29,
+  "key": "nidoranf",
+  "en": "Nidoran-F",
+  "zh": "尼多兰",
+  "national": 29,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 47,
+   "def": 52,
+   "spa": 40,
+   "spd": 40,
+   "spe": 41
+  },
+  "abilities": [
+   "Poison Point",
+   "Rivalry"
+  ]
+ },
+ "30": {
+  "id": 30,
+  "key": "nidorina",
+  "en": "Nidorina",
+  "zh": "尼多娜",
+  "national": 30,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 62,
+   "def": 67,
+   "spa": 55,
+   "spd": 55,
+   "spe": 56
+  },
+  "abilities": [
+   "Poison Point",
+   "Rivalry"
+  ]
+ },
+ "31": {
+  "id": 31,
+  "key": "nidoqueen",
+  "en": "Nidoqueen",
+  "zh": "尼多后",
+  "national": 31,
+  "types": [
+   3,
+   4
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 82,
+   "def": 87,
+   "spa": 75,
+   "spd": 85,
+   "spe": 76
+  },
+  "abilities": [
+   "Poison Point",
+   "Rivalry"
+  ]
+ },
+ "32": {
+  "id": 32,
+  "key": "nidoranm",
+  "en": "Nidoran-M",
+  "zh": "尼多朗",
+  "national": 32,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 46,
+   "atk": 57,
+   "def": 40,
+   "spa": 40,
+   "spd": 40,
+   "spe": 50
+  },
+  "abilities": [
+   "Poison Point",
+   "Rivalry"
+  ]
+ },
+ "33": {
+  "id": 33,
+  "key": "nidorino",
+  "en": "Nidorino",
+  "zh": "尼多力诺",
+  "national": 33,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 61,
+   "atk": 72,
+   "def": 57,
+   "spa": 55,
+   "spd": 55,
+   "spe": 65
+  },
+  "abilities": [
+   "Poison Point",
+   "Rivalry"
+  ]
+ },
+ "34": {
+  "id": 34,
+  "key": "nidoking",
+  "en": "Nidoking",
+  "zh": "尼多王",
+  "national": 34,
+  "types": [
+   3,
+   4
+  ],
+  "base": {
+   "hp": 81,
+   "atk": 92,
+   "def": 77,
+   "spa": 85,
+   "spd": 75,
+   "spe": 85
+  },
+  "abilities": [
+   "Poison Point",
+   "Rivalry"
+  ]
+ },
+ "35": {
+  "id": 35,
+  "key": "clefairy",
+  "en": "Clefairy",
+  "zh": "皮皮",
+  "national": 35,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 45,
+   "def": 48,
+   "spa": 60,
+   "spd": 65,
+   "spe": 35
+  },
+  "abilities": [
+   "Cute Charm",
+   "Magic Guard"
+  ]
+ },
+ "36": {
+  "id": 36,
+  "key": "clefable",
+  "en": "Clefable",
+  "zh": "皮可西",
+  "national": 36,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 70,
+   "def": 73,
+   "spa": 85,
+   "spd": 90,
+   "spe": 60
+  },
+  "abilities": [
+   "Cute Charm",
+   "Magic Guard"
+  ]
+ },
+ "37": {
+  "id": 37,
+  "key": "vulpix",
+  "en": "Vulpix",
+  "zh": "六尾",
+  "national": 37,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 38,
+   "atk": 41,
+   "def": 40,
+   "spa": 50,
+   "spd": 65,
+   "spe": 65
+  },
+  "abilities": [
+   "Flash Fire"
+  ]
+ },
+ "38": {
+  "id": 38,
+  "key": "ninetales",
+  "en": "Ninetales",
+  "zh": "九尾",
+  "national": 38,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 73,
+   "atk": 76,
+   "def": 75,
+   "spa": 81,
+   "spd": 100,
+   "spe": 100
+  },
+  "abilities": [
+   "Flash Fire"
+  ]
+ },
+ "39": {
+  "id": 39,
+  "key": "jigglypuff",
+  "en": "Jigglypuff",
+  "zh": "胖丁",
+  "national": 39,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 115,
+   "atk": 45,
+   "def": 20,
+   "spa": 45,
+   "spd": 25,
+   "spe": 20
+  },
+  "abilities": [
+   "Cute Charm"
+  ]
+ },
+ "40": {
+  "id": 40,
+  "key": "wigglytuff",
+  "en": "Wigglytuff",
+  "zh": "胖可丁",
+  "national": 40,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 140,
+   "atk": 70,
+   "def": 45,
+   "spa": 75,
+   "spd": 50,
+   "spe": 45
+  },
+  "abilities": [
+   "Cute Charm"
+  ]
+ },
+ "41": {
+  "id": 41,
+  "key": "zubat",
+  "en": "Zubat",
+  "zh": "超音蝠",
+  "national": 41,
+  "types": [
+   3,
+   2
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 45,
+   "def": 35,
+   "spa": 30,
+   "spd": 40,
+   "spe": 55
+  },
+  "abilities": [
+   "Inner Focus"
+  ]
+ },
+ "42": {
+  "id": 42,
+  "key": "golbat",
+  "en": "Golbat",
+  "zh": "大嘴蝠",
+  "national": 42,
+  "types": [
+   3,
+   2
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 80,
+   "def": 70,
+   "spa": 65,
+   "spd": 75,
+   "spe": 90
+  },
+  "abilities": [
+   "Inner Focus"
+  ]
+ },
+ "43": {
+  "id": 43,
+  "key": "oddish",
+  "en": "Oddish",
+  "zh": "走路草",
+  "national": 43,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 50,
+   "def": 55,
+   "spa": 75,
+   "spd": 65,
+   "spe": 30
+  },
+  "abilities": [
+   "Chlorophyll"
+  ]
+ },
+ "44": {
+  "id": 44,
+  "key": "gloom",
+  "en": "Gloom",
+  "zh": "臭臭花",
+  "national": 44,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 65,
+   "def": 70,
+   "spa": 85,
+   "spd": 75,
+   "spe": 40
+  },
+  "abilities": [
+   "Chlorophyll"
+  ]
+ },
+ "45": {
+  "id": 45,
+  "key": "vileplume",
+  "en": "Vileplume",
+  "zh": "霸王花",
+  "national": 45,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 80,
+   "def": 85,
+   "spa": 100,
+   "spd": 90,
+   "spe": 50
+  },
+  "abilities": [
+   "Chlorophyll"
+  ]
+ },
+ "46": {
+  "id": 46,
+  "key": "paras",
+  "en": "Paras",
+  "zh": "派拉斯",
+  "national": 46,
+  "types": [
+   6,
+   12
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 70,
+   "def": 55,
+   "spa": 45,
+   "spd": 55,
+   "spe": 25
+  },
+  "abilities": [
+   "Effect Spore",
+   "Dry Skin"
+  ]
+ },
+ "47": {
+  "id": 47,
+  "key": "parasect",
+  "en": "Parasect",
+  "zh": "派拉斯特",
+  "national": 47,
+  "types": [
+   6,
+   12
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 95,
+   "def": 80,
+   "spa": 60,
+   "spd": 80,
+   "spe": 30
+  },
+  "abilities": [
+   "Effect Spore",
+   "Dry Skin"
+  ]
+ },
+ "48": {
+  "id": 48,
+  "key": "venonat",
+  "en": "Venonat",
+  "zh": "毛球",
+  "national": 48,
+  "types": [
+   6,
+   3
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 55,
+   "def": 50,
+   "spa": 40,
+   "spd": 55,
+   "spe": 45
+  },
+  "abilities": [
+   "Compound Eyes",
+   "Tinted Lens"
+  ]
+ },
+ "49": {
+  "id": 49,
+  "key": "venomoth",
+  "en": "Venomoth",
+  "zh": "摩鲁蛾",
+  "national": 49,
+  "types": [
+   6,
+   3
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 65,
+   "def": 60,
+   "spa": 90,
+   "spd": 75,
+   "spe": 90
+  },
+  "abilities": [
+   "Shield Dust",
+   "Tinted Lens"
+  ]
+ },
+ "50": {
+  "id": 50,
+  "key": "diglett",
+  "en": "Diglett",
+  "zh": "地鼠",
+  "national": 50,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 10,
+   "atk": 55,
+   "def": 25,
+   "spa": 35,
+   "spd": 45,
+   "spe": 95
+  },
+  "abilities": [
+   "Sand Veil",
+   "Arena Trap"
+  ]
+ },
+ "51": {
+  "id": 51,
+  "key": "dugtrio",
+  "en": "Dugtrio",
+  "zh": "三地鼠",
+  "national": 51,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 80,
+   "def": 50,
+   "spa": 50,
+   "spd": 70,
+   "spe": 120
+  },
+  "abilities": [
+   "Sand Veil",
+   "Arena Trap"
+  ]
+ },
+ "52": {
+  "id": 52,
+  "key": "meowth",
+  "en": "Meowth",
+  "zh": "喵喵",
+  "national": 52,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 45,
+   "def": 35,
+   "spa": 40,
+   "spd": 40,
+   "spe": 90
+  },
+  "abilities": [
+   "Pickup",
+   "Technician"
+  ]
+ },
+ "53": {
+  "id": 53,
+  "key": "persian",
+  "en": "Persian",
+  "zh": "猫老大",
+  "national": 53,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 70,
+   "def": 60,
+   "spa": 65,
+   "spd": 65,
+   "spe": 115
+  },
+  "abilities": [
+   "Limber",
+   "Technician"
+  ]
+ },
+ "54": {
+  "id": 54,
+  "key": "psyduck",
+  "en": "Psyduck",
+  "zh": "可达鸭",
+  "national": 54,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 52,
+   "def": 48,
+   "spa": 65,
+   "spd": 50,
+   "spe": 55
+  },
+  "abilities": [
+   "Damp",
+   "Cloud Nine"
+  ]
+ },
+ "55": {
+  "id": 55,
+  "key": "golduck",
+  "en": "Golduck",
+  "zh": "哥达鸭",
+  "national": 55,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 82,
+   "def": 78,
+   "spa": 95,
+   "spd": 80,
+   "spe": 85
+  },
+  "abilities": [
+   "Damp",
+   "Cloud Nine"
+  ]
+ },
+ "56": {
+  "id": 56,
+  "key": "mankey",
+  "en": "Mankey",
+  "zh": "猴怪",
+  "national": 56,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 80,
+   "def": 35,
+   "spa": 35,
+   "spd": 45,
+   "spe": 70
+  },
+  "abilities": [
+   "Vital Spirit",
+   "Anger Point"
+  ]
+ },
+ "57": {
+  "id": 57,
+  "key": "primeape",
+  "en": "Primeape",
+  "zh": "火暴猴",
+  "national": 57,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 105,
+   "def": 60,
+   "spa": 60,
+   "spd": 70,
+   "spe": 95
+  },
+  "abilities": [
+   "Vital Spirit",
+   "Anger Point"
+  ]
+ },
+ "58": {
+  "id": 58,
+  "key": "growlithe",
+  "en": "Growlithe",
+  "zh": "卡蒂狗",
+  "national": 58,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 70,
+   "def": 45,
+   "spa": 70,
+   "spd": 50,
+   "spe": 60
+  },
+  "abilities": [
+   "Intimidate",
+   "Flash Fire"
+  ]
+ },
+ "59": {
+  "id": 59,
+  "key": "arcanine",
+  "en": "Arcanine",
+  "zh": "风速狗",
+  "national": 59,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 110,
+   "def": 80,
+   "spa": 100,
+   "spd": 80,
+   "spe": 95
+  },
+  "abilities": [
+   "Intimidate",
+   "Flash Fire"
+  ]
+ },
+ "60": {
+  "id": 60,
+  "key": "poliwag",
+  "en": "Poliwag",
+  "zh": "蚊香蝌蚪",
+  "national": 60,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 50,
+   "def": 40,
+   "spa": 40,
+   "spd": 40,
+   "spe": 90
+  },
+  "abilities": [
+   "Water Absorb",
+   "Damp"
+  ]
+ },
+ "61": {
+  "id": 61,
+  "key": "poliwhirl",
+  "en": "Poliwhirl",
+  "zh": "蚊香君",
+  "national": 61,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 65,
+   "def": 65,
+   "spa": 50,
+   "spd": 50,
+   "spe": 90
+  },
+  "abilities": [
+   "Water Absorb",
+   "Damp"
+  ]
+ },
+ "62": {
+  "id": 62,
+  "key": "poliwrath",
+  "en": "Poliwrath",
+  "zh": "蚊香泳士",
+  "national": 62,
+  "types": [
+   11,
+   1
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 85,
+   "def": 95,
+   "spa": 70,
+   "spd": 90,
+   "spe": 70
+  },
+  "abilities": [
+   "Water Absorb",
+   "Damp"
+  ]
+ },
+ "63": {
+  "id": 63,
+  "key": "abra",
+  "en": "Abra",
+  "zh": "凯西",
+  "national": 63,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 25,
+   "atk": 20,
+   "def": 15,
+   "spa": 105,
+   "spd": 55,
+   "spe": 90
+  },
+  "abilities": [
+   "Synchronize",
+   "Inner Focus"
+  ]
+ },
+ "64": {
+  "id": 64,
+  "key": "kadabra",
+  "en": "Kadabra",
+  "zh": "勇基拉",
+  "national": 64,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 35,
+   "def": 30,
+   "spa": 120,
+   "spd": 70,
+   "spe": 105
+  },
+  "abilities": [
+   "Synchronize",
+   "Inner Focus"
+  ]
+ },
+ "65": {
+  "id": 65,
+  "key": "alakazam",
+  "en": "Alakazam",
+  "zh": "胡地",
+  "national": 65,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 50,
+   "def": 45,
+   "spa": 135,
+   "spd": 85,
+   "spe": 120
+  },
+  "abilities": [
+   "Synchronize",
+   "Inner Focus"
+  ]
+ },
+ "66": {
+  "id": 66,
+  "key": "machop",
+  "en": "Machop",
+  "zh": "腕力",
+  "national": 66,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 80,
+   "def": 50,
+   "spa": 35,
+   "spd": 35,
+   "spe": 35
+  },
+  "abilities": [
+   "Guts",
+   "No Guard"
+  ]
+ },
+ "67": {
+  "id": 67,
+  "key": "machoke",
+  "en": "Machoke",
+  "zh": "豪力",
+  "national": 67,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 100,
+   "def": 70,
+   "spa": 50,
+   "spd": 60,
+   "spe": 45
+  },
+  "abilities": [
+   "Guts",
+   "No Guard"
+  ]
+ },
+ "68": {
+  "id": 68,
+  "key": "machamp",
+  "en": "Machamp",
+  "zh": "怪力",
+  "national": 68,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 130,
+   "def": 80,
+   "spa": 65,
+   "spd": 85,
+   "spe": 55
+  },
+  "abilities": [
+   "Guts",
+   "No Guard"
+  ]
+ },
+ "69": {
+  "id": 69,
+  "key": "bellsprout",
+  "en": "Bellsprout",
+  "zh": "喇叭芽",
+  "national": 69,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 75,
+   "def": 35,
+   "spa": 70,
+   "spd": 30,
+   "spe": 40
+  },
+  "abilities": [
+   "Chlorophyll"
+  ]
+ },
+ "70": {
+  "id": 70,
+  "key": "weepinbell",
+  "en": "Weepinbell",
+  "zh": "口呆花",
+  "national": 70,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 90,
+   "def": 50,
+   "spa": 85,
+   "spd": 45,
+   "spe": 55
+  },
+  "abilities": [
+   "Chlorophyll"
+  ]
+ },
+ "71": {
+  "id": 71,
+  "key": "victreebel",
+  "en": "Victreebel",
+  "zh": "大食花",
+  "national": 71,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 105,
+   "def": 65,
+   "spa": 100,
+   "spd": 60,
+   "spe": 70
+  },
+  "abilities": [
+   "Chlorophyll"
+  ]
+ },
+ "72": {
+  "id": 72,
+  "key": "tentacool",
+  "en": "Tentacool",
+  "zh": "玛瑙水母",
+  "national": 72,
+  "types": [
+   11,
+   3
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 40,
+   "def": 35,
+   "spa": 50,
+   "spd": 100,
+   "spe": 70
+  },
+  "abilities": [
+   "Clear Body",
+   "Liquid Ooze"
+  ]
+ },
+ "73": {
+  "id": 73,
+  "key": "tentacruel",
+  "en": "Tentacruel",
+  "zh": "毒刺水母",
+  "national": 73,
+  "types": [
+   11,
+   3
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 70,
+   "def": 65,
+   "spa": 80,
+   "spd": 120,
+   "spe": 100
+  },
+  "abilities": [
+   "Clear Body",
+   "Liquid Ooze"
+  ]
+ },
+ "74": {
+  "id": 74,
+  "key": "geodude",
+  "en": "Geodude",
+  "zh": "小拳石",
+  "national": 74,
+  "types": [
+   5,
+   4
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 80,
+   "def": 100,
+   "spa": 30,
+   "spd": 30,
+   "spe": 20
+  },
+  "abilities": [
+   "Rock Head",
+   "Sturdy"
+  ]
+ },
+ "75": {
+  "id": 75,
+  "key": "graveler",
+  "en": "Graveler",
+  "zh": "隆隆石",
+  "national": 75,
+  "types": [
+   5,
+   4
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 95,
+   "def": 115,
+   "spa": 45,
+   "spd": 45,
+   "spe": 35
+  },
+  "abilities": [
+   "Rock Head",
+   "Sturdy"
+  ]
+ },
+ "76": {
+  "id": 76,
+  "key": "golem",
+  "en": "Golem",
+  "zh": "隆隆岩",
+  "national": 76,
+  "types": [
+   5,
+   4
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 110,
+   "def": 130,
+   "spa": 55,
+   "spd": 65,
+   "spe": 45
+  },
+  "abilities": [
+   "Rock Head",
+   "Sturdy"
+  ]
+ },
+ "77": {
+  "id": 77,
+  "key": "ponyta",
+  "en": "Ponyta",
+  "zh": "小火马",
+  "national": 77,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 85,
+   "def": 55,
+   "spa": 65,
+   "spd": 65,
+   "spe": 90
+  },
+  "abilities": [
+   "Run Away",
+   "Flash Fire"
+  ]
+ },
+ "78": {
+  "id": 78,
+  "key": "rapidash",
+  "en": "Rapidash",
+  "zh": "烈焰马",
+  "national": 78,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 100,
+   "def": 70,
+   "spa": 80,
+   "spd": 80,
+   "spe": 105
+  },
+  "abilities": [
+   "Run Away",
+   "Flash Fire"
+  ]
+ },
+ "79": {
+  "id": 79,
+  "key": "slowpoke",
+  "en": "Slowpoke",
+  "zh": "呆呆兽",
+  "national": 79,
+  "types": [
+   11,
+   14
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 65,
+   "def": 65,
+   "spa": 40,
+   "spd": 40,
+   "spe": 15
+  },
+  "abilities": [
+   "Oblivious",
+   "Own Tempo"
+  ]
+ },
+ "80": {
+  "id": 80,
+  "key": "slowbro",
+  "en": "Slowbro",
+  "zh": "呆壳兽",
+  "national": 80,
+  "types": [
+   11,
+   14
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 75,
+   "def": 110,
+   "spa": 100,
+   "spd": 80,
+   "spe": 30
+  },
+  "abilities": [
+   "Oblivious",
+   "Own Tempo"
+  ]
+ },
+ "81": {
+  "id": 81,
+  "key": "magnemite",
+  "en": "Magnemite",
+  "zh": "小磁怪",
+  "national": 81,
+  "types": [
+   13,
+   8
+  ],
+  "base": {
+   "hp": 25,
+   "atk": 35,
+   "def": 70,
+   "spa": 95,
+   "spd": 55,
+   "spe": 45
+  },
+  "abilities": [
+   "Magnet Pull",
+   "Sturdy"
+  ]
+ },
+ "82": {
+  "id": 82,
+  "key": "magneton",
+  "en": "Magneton",
+  "zh": "三合一磁怪",
+  "national": 82,
+  "types": [
+   13,
+   8
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 60,
+   "def": 95,
+   "spa": 120,
+   "spd": 70,
+   "spe": 70
+  },
+  "abilities": [
+   "Magnet Pull",
+   "Sturdy"
+  ]
+ },
+ "83": {
+  "id": 83,
+  "key": "farfetchd",
+  "en": "Farfetch’d",
+  "zh": "大葱鸭",
+  "national": 83,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 52,
+   "atk": 65,
+   "def": 55,
+   "spa": 58,
+   "spd": 62,
+   "spe": 60
+  },
+  "abilities": [
+   "Keen Eye",
+   "Inner Focus"
+  ]
+ },
+ "84": {
+  "id": 84,
+  "key": "doduo",
+  "en": "Doduo",
+  "zh": "嘟嘟",
+  "national": 84,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 85,
+   "def": 45,
+   "spa": 35,
+   "spd": 35,
+   "spe": 75
+  },
+  "abilities": [
+   "Run Away",
+   "Early Bird"
+  ]
+ },
+ "85": {
+  "id": 85,
+  "key": "dodrio",
+  "en": "Dodrio",
+  "zh": "嘟嘟利",
+  "national": 85,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 110,
+   "def": 70,
+   "spa": 60,
+   "spd": 60,
+   "spe": 100
+  },
+  "abilities": [
+   "Run Away",
+   "Early Bird"
+  ]
+ },
+ "86": {
+  "id": 86,
+  "key": "seel",
+  "en": "Seel",
+  "zh": "小海狮",
+  "national": 86,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 45,
+   "def": 55,
+   "spa": 45,
+   "spd": 70,
+   "spe": 45
+  },
+  "abilities": [
+   "Thick Fat",
+   "Hydration"
+  ]
+ },
+ "87": {
+  "id": 87,
+  "key": "dewgong",
+  "en": "Dewgong",
+  "zh": "白海狮",
+  "national": 87,
+  "types": [
+   11,
+   15
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 70,
+   "def": 80,
+   "spa": 70,
+   "spd": 95,
+   "spe": 70
+  },
+  "abilities": [
+   "Thick Fat",
+   "Hydration"
+  ]
+ },
+ "88": {
+  "id": 88,
+  "key": "grimer",
+  "en": "Grimer",
+  "zh": "臭泥",
+  "national": 88,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 80,
+   "def": 50,
+   "spa": 40,
+   "spd": 50,
+   "spe": 25
+  },
+  "abilities": [
+   "Stench",
+   "Sticky Hold"
+  ]
+ },
+ "89": {
+  "id": 89,
+  "key": "muk",
+  "en": "Muk",
+  "zh": "臭臭泥",
+  "national": 89,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 105,
+   "atk": 105,
+   "def": 75,
+   "spa": 65,
+   "spd": 100,
+   "spe": 50
+  },
+  "abilities": [
+   "Stench",
+   "Sticky Hold"
+  ]
+ },
+ "90": {
+  "id": 90,
+  "key": "shellder",
+  "en": "Shellder",
+  "zh": "大舌贝",
+  "national": 90,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 65,
+   "def": 100,
+   "spa": 45,
+   "spd": 25,
+   "spe": 40
+  },
+  "abilities": [
+   "Shell Armor",
+   "Skill Link"
+  ]
+ },
+ "91": {
+  "id": 91,
+  "key": "cloyster",
+  "en": "Cloyster",
+  "zh": "刺甲贝",
+  "national": 91,
+  "types": [
+   11,
+   15
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 95,
+   "def": 180,
+   "spa": 85,
+   "spd": 45,
+   "spe": 70
+  },
+  "abilities": [
+   "Shell Armor",
+   "Skill Link"
+  ]
+ },
+ "92": {
+  "id": 92,
+  "key": "gastly",
+  "en": "Gastly",
+  "zh": "鬼斯",
+  "national": 92,
+  "types": [
+   7,
+   3
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 35,
+   "def": 30,
+   "spa": 100,
+   "spd": 35,
+   "spe": 80
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "93": {
+  "id": 93,
+  "key": "haunter",
+  "en": "Haunter",
+  "zh": "鬼斯通",
+  "national": 93,
+  "types": [
+   7,
+   3
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 50,
+   "def": 45,
+   "spa": 115,
+   "spd": 55,
+   "spe": 95
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "94": {
+  "id": 94,
+  "key": "gengar",
+  "en": "Gengar",
+  "zh": "耿鬼",
+  "national": 94,
+  "types": [
+   7,
+   3
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 65,
+   "def": 60,
+   "spa": 130,
+   "spd": 75,
+   "spe": 110
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "95": {
+  "id": 95,
+  "key": "onix",
+  "en": "Onix",
+  "zh": "大岩蛇",
+  "national": 95,
+  "types": [
+   5,
+   4
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 45,
+   "def": 160,
+   "spa": 30,
+   "spd": 45,
+   "spe": 70
+  },
+  "abilities": [
+   "Rock Head",
+   "Sturdy"
+  ]
+ },
+ "96": {
+  "id": 96,
+  "key": "drowzee",
+  "en": "Drowzee",
+  "zh": "催眠貘",
+  "national": 96,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 48,
+   "def": 45,
+   "spa": 43,
+   "spd": 90,
+   "spe": 42
+  },
+  "abilities": [
+   "Insomnia",
+   "Forewarn"
+  ]
+ },
+ "97": {
+  "id": 97,
+  "key": "hypno",
+  "en": "Hypno",
+  "zh": "引梦貘人",
+  "national": 97,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 85,
+   "atk": 73,
+   "def": 70,
+   "spa": 73,
+   "spd": 115,
+   "spe": 67
+  },
+  "abilities": [
+   "Insomnia",
+   "Forewarn"
+  ]
+ },
+ "98": {
+  "id": 98,
+  "key": "krabby",
+  "en": "Krabby",
+  "zh": "大钳蟹",
+  "national": 98,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 105,
+   "def": 90,
+   "spa": 25,
+   "spd": 25,
+   "spe": 50
+  },
+  "abilities": [
+   "Hyper Cutter",
+   "Shell Armor"
+  ]
+ },
+ "99": {
+  "id": 99,
+  "key": "kingler",
+  "en": "Kingler",
+  "zh": "巨钳蟹",
+  "national": 99,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 130,
+   "def": 115,
+   "spa": 50,
+   "spd": 50,
+   "spe": 75
+  },
+  "abilities": [
+   "Hyper Cutter",
+   "Shell Armor"
+  ]
+ },
+ "100": {
+  "id": 100,
+  "key": "voltorb",
+  "en": "Voltorb",
+  "zh": "霹雳电球",
+  "national": 100,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 30,
+   "def": 50,
+   "spa": 55,
+   "spd": 55,
+   "spe": 100
+  },
+  "abilities": [
+   "Soundproof",
+   "Static"
+  ]
+ },
+ "101": {
+  "id": 101,
+  "key": "electrode",
+  "en": "Electrode",
+  "zh": "顽皮雷弹",
+  "national": 101,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 50,
+   "def": 70,
+   "spa": 80,
+   "spd": 80,
+   "spe": 140
+  },
+  "abilities": [
+   "Soundproof",
+   "Static"
+  ]
+ },
+ "102": {
+  "id": 102,
+  "key": "exeggcute",
+  "en": "Exeggcute",
+  "zh": "蛋蛋",
+  "national": 102,
+  "types": [
+   12,
+   14
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 40,
+   "def": 80,
+   "spa": 60,
+   "spd": 45,
+   "spe": 40
+  },
+  "abilities": [
+   "Chlorophyll"
+  ]
+ },
+ "103": {
+  "id": 103,
+  "key": "exeggutor",
+  "en": "Exeggutor",
+  "zh": "椰蛋树",
+  "national": 103,
+  "types": [
+   12,
+   14
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 95,
+   "def": 85,
+   "spa": 125,
+   "spd": 65,
+   "spe": 55
+  },
+  "abilities": [
+   "Chlorophyll"
+  ]
+ },
+ "104": {
+  "id": 104,
+  "key": "cubone",
+  "en": "Cubone",
+  "zh": "卡拉卡拉",
+  "national": 104,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 50,
+   "def": 95,
+   "spa": 40,
+   "spd": 50,
+   "spe": 35
+  },
+  "abilities": [
+   "Rock Head",
+   "Lightning Rod"
+  ]
+ },
+ "105": {
+  "id": 105,
+  "key": "marowak",
+  "en": "Marowak",
+  "zh": "嘎啦嘎啦",
+  "national": 105,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 80,
+   "def": 110,
+   "spa": 50,
+   "spd": 80,
+   "spe": 45
+  },
+  "abilities": [
+   "Rock Head",
+   "Lightning Rod"
+  ]
+ },
+ "106": {
+  "id": 106,
+  "key": "hitmonlee",
+  "en": "Hitmonlee",
+  "zh": "飞腿郎",
+  "national": 106,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 120,
+   "def": 53,
+   "spa": 35,
+   "spd": 110,
+   "spe": 87
+  },
+  "abilities": [
+   "Limber",
+   "Reckless"
+  ]
+ },
+ "107": {
+  "id": 107,
+  "key": "hitmonchan",
+  "en": "Hitmonchan",
+  "zh": "快拳郎",
+  "national": 107,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 105,
+   "def": 79,
+   "spa": 35,
+   "spd": 110,
+   "spe": 76
+  },
+  "abilities": [
+   "Keen Eye",
+   "Iron Fist"
+  ]
+ },
+ "108": {
+  "id": 108,
+  "key": "lickitung",
+  "en": "Lickitung",
+  "zh": "大舌头",
+  "national": 108,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 55,
+   "def": 75,
+   "spa": 60,
+   "spd": 75,
+   "spe": 30
+  },
+  "abilities": [
+   "Own Tempo",
+   "Oblivious"
+  ]
+ },
+ "109": {
+  "id": 109,
+  "key": "koffing",
+  "en": "Koffing",
+  "zh": "瓦斯弹",
+  "national": 109,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 65,
+   "def": 95,
+   "spa": 60,
+   "spd": 45,
+   "spe": 35
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "110": {
+  "id": 110,
+  "key": "weezing",
+  "en": "Weezing",
+  "zh": "双弹瓦斯",
+  "national": 110,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 90,
+   "def": 120,
+   "spa": 85,
+   "spd": 70,
+   "spe": 60
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "111": {
+  "id": 111,
+  "key": "rhyhorn",
+  "en": "Rhyhorn",
+  "zh": "独角犀牛",
+  "national": 111,
+  "types": [
+   4,
+   5
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 85,
+   "def": 95,
+   "spa": 30,
+   "spd": 30,
+   "spe": 25
+  },
+  "abilities": [
+   "Lightning Rod",
+   "Rock Head"
+  ]
+ },
+ "112": {
+  "id": 112,
+  "key": "rhydon",
+  "en": "Rhydon",
+  "zh": "钻角犀兽",
+  "national": 112,
+  "types": [
+   4,
+   5
+  ],
+  "base": {
+   "hp": 105,
+   "atk": 130,
+   "def": 120,
+   "spa": 45,
+   "spd": 45,
+   "spe": 40
+  },
+  "abilities": [
+   "Lightning Rod",
+   "Rock Head"
+  ]
+ },
+ "113": {
+  "id": 113,
+  "key": "chansey",
+  "en": "Chansey",
+  "zh": "吉利蛋",
+  "national": 113,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 250,
+   "atk": 5,
+   "def": 5,
+   "spa": 35,
+   "spd": 105,
+   "spe": 50
+  },
+  "abilities": [
+   "Natural Cure",
+   "Serene Grace"
+  ]
+ },
+ "114": {
+  "id": 114,
+  "key": "tangela",
+  "en": "Tangela",
+  "zh": "蔓藤怪",
+  "national": 114,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 55,
+   "def": 115,
+   "spa": 100,
+   "spd": 40,
+   "spe": 60
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Leaf Guard"
+  ]
+ },
+ "115": {
+  "id": 115,
+  "key": "kangaskhan",
+  "en": "Kangaskhan",
+  "zh": "袋兽",
+  "national": 115,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 105,
+   "atk": 95,
+   "def": 80,
+   "spa": 40,
+   "spd": 80,
+   "spe": 90
+  },
+  "abilities": [
+   "Early Bird",
+   "Scrappy"
+  ]
+ },
+ "116": {
+  "id": 116,
+  "key": "horsea",
+  "en": "Horsea",
+  "zh": "墨海马",
+  "national": 116,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 40,
+   "def": 70,
+   "spa": 70,
+   "spd": 25,
+   "spe": 60
+  },
+  "abilities": [
+   "Swift Swim",
+   "Sniper"
+  ]
+ },
+ "117": {
+  "id": 117,
+  "key": "seadra",
+  "en": "Seadra",
+  "zh": "海刺龙",
+  "national": 117,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 65,
+   "def": 95,
+   "spa": 95,
+   "spd": 45,
+   "spe": 85
+  },
+  "abilities": [
+   "Poison Point",
+   "Sniper"
+  ]
+ },
+ "118": {
+  "id": 118,
+  "key": "goldeen",
+  "en": "Goldeen",
+  "zh": "角金鱼",
+  "national": 118,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 67,
+   "def": 60,
+   "spa": 35,
+   "spd": 50,
+   "spe": 63
+  },
+  "abilities": [
+   "Swift Swim",
+   "Water Veil"
+  ]
+ },
+ "119": {
+  "id": 119,
+  "key": "seaking",
+  "en": "Seaking",
+  "zh": "金鱼王",
+  "national": 119,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 92,
+   "def": 65,
+   "spa": 65,
+   "spd": 80,
+   "spe": 68
+  },
+  "abilities": [
+   "Swift Swim",
+   "Water Veil"
+  ]
+ },
+ "120": {
+  "id": 120,
+  "key": "staryu",
+  "en": "Staryu",
+  "zh": "海星星",
+  "national": 120,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 45,
+   "def": 55,
+   "spa": 70,
+   "spd": 55,
+   "spe": 85
+  },
+  "abilities": [
+   "Illuminate",
+   "Natural Cure"
+  ]
+ },
+ "121": {
+  "id": 121,
+  "key": "starmie",
+  "en": "Starmie",
+  "zh": "宝石海星",
+  "national": 121,
+  "types": [
+   11,
+   14
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 75,
+   "def": 85,
+   "spa": 100,
+   "spd": 85,
+   "spe": 115
+  },
+  "abilities": [
+   "Illuminate",
+   "Natural Cure"
+  ]
+ },
+ "122": {
+  "id": 122,
+  "key": "mrmime",
+  "en": "Mr. Mime",
+  "zh": "魔墙人偶",
+  "national": 122,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 45,
+   "def": 65,
+   "spa": 100,
+   "spd": 120,
+   "spe": 90
+  },
+  "abilities": [
+   "Soundproof",
+   "Filter"
+  ]
+ },
+ "123": {
+  "id": 123,
+  "key": "scyther",
+  "en": "Scyther",
+  "zh": "飞天螳螂",
+  "national": 123,
+  "types": [
+   6,
+   2
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 110,
+   "def": 80,
+   "spa": 55,
+   "spd": 80,
+   "spe": 105
+  },
+  "abilities": [
+   "Swarm",
+   "Technician"
+  ]
+ },
+ "124": {
+  "id": 124,
+  "key": "jynx",
+  "en": "Jynx",
+  "zh": "迷唇姐",
+  "national": 124,
+  "types": [
+   15,
+   14
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 50,
+   "def": 35,
+   "spa": 115,
+   "spd": 95,
+   "spe": 95
+  },
+  "abilities": [
+   "Oblivious",
+   "Forewarn"
+  ]
+ },
+ "125": {
+  "id": 125,
+  "key": "electabuzz",
+  "en": "Electabuzz",
+  "zh": "电击兽",
+  "national": 125,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 83,
+   "def": 57,
+   "spa": 95,
+   "spd": 85,
+   "spe": 105
+  },
+  "abilities": [
+   "Static"
+  ]
+ },
+ "126": {
+  "id": 126,
+  "key": "magmar",
+  "en": "Magmar",
+  "zh": "鸭嘴火兽",
+  "national": 126,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 95,
+   "def": 57,
+   "spa": 100,
+   "spd": 85,
+   "spe": 93
+  },
+  "abilities": [
+   "Flame Body"
+  ]
+ },
+ "127": {
+  "id": 127,
+  "key": "pinsir",
+  "en": "Pinsir",
+  "zh": "凯罗斯",
+  "national": 127,
+  "types": [
+   6,
+   6
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 125,
+   "def": 100,
+   "spa": 55,
+   "spd": 70,
+   "spe": 85
+  },
+  "abilities": [
+   "Hyper Cutter",
+   "Mold Breaker"
+  ]
+ },
+ "128": {
+  "id": 128,
+  "key": "tauros",
+  "en": "Tauros",
+  "zh": "肯泰罗",
+  "national": 128,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 100,
+   "def": 95,
+   "spa": 40,
+   "spd": 70,
+   "spe": 110
+  },
+  "abilities": [
+   "Intimidate",
+   "Anger Point"
+  ]
+ },
+ "129": {
+  "id": 129,
+  "key": "magikarp",
+  "en": "Magikarp",
+  "zh": "鲤鱼王",
+  "national": 129,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 20,
+   "atk": 10,
+   "def": 55,
+   "spa": 15,
+   "spd": 20,
+   "spe": 80
+  },
+  "abilities": [
+   "Swift Swim"
+  ]
+ },
+ "130": {
+  "id": 130,
+  "key": "gyarados",
+  "en": "Gyarados",
+  "zh": "暴鲤龙",
+  "national": 130,
+  "types": [
+   11,
+   2
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 125,
+   "def": 79,
+   "spa": 60,
+   "spd": 100,
+   "spe": 81
+  },
+  "abilities": [
+   "Intimidate"
+  ]
+ },
+ "131": {
+  "id": 131,
+  "key": "lapras",
+  "en": "Lapras",
+  "zh": "拉普拉斯",
+  "national": 131,
+  "types": [
+   11,
+   15
+  ],
+  "base": {
+   "hp": 130,
+   "atk": 85,
+   "def": 80,
+   "spa": 85,
+   "spd": 95,
+   "spe": 60
+  },
+  "abilities": [
+   "Water Absorb",
+   "Shell Armor"
+  ]
+ },
+ "132": {
+  "id": 132,
+  "key": "ditto",
+  "en": "Ditto",
+  "zh": "百变怪",
+  "national": 132,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 48,
+   "atk": 48,
+   "def": 48,
+   "spa": 48,
+   "spd": 48,
+   "spe": 48
+  },
+  "abilities": [
+   "Limber"
+  ]
+ },
+ "133": {
+  "id": 133,
+  "key": "eevee",
+  "en": "Eevee",
+  "zh": "伊布",
+  "national": 133,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 55,
+   "def": 50,
+   "spa": 45,
+   "spd": 65,
+   "spe": 55
+  },
+  "abilities": [
+   "Run Away",
+   "Adaptability"
+  ]
+ },
+ "134": {
+  "id": 134,
+  "key": "vaporeon",
+  "en": "Vaporeon",
+  "zh": "水伊布",
+  "national": 134,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 130,
+   "atk": 65,
+   "def": 60,
+   "spa": 110,
+   "spd": 95,
+   "spe": 65
+  },
+  "abilities": [
+   "Water Absorb"
+  ]
+ },
+ "135": {
+  "id": 135,
+  "key": "jolteon",
+  "en": "Jolteon",
+  "zh": "雷伊布",
+  "national": 135,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 65,
+   "def": 60,
+   "spa": 110,
+   "spd": 95,
+   "spe": 130
+  },
+  "abilities": [
+   "Volt Absorb"
+  ]
+ },
+ "136": {
+  "id": 136,
+  "key": "flareon",
+  "en": "Flareon",
+  "zh": "火伊布",
+  "national": 136,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 130,
+   "def": 60,
+   "spa": 95,
+   "spd": 110,
+   "spe": 65
+  },
+  "abilities": [
+   "Flash Fire"
+  ]
+ },
+ "137": {
+  "id": 137,
+  "key": "porygon",
+  "en": "Porygon",
+  "zh": "多边兽",
+  "national": 137,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 60,
+   "def": 70,
+   "spa": 85,
+   "spd": 75,
+   "spe": 40
+  },
+  "abilities": [
+   "Trace",
+   "Download"
+  ]
+ },
+ "138": {
+  "id": 138,
+  "key": "omanyte",
+  "en": "Omanyte",
+  "zh": "菊石兽",
+  "national": 138,
+  "types": [
+   5,
+   11
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 40,
+   "def": 100,
+   "spa": 90,
+   "spd": 55,
+   "spe": 35
+  },
+  "abilities": [
+   "Swift Swim",
+   "Shell Armor"
+  ]
+ },
+ "139": {
+  "id": 139,
+  "key": "omastar",
+  "en": "Omastar",
+  "zh": "多刺菊石兽",
+  "national": 139,
+  "types": [
+   5,
+   11
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 60,
+   "def": 125,
+   "spa": 115,
+   "spd": 70,
+   "spe": 55
+  },
+  "abilities": [
+   "Swift Swim",
+   "Shell Armor"
+  ]
+ },
+ "140": {
+  "id": 140,
+  "key": "kabuto",
+  "en": "Kabuto",
+  "zh": "化石盔",
+  "national": 140,
+  "types": [
+   5,
+   11
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 80,
+   "def": 90,
+   "spa": 55,
+   "spd": 45,
+   "spe": 55
+  },
+  "abilities": [
+   "Swift Swim",
+   "Battle Armor"
+  ]
+ },
+ "141": {
+  "id": 141,
+  "key": "kabutops",
+  "en": "Kabutops",
+  "zh": "镰刀盔",
+  "national": 141,
+  "types": [
+   5,
+   11
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 115,
+   "def": 105,
+   "spa": 65,
+   "spd": 70,
+   "spe": 80
+  },
+  "abilities": [
+   "Swift Swim",
+   "Battle Armor"
+  ]
+ },
+ "142": {
+  "id": 142,
+  "key": "aerodactyl",
+  "en": "Aerodactyl",
+  "zh": "化石翼龙",
+  "national": 142,
+  "types": [
+   5,
+   2
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 105,
+   "def": 65,
+   "spa": 60,
+   "spd": 75,
+   "spe": 130
+  },
+  "abilities": [
+   "Rock Head",
+   "Pressure"
+  ]
+ },
+ "143": {
+  "id": 143,
+  "key": "snorlax",
+  "en": "Snorlax",
+  "zh": "卡比兽",
+  "national": 143,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 160,
+   "atk": 110,
+   "def": 65,
+   "spa": 65,
+   "spd": 110,
+   "spe": 30
+  },
+  "abilities": [
+   "Immunity",
+   "Thick Fat"
+  ]
+ },
+ "144": {
+  "id": 144,
+  "key": "articuno",
+  "en": "Articuno",
+  "zh": "急冻鸟",
+  "national": 144,
+  "types": [
+   15,
+   2
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 85,
+   "def": 100,
+   "spa": 95,
+   "spd": 125,
+   "spe": 85
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "145": {
+  "id": 145,
+  "key": "zapdos",
+  "en": "Zapdos",
+  "zh": "闪电鸟",
+  "national": 145,
+  "types": [
+   13,
+   2
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 90,
+   "def": 85,
+   "spa": 125,
+   "spd": 90,
+   "spe": 100
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "146": {
+  "id": 146,
+  "key": "moltres",
+  "en": "Moltres",
+  "zh": "火焰鸟",
+  "national": 146,
+  "types": [
+   10,
+   2
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 100,
+   "def": 90,
+   "spa": 125,
+   "spd": 85,
+   "spe": 90
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "147": {
+  "id": 147,
+  "key": "dratini",
+  "en": "Dratini",
+  "zh": "迷你龙",
+  "national": 147,
+  "types": [
+   16,
+   16
+  ],
+  "base": {
+   "hp": 41,
+   "atk": 64,
+   "def": 45,
+   "spa": 50,
+   "spd": 50,
+   "spe": 50
+  },
+  "abilities": [
+   "Shed Skin"
+  ]
+ },
+ "148": {
+  "id": 148,
+  "key": "dragonair",
+  "en": "Dragonair",
+  "zh": "哈克龙",
+  "national": 148,
+  "types": [
+   16,
+   16
+  ],
+  "base": {
+   "hp": 61,
+   "atk": 84,
+   "def": 65,
+   "spa": 70,
+   "spd": 70,
+   "spe": 70
+  },
+  "abilities": [
+   "Shed Skin"
+  ]
+ },
+ "149": {
+  "id": 149,
+  "key": "dragonite",
+  "en": "Dragonite",
+  "zh": "快龙",
+  "national": 149,
+  "types": [
+   16,
+   2
+  ],
+  "base": {
+   "hp": 91,
+   "atk": 134,
+   "def": 95,
+   "spa": 100,
+   "spd": 100,
+   "spe": 80
+  },
+  "abilities": [
+   "Inner Focus"
+  ]
+ },
+ "150": {
+  "id": 150,
+  "key": "mewtwo",
+  "en": "Mewtwo",
+  "zh": "超梦",
+  "national": 150,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 106,
+   "atk": 110,
+   "def": 90,
+   "spa": 154,
+   "spd": 90,
+   "spe": 130
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "151": {
+  "id": 151,
+  "key": "mew",
+  "en": "Mew",
+  "zh": "梦幻",
+  "national": 151,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 100,
+   "def": 100,
+   "spa": 100,
+   "spd": 100,
+   "spe": 100
+  },
+  "abilities": [
+   "Synchronize"
+  ]
+ },
+ "152": {
+  "id": 152,
+  "key": "chikorita",
+  "en": "Chikorita",
+  "zh": "菊草叶",
+  "national": 152,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 49,
+   "def": 65,
+   "spa": 49,
+   "spd": 65,
+   "spe": 45
+  },
+  "abilities": [
+   "Overgrow"
+  ]
+ },
+ "153": {
+  "id": 153,
+  "key": "bayleef",
+  "en": "Bayleef",
+  "zh": "月桂叶",
+  "national": 153,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 62,
+   "def": 80,
+   "spa": 63,
+   "spd": 80,
+   "spe": 60
+  },
+  "abilities": [
+   "Overgrow"
+  ]
+ },
+ "154": {
+  "id": 154,
+  "key": "meganium",
+  "en": "Meganium",
+  "zh": "大竺葵",
+  "national": 154,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 82,
+   "def": 100,
+   "spa": 83,
+   "spd": 100,
+   "spe": 80
+  },
+  "abilities": [
+   "Overgrow"
+  ]
+ },
+ "155": {
+  "id": 155,
+  "key": "cyndaquil",
+  "en": "Cyndaquil",
+  "zh": "火球鼠",
+  "national": 155,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 39,
+   "atk": 52,
+   "def": 43,
+   "spa": 60,
+   "spd": 50,
+   "spe": 65
+  },
+  "abilities": [
+   "Blaze"
+  ]
+ },
+ "156": {
+  "id": 156,
+  "key": "quilava",
+  "en": "Quilava",
+  "zh": "火岩鼠",
+  "national": 156,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 58,
+   "atk": 64,
+   "def": 58,
+   "spa": 80,
+   "spd": 65,
+   "spe": 80
+  },
+  "abilities": [
+   "Blaze"
+  ]
+ },
+ "157": {
+  "id": 157,
+  "key": "typhlosion",
+  "en": "Typhlosion",
+  "zh": "火暴兽",
+  "national": 157,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 78,
+   "atk": 84,
+   "def": 78,
+   "spa": 109,
+   "spd": 85,
+   "spe": 100
+  },
+  "abilities": [
+   "Blaze"
+  ]
+ },
+ "158": {
+  "id": 158,
+  "key": "totodile",
+  "en": "Totodile",
+  "zh": "小锯鳄",
+  "national": 158,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 65,
+   "def": 64,
+   "spa": 44,
+   "spd": 48,
+   "spe": 43
+  },
+  "abilities": [
+   "Torrent"
+  ]
+ },
+ "159": {
+  "id": 159,
+  "key": "croconaw",
+  "en": "Croconaw",
+  "zh": "蓝鳄",
+  "national": 159,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 80,
+   "def": 80,
+   "spa": 59,
+   "spd": 63,
+   "spe": 58
+  },
+  "abilities": [
+   "Torrent"
+  ]
+ },
+ "160": {
+  "id": 160,
+  "key": "feraligatr",
+  "en": "Feraligatr",
+  "zh": "大力鳄",
+  "national": 160,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 85,
+   "atk": 105,
+   "def": 100,
+   "spa": 79,
+   "spd": 83,
+   "spe": 78
+  },
+  "abilities": [
+   "Torrent"
+  ]
+ },
+ "161": {
+  "id": 161,
+  "key": "sentret",
+  "en": "Sentret",
+  "zh": "尾立",
+  "national": 161,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 46,
+   "def": 34,
+   "spa": 35,
+   "spd": 45,
+   "spe": 20
+  },
+  "abilities": [
+   "Run Away",
+   "Keen Eye"
+  ]
+ },
+ "162": {
+  "id": 162,
+  "key": "furret",
+  "en": "Furret",
+  "zh": "大尾立",
+  "national": 162,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 85,
+   "atk": 76,
+   "def": 64,
+   "spa": 45,
+   "spd": 55,
+   "spe": 90
+  },
+  "abilities": [
+   "Run Away",
+   "Keen Eye"
+  ]
+ },
+ "163": {
+  "id": 163,
+  "key": "hoothoot",
+  "en": "Hoothoot",
+  "zh": "咕咕",
+  "national": 163,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 30,
+   "def": 30,
+   "spa": 36,
+   "spd": 56,
+   "spe": 50
+  },
+  "abilities": [
+   "Insomnia",
+   "Keen Eye"
+  ]
+ },
+ "164": {
+  "id": 164,
+  "key": "noctowl",
+  "en": "Noctowl",
+  "zh": "猫头夜鹰",
+  "national": 164,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 50,
+   "def": 50,
+   "spa": 76,
+   "spd": 96,
+   "spe": 70
+  },
+  "abilities": [
+   "Insomnia",
+   "Keen Eye"
+  ]
+ },
+ "165": {
+  "id": 165,
+  "key": "ledyba",
+  "en": "Ledyba",
+  "zh": "芭瓢虫",
+  "national": 165,
+  "types": [
+   6,
+   2
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 20,
+   "def": 30,
+   "spa": 40,
+   "spd": 80,
+   "spe": 55
+  },
+  "abilities": [
+   "Swarm",
+   "Early Bird"
+  ]
+ },
+ "166": {
+  "id": 166,
+  "key": "ledian",
+  "en": "Ledian",
+  "zh": "安瓢虫",
+  "national": 166,
+  "types": [
+   6,
+   2
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 35,
+   "def": 50,
+   "spa": 55,
+   "spd": 110,
+   "spe": 85
+  },
+  "abilities": [
+   "Swarm",
+   "Early Bird"
+  ]
+ },
+ "167": {
+  "id": 167,
+  "key": "spinarak",
+  "en": "Spinarak",
+  "zh": "圆丝蛛",
+  "national": 167,
+  "types": [
+   6,
+   3
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 60,
+   "def": 40,
+   "spa": 40,
+   "spd": 40,
+   "spe": 30
+  },
+  "abilities": [
+   "Swarm",
+   "Insomnia"
+  ]
+ },
+ "168": {
+  "id": 168,
+  "key": "ariados",
+  "en": "Ariados",
+  "zh": "阿利多斯",
+  "national": 168,
+  "types": [
+   6,
+   3
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 90,
+   "def": 70,
+   "spa": 60,
+   "spd": 60,
+   "spe": 40
+  },
+  "abilities": [
+   "Swarm",
+   "Insomnia"
+  ]
+ },
+ "169": {
+  "id": 169,
+  "key": "crobat",
+  "en": "Crobat",
+  "zh": "叉字蝠",
+  "national": 169,
+  "types": [
+   3,
+   2
+  ],
+  "base": {
+   "hp": 85,
+   "atk": 90,
+   "def": 80,
+   "spa": 70,
+   "spd": 80,
+   "spe": 130
+  },
+  "abilities": [
+   "Inner Focus"
+  ]
+ },
+ "170": {
+  "id": 170,
+  "key": "chinchou",
+  "en": "Chinchou",
+  "zh": "灯笼鱼",
+  "national": 170,
+  "types": [
+   11,
+   13
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 38,
+   "def": 38,
+   "spa": 56,
+   "spd": 56,
+   "spe": 67
+  },
+  "abilities": [
+   "Volt Absorb",
+   "Illuminate"
+  ]
+ },
+ "171": {
+  "id": 171,
+  "key": "lanturn",
+  "en": "Lanturn",
+  "zh": "电灯怪",
+  "national": 171,
+  "types": [
+   11,
+   13
+  ],
+  "base": {
+   "hp": 125,
+   "atk": 58,
+   "def": 58,
+   "spa": 76,
+   "spd": 76,
+   "spe": 67
+  },
+  "abilities": [
+   "Volt Absorb",
+   "Illuminate"
+  ]
+ },
+ "172": {
+  "id": 172,
+  "key": "pichu",
+  "en": "Pichu",
+  "zh": "皮丘",
+  "national": 172,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 20,
+   "atk": 40,
+   "def": 15,
+   "spa": 35,
+   "spd": 35,
+   "spe": 60
+  },
+  "abilities": [
+   "Static"
+  ]
+ },
+ "173": {
+  "id": 173,
+  "key": "cleffa",
+  "en": "Cleffa",
+  "zh": "皮宝宝",
+  "national": 173,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 25,
+   "def": 28,
+   "spa": 45,
+   "spd": 55,
+   "spe": 15
+  },
+  "abilities": [
+   "Cute Charm",
+   "Magic Guard"
+  ]
+ },
+ "174": {
+  "id": 174,
+  "key": "igglybuff",
+  "en": "Igglybuff",
+  "zh": "宝宝丁",
+  "national": 174,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 30,
+   "def": 15,
+   "spa": 40,
+   "spd": 20,
+   "spe": 15
+  },
+  "abilities": [
+   "Cute Charm"
+  ]
+ },
+ "175": {
+  "id": 175,
+  "key": "togepi",
+  "en": "Togepi",
+  "zh": "波克比",
+  "national": 175,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 20,
+   "def": 65,
+   "spa": 40,
+   "spd": 65,
+   "spe": 20
+  },
+  "abilities": [
+   "Hustle",
+   "Serene Grace"
+  ]
+ },
+ "176": {
+  "id": 176,
+  "key": "togetic",
+  "en": "Togetic",
+  "zh": "波克基古",
+  "national": 176,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 40,
+   "def": 85,
+   "spa": 80,
+   "spd": 105,
+   "spe": 40
+  },
+  "abilities": [
+   "Hustle",
+   "Serene Grace"
+  ]
+ },
+ "177": {
+  "id": 177,
+  "key": "natu",
+  "en": "Natu",
+  "zh": "天然雀",
+  "national": 177,
+  "types": [
+   14,
+   2
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 50,
+   "def": 45,
+   "spa": 70,
+   "spd": 45,
+   "spe": 70
+  },
+  "abilities": [
+   "Synchronize",
+   "Early Bird"
+  ]
+ },
+ "178": {
+  "id": 178,
+  "key": "xatu",
+  "en": "Xatu",
+  "zh": "天然鸟",
+  "national": 178,
+  "types": [
+   14,
+   2
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 75,
+   "def": 70,
+   "spa": 95,
+   "spd": 70,
+   "spe": 95
+  },
+  "abilities": [
+   "Synchronize",
+   "Early Bird"
+  ]
+ },
+ "179": {
+  "id": 179,
+  "key": "mareep",
+  "en": "Mareep",
+  "zh": "咩利羊",
+  "national": 179,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 40,
+   "def": 40,
+   "spa": 65,
+   "spd": 45,
+   "spe": 35
+  },
+  "abilities": [
+   "Static"
+  ]
+ },
+ "180": {
+  "id": 180,
+  "key": "flaaffy",
+  "en": "Flaaffy",
+  "zh": "茸茸羊",
+  "national": 180,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 55,
+   "def": 55,
+   "spa": 80,
+   "spd": 60,
+   "spe": 45
+  },
+  "abilities": [
+   "Static"
+  ]
+ },
+ "181": {
+  "id": 181,
+  "key": "ampharos",
+  "en": "Ampharos",
+  "zh": "电龙",
+  "national": 181,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 75,
+   "def": 75,
+   "spa": 115,
+   "spd": 90,
+   "spe": 55
+  },
+  "abilities": [
+   "Static"
+  ]
+ },
+ "182": {
+  "id": 182,
+  "key": "bellossom",
+  "en": "Bellossom",
+  "zh": "美丽花",
+  "national": 182,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 80,
+   "def": 85,
+   "spa": 90,
+   "spd": 100,
+   "spe": 50
+  },
+  "abilities": [
+   "Chlorophyll"
+  ]
+ },
+ "183": {
+  "id": 183,
+  "key": "marill",
+  "en": "Marill",
+  "zh": "玛力露",
+  "national": 183,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 20,
+   "def": 50,
+   "spa": 20,
+   "spd": 50,
+   "spe": 40
+  },
+  "abilities": [
+   "Thick Fat",
+   "Huge Power"
+  ]
+ },
+ "184": {
+  "id": 184,
+  "key": "azumarill",
+  "en": "Azumarill",
+  "zh": "玛力露丽",
+  "national": 184,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 50,
+   "def": 80,
+   "spa": 50,
+   "spd": 80,
+   "spe": 50
+  },
+  "abilities": [
+   "Thick Fat",
+   "Huge Power"
+  ]
+ },
+ "185": {
+  "id": 185,
+  "key": "sudowoodo",
+  "en": "Sudowoodo",
+  "zh": "树才怪",
+  "national": 185,
+  "types": [
+   5,
+   5
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 100,
+   "def": 115,
+   "spa": 30,
+   "spd": 65,
+   "spe": 30
+  },
+  "abilities": [
+   "Sturdy",
+   "Rock Head"
+  ]
+ },
+ "186": {
+  "id": 186,
+  "key": "politoed",
+  "en": "Politoed",
+  "zh": "蚊香蛙皇",
+  "national": 186,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 75,
+   "def": 75,
+   "spa": 90,
+   "spd": 100,
+   "spe": 70
+  },
+  "abilities": [
+   "Water Absorb",
+   "Damp"
+  ]
+ },
+ "187": {
+  "id": 187,
+  "key": "hoppip",
+  "en": "Hoppip",
+  "zh": "毽子草",
+  "national": 187,
+  "types": [
+   12,
+   2
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 35,
+   "def": 40,
+   "spa": 35,
+   "spd": 55,
+   "spe": 50
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Leaf Guard"
+  ]
+ },
+ "188": {
+  "id": 188,
+  "key": "skiploom",
+  "en": "Skiploom",
+  "zh": "毽子花",
+  "national": 188,
+  "types": [
+   12,
+   2
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 45,
+   "def": 50,
+   "spa": 45,
+   "spd": 65,
+   "spe": 80
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Leaf Guard"
+  ]
+ },
+ "189": {
+  "id": 189,
+  "key": "jumpluff",
+  "en": "Jumpluff",
+  "zh": "毽子棉",
+  "national": 189,
+  "types": [
+   12,
+   2
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 55,
+   "def": 70,
+   "spa": 55,
+   "spd": 85,
+   "spe": 110
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Leaf Guard"
+  ]
+ },
+ "190": {
+  "id": 190,
+  "key": "aipom",
+  "en": "Aipom",
+  "zh": "长尾怪手",
+  "national": 190,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 70,
+   "def": 55,
+   "spa": 40,
+   "spd": 55,
+   "spe": 85
+  },
+  "abilities": [
+   "Run Away",
+   "Pickup"
+  ]
+ },
+ "191": {
+  "id": 191,
+  "key": "sunkern",
+  "en": "Sunkern",
+  "zh": "向日种子",
+  "national": 191,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 30,
+   "def": 30,
+   "spa": 30,
+   "spd": 30,
+   "spe": 30
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Solar Power"
+  ]
+ },
+ "192": {
+  "id": 192,
+  "key": "sunflora",
+  "en": "Sunflora",
+  "zh": "向日花怪",
+  "national": 192,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 75,
+   "def": 55,
+   "spa": 105,
+   "spd": 85,
+   "spe": 30
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Solar Power"
+  ]
+ },
+ "193": {
+  "id": 193,
+  "key": "yanma",
+  "en": "Yanma",
+  "zh": "蜻蜻蜓",
+  "national": 193,
+  "types": [
+   6,
+   2
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 65,
+   "def": 45,
+   "spa": 75,
+   "spd": 45,
+   "spe": 95
+  },
+  "abilities": [
+   "Speed Boost",
+   "Compound Eyes"
+  ]
+ },
+ "194": {
+  "id": 194,
+  "key": "wooper",
+  "en": "Wooper",
+  "zh": "乌波",
+  "national": 194,
+  "types": [
+   11,
+   4
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 45,
+   "def": 45,
+   "spa": 25,
+   "spd": 25,
+   "spe": 15
+  },
+  "abilities": [
+   "Damp",
+   "Water Absorb"
+  ]
+ },
+ "195": {
+  "id": 195,
+  "key": "quagsire",
+  "en": "Quagsire",
+  "zh": "沼王",
+  "national": 195,
+  "types": [
+   11,
+   4
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 85,
+   "def": 85,
+   "spa": 65,
+   "spd": 65,
+   "spe": 35
+  },
+  "abilities": [
+   "Damp",
+   "Water Absorb"
+  ]
+ },
+ "196": {
+  "id": 196,
+  "key": "espeon",
+  "en": "Espeon",
+  "zh": "太阳伊布",
+  "national": 196,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 65,
+   "def": 60,
+   "spa": 130,
+   "spd": 95,
+   "spe": 110
+  },
+  "abilities": [
+   "Synchronize"
+  ]
+ },
+ "197": {
+  "id": 197,
+  "key": "umbreon",
+  "en": "Umbreon",
+  "zh": "月亮伊布",
+  "national": 197,
+  "types": [
+   17,
+   17
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 65,
+   "def": 110,
+   "spa": 60,
+   "spd": 130,
+   "spe": 65
+  },
+  "abilities": [
+   "Synchronize"
+  ]
+ },
+ "198": {
+  "id": 198,
+  "key": "murkrow",
+  "en": "Murkrow",
+  "zh": "黑暗鸦",
+  "national": 198,
+  "types": [
+   17,
+   2
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 85,
+   "def": 42,
+   "spa": 85,
+   "spd": 42,
+   "spe": 91
+  },
+  "abilities": [
+   "Insomnia",
+   "Super Luck"
+  ]
+ },
+ "199": {
+  "id": 199,
+  "key": "slowking",
+  "en": "Slowking",
+  "zh": "呆呆王",
+  "national": 199,
+  "types": [
+   11,
+   14
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 75,
+   "def": 80,
+   "spa": 100,
+   "spd": 110,
+   "spe": 30
+  },
+  "abilities": [
+   "Oblivious",
+   "Own Tempo"
+  ]
+ },
+ "200": {
+  "id": 200,
+  "key": "misdreavus",
+  "en": "Misdreavus",
+  "zh": "梦妖",
+  "national": 200,
+  "types": [
+   7,
+   7
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 60,
+   "def": 60,
+   "spa": 85,
+   "spd": 85,
+   "spe": 85
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "201": {
+  "id": 201,
+  "key": "unown",
+  "en": "Unown",
+  "zh": "未知图腾",
+  "national": 201,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 48,
+   "atk": 72,
+   "def": 48,
+   "spa": 72,
+   "spd": 48,
+   "spe": 48
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "202": {
+  "id": 202,
+  "key": "wobbuffet",
+  "en": "Wobbuffet",
+  "zh": "果然翁",
+  "national": 202,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 190,
+   "atk": 33,
+   "def": 58,
+   "spa": 33,
+   "spd": 58,
+   "spe": 33
+  },
+  "abilities": [
+   "Shadow Tag"
+  ]
+ },
+ "203": {
+  "id": 203,
+  "key": "girafarig",
+  "en": "Girafarig",
+  "zh": "麒麟奇",
+  "national": 203,
+  "types": [
+   0,
+   14
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 80,
+   "def": 65,
+   "spa": 90,
+   "spd": 65,
+   "spe": 85
+  },
+  "abilities": [
+   "Inner Focus",
+   "Early Bird"
+  ]
+ },
+ "204": {
+  "id": 204,
+  "key": "pineco",
+  "en": "Pineco",
+  "zh": "榛果球",
+  "national": 204,
+  "types": [
+   6,
+   6
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 65,
+   "def": 90,
+   "spa": 35,
+   "spd": 35,
+   "spe": 15
+  },
+  "abilities": [
+   "Sturdy"
+  ]
+ },
+ "205": {
+  "id": 205,
+  "key": "forretress",
+  "en": "Forretress",
+  "zh": "佛烈托斯",
+  "national": 205,
+  "types": [
+   6,
+   8
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 90,
+   "def": 140,
+   "spa": 60,
+   "spd": 60,
+   "spe": 40
+  },
+  "abilities": [
+   "Sturdy"
+  ]
+ },
+ "206": {
+  "id": 206,
+  "key": "dunsparce",
+  "en": "Dunsparce",
+  "zh": "土龙弟弟",
+  "national": 206,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 70,
+   "def": 70,
+   "spa": 65,
+   "spd": 65,
+   "spe": 45
+  },
+  "abilities": [
+   "Serene Grace",
+   "Run Away"
+  ]
+ },
+ "207": {
+  "id": 207,
+  "key": "gligar",
+  "en": "Gligar",
+  "zh": "天蝎",
+  "national": 207,
+  "types": [
+   4,
+   2
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 75,
+   "def": 105,
+   "spa": 35,
+   "spd": 65,
+   "spe": 85
+  },
+  "abilities": [
+   "Hyper Cutter",
+   "Sand Veil"
+  ]
+ },
+ "208": {
+  "id": 208,
+  "key": "steelix",
+  "en": "Steelix",
+  "zh": "大钢蛇",
+  "national": 208,
+  "types": [
+   8,
+   4
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 85,
+   "def": 200,
+   "spa": 55,
+   "spd": 65,
+   "spe": 30
+  },
+  "abilities": [
+   "Rock Head",
+   "Sturdy"
+  ]
+ },
+ "209": {
+  "id": 209,
+  "key": "snubbull",
+  "en": "Snubbull",
+  "zh": "布鲁",
+  "national": 209,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 80,
+   "def": 50,
+   "spa": 40,
+   "spd": 40,
+   "spe": 30
+  },
+  "abilities": [
+   "Intimidate",
+   "Run Away"
+  ]
+ },
+ "210": {
+  "id": 210,
+  "key": "granbull",
+  "en": "Granbull",
+  "zh": "布鲁皇",
+  "national": 210,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 120,
+   "def": 75,
+   "spa": 60,
+   "spd": 60,
+   "spe": 45
+  },
+  "abilities": [
+   "Intimidate",
+   "Quick Feet"
+  ]
+ },
+ "211": {
+  "id": 211,
+  "key": "qwilfish",
+  "en": "Qwilfish",
+  "zh": "千针鱼",
+  "national": 211,
+  "types": [
+   11,
+   3
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 95,
+   "def": 75,
+   "spa": 55,
+   "spd": 55,
+   "spe": 85
+  },
+  "abilities": [
+   "Poison Point",
+   "Swift Swim"
+  ]
+ },
+ "212": {
+  "id": 212,
+  "key": "scizor",
+  "en": "Scizor",
+  "zh": "巨钳螳螂",
+  "national": 212,
+  "types": [
+   6,
+   8
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 130,
+   "def": 100,
+   "spa": 55,
+   "spd": 80,
+   "spe": 65
+  },
+  "abilities": [
+   "Swarm",
+   "Technician"
+  ]
+ },
+ "213": {
+  "id": 213,
+  "key": "shuckle",
+  "en": "Shuckle",
+  "zh": "壶壶",
+  "national": 213,
+  "types": [
+   6,
+   5
+  ],
+  "base": {
+   "hp": 20,
+   "atk": 10,
+   "def": 230,
+   "spa": 10,
+   "spd": 230,
+   "spe": 5
+  },
+  "abilities": [
+   "Sturdy",
+   "Gluttony"
+  ]
+ },
+ "214": {
+  "id": 214,
+  "key": "heracross",
+  "en": "Heracross",
+  "zh": "赫拉克罗斯",
+  "national": 214,
+  "types": [
+   6,
+   1
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 125,
+   "def": 75,
+   "spa": 40,
+   "spd": 95,
+   "spe": 85
+  },
+  "abilities": [
+   "Swarm",
+   "Guts"
+  ]
+ },
+ "215": {
+  "id": 215,
+  "key": "sneasel",
+  "en": "Sneasel",
+  "zh": "狃拉",
+  "national": 215,
+  "types": [
+   17,
+   15
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 95,
+   "def": 55,
+   "spa": 35,
+   "spd": 75,
+   "spe": 115
+  },
+  "abilities": [
+   "Inner Focus",
+   "Keen Eye"
+  ]
+ },
+ "216": {
+  "id": 216,
+  "key": "teddiursa",
+  "en": "Teddiursa",
+  "zh": "熊宝宝",
+  "national": 216,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 80,
+   "def": 50,
+   "spa": 50,
+   "spd": 50,
+   "spe": 40
+  },
+  "abilities": [
+   "Pickup",
+   "Quick Feet"
+  ]
+ },
+ "217": {
+  "id": 217,
+  "key": "ursaring",
+  "en": "Ursaring",
+  "zh": "圈圈熊",
+  "national": 217,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 130,
+   "def": 75,
+   "spa": 75,
+   "spd": 75,
+   "spe": 55
+  },
+  "abilities": [
+   "Guts",
+   "Quick Feet"
+  ]
+ },
+ "218": {
+  "id": 218,
+  "key": "slugma",
+  "en": "Slugma",
+  "zh": "熔岩虫",
+  "national": 218,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 40,
+   "def": 40,
+   "spa": 70,
+   "spd": 40,
+   "spe": 20
+  },
+  "abilities": [
+   "Magma Armor",
+   "Flame Body"
+  ]
+ },
+ "219": {
+  "id": 219,
+  "key": "magcargo",
+  "en": "Magcargo",
+  "zh": "熔岩蜗牛",
+  "national": 219,
+  "types": [
+   10,
+   5
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 50,
+   "def": 120,
+   "spa": 80,
+   "spd": 80,
+   "spe": 30
+  },
+  "abilities": [
+   "Magma Armor",
+   "Flame Body"
+  ]
+ },
+ "220": {
+  "id": 220,
+  "key": "swinub",
+  "en": "Swinub",
+  "zh": "小山猪",
+  "national": 220,
+  "types": [
+   15,
+   4
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 50,
+   "def": 40,
+   "spa": 30,
+   "spd": 30,
+   "spe": 50
+  },
+  "abilities": [
+   "Oblivious",
+   "Snow Cloak"
+  ]
+ },
+ "221": {
+  "id": 221,
+  "key": "piloswine",
+  "en": "Piloswine",
+  "zh": "长毛猪",
+  "national": 221,
+  "types": [
+   15,
+   4
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 100,
+   "def": 80,
+   "spa": 60,
+   "spd": 60,
+   "spe": 50
+  },
+  "abilities": [
+   "Oblivious",
+   "Snow Cloak"
+  ]
+ },
+ "222": {
+  "id": 222,
+  "key": "corsola",
+  "en": "Corsola",
+  "zh": "太阳珊瑚",
+  "national": 222,
+  "types": [
+   11,
+   5
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 55,
+   "def": 85,
+   "spa": 65,
+   "spd": 85,
+   "spe": 35
+  },
+  "abilities": [
+   "Hustle",
+   "Natural Cure"
+  ]
+ },
+ "223": {
+  "id": 223,
+  "key": "remoraid",
+  "en": "Remoraid",
+  "zh": "铁炮鱼",
+  "national": 223,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 65,
+   "def": 35,
+   "spa": 65,
+   "spd": 35,
+   "spe": 65
+  },
+  "abilities": [
+   "Hustle",
+   "Sniper"
+  ]
+ },
+ "224": {
+  "id": 224,
+  "key": "octillery",
+  "en": "Octillery",
+  "zh": "章鱼桶",
+  "national": 224,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 105,
+   "def": 75,
+   "spa": 105,
+   "spd": 75,
+   "spe": 45
+  },
+  "abilities": [
+   "Suction Cups",
+   "Sniper"
+  ]
+ },
+ "225": {
+  "id": 225,
+  "key": "delibird",
+  "en": "Delibird",
+  "zh": "信使鸟",
+  "national": 225,
+  "types": [
+   15,
+   2
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 55,
+   "def": 45,
+   "spa": 65,
+   "spd": 45,
+   "spe": 75
+  },
+  "abilities": [
+   "Vital Spirit",
+   "Hustle"
+  ]
+ },
+ "226": {
+  "id": 226,
+  "key": "mantine",
+  "en": "Mantine",
+  "zh": "巨翅飞鱼",
+  "national": 226,
+  "types": [
+   11,
+   2
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 40,
+   "def": 70,
+   "spa": 80,
+   "spd": 140,
+   "spe": 70
+  },
+  "abilities": [
+   "Swift Swim",
+   "Water Absorb"
+  ]
+ },
+ "227": {
+  "id": 227,
+  "key": "skarmory",
+  "en": "Skarmory",
+  "zh": "盔甲鸟",
+  "national": 227,
+  "types": [
+   8,
+   2
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 80,
+   "def": 140,
+   "spa": 40,
+   "spd": 70,
+   "spe": 70
+  },
+  "abilities": [
+   "Keen Eye",
+   "Sturdy"
+  ]
+ },
+ "228": {
+  "id": 228,
+  "key": "houndour",
+  "en": "Houndour",
+  "zh": "戴鲁比",
+  "national": 228,
+  "types": [
+   17,
+   10
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 60,
+   "def": 30,
+   "spa": 80,
+   "spd": 50,
+   "spe": 65
+  },
+  "abilities": [
+   "Early Bird",
+   "Flash Fire"
+  ]
+ },
+ "229": {
+  "id": 229,
+  "key": "houndoom",
+  "en": "Houndoom",
+  "zh": "黑鲁加",
+  "national": 229,
+  "types": [
+   17,
+   10
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 90,
+   "def": 50,
+   "spa": 110,
+   "spd": 80,
+   "spe": 95
+  },
+  "abilities": [
+   "Early Bird",
+   "Flash Fire"
+  ]
+ },
+ "230": {
+  "id": 230,
+  "key": "kingdra",
+  "en": "Kingdra",
+  "zh": "刺龙王",
+  "national": 230,
+  "types": [
+   11,
+   16
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 95,
+   "def": 95,
+   "spa": 95,
+   "spd": 95,
+   "spe": 85
+  },
+  "abilities": [
+   "Swift Swim",
+   "Sniper"
+  ]
+ },
+ "231": {
+  "id": 231,
+  "key": "phanpy",
+  "en": "Phanpy",
+  "zh": "小小象",
+  "national": 231,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 60,
+   "def": 60,
+   "spa": 40,
+   "spd": 40,
+   "spe": 40
+  },
+  "abilities": [
+   "Pickup"
+  ]
+ },
+ "232": {
+  "id": 232,
+  "key": "donphan",
+  "en": "Donphan",
+  "zh": "顿甲",
+  "national": 232,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 120,
+   "def": 120,
+   "spa": 60,
+   "spd": 60,
+   "spe": 50
+  },
+  "abilities": [
+   "Sturdy"
+  ]
+ },
+ "233": {
+  "id": 233,
+  "key": "porygon2",
+  "en": "Porygon2",
+  "zh": "多边兽２型",
+  "national": 233,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 85,
+   "atk": 80,
+   "def": 90,
+   "spa": 105,
+   "spd": 95,
+   "spe": 60
+  },
+  "abilities": [
+   "Trace",
+   "Download"
+  ]
+ },
+ "234": {
+  "id": 234,
+  "key": "stantler",
+  "en": "Stantler",
+  "zh": "惊角鹿",
+  "national": 234,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 73,
+   "atk": 95,
+   "def": 62,
+   "spa": 85,
+   "spd": 65,
+   "spe": 85
+  },
+  "abilities": [
+   "Intimidate",
+   "Frisk"
+  ]
+ },
+ "235": {
+  "id": 235,
+  "key": "smeargle",
+  "en": "Smeargle",
+  "zh": "图图犬",
+  "national": 235,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 20,
+   "def": 35,
+   "spa": 20,
+   "spd": 45,
+   "spe": 75
+  },
+  "abilities": [
+   "Own Tempo",
+   "Technician"
+  ]
+ },
+ "236": {
+  "id": 236,
+  "key": "tyrogue",
+  "en": "Tyrogue",
+  "zh": "无畏小子",
+  "national": 236,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 35,
+   "def": 35,
+   "spa": 35,
+   "spd": 35,
+   "spe": 35
+  },
+  "abilities": [
+   "Guts",
+   "Steadfast"
+  ]
+ },
+ "237": {
+  "id": 237,
+  "key": "hitmontop",
+  "en": "Hitmontop",
+  "zh": "战舞郎",
+  "national": 237,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 95,
+   "def": 95,
+   "spa": 35,
+   "spd": 110,
+   "spe": 70
+  },
+  "abilities": [
+   "Intimidate",
+   "Technician"
+  ]
+ },
+ "238": {
+  "id": 238,
+  "key": "smoochum",
+  "en": "Smoochum",
+  "zh": "迷唇娃",
+  "national": 238,
+  "types": [
+   15,
+   14
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 30,
+   "def": 15,
+   "spa": 85,
+   "spd": 65,
+   "spe": 65
+  },
+  "abilities": [
+   "Oblivious",
+   "Forewarn"
+  ]
+ },
+ "239": {
+  "id": 239,
+  "key": "elekid",
+  "en": "Elekid",
+  "zh": "电击怪",
+  "national": 239,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 63,
+   "def": 37,
+   "spa": 65,
+   "spd": 55,
+   "spe": 95
+  },
+  "abilities": [
+   "Static"
+  ]
+ },
+ "240": {
+  "id": 240,
+  "key": "magby",
+  "en": "Magby",
+  "zh": "鸭嘴宝宝",
+  "national": 240,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 75,
+   "def": 37,
+   "spa": 70,
+   "spd": 55,
+   "spe": 83
+  },
+  "abilities": [
+   "Flame Body"
+  ]
+ },
+ "241": {
+  "id": 241,
+  "key": "miltank",
+  "en": "Miltank",
+  "zh": "大奶罐",
+  "national": 241,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 80,
+   "def": 105,
+   "spa": 40,
+   "spd": 70,
+   "spe": 100
+  },
+  "abilities": [
+   "Thick Fat",
+   "Scrappy"
+  ]
+ },
+ "242": {
+  "id": 242,
+  "key": "blissey",
+  "en": "Blissey",
+  "zh": "幸福蛋",
+  "national": 242,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 255,
+   "atk": 10,
+   "def": 10,
+   "spa": 75,
+   "spd": 135,
+   "spe": 55
+  },
+  "abilities": [
+   "Natural Cure",
+   "Serene Grace"
+  ]
+ },
+ "243": {
+  "id": 243,
+  "key": "raikou",
+  "en": "Raikou",
+  "zh": "雷公",
+  "national": 243,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 85,
+   "def": 75,
+   "spa": 115,
+   "spd": 100,
+   "spe": 115
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "244": {
+  "id": 244,
+  "key": "entei",
+  "en": "Entei",
+  "zh": "炎帝",
+  "national": 244,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 115,
+   "atk": 115,
+   "def": 85,
+   "spa": 90,
+   "spd": 75,
+   "spe": 100
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "245": {
+  "id": 245,
+  "key": "suicune",
+  "en": "Suicune",
+  "zh": "水君",
+  "national": 245,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 75,
+   "def": 115,
+   "spa": 90,
+   "spd": 115,
+   "spe": 85
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "246": {
+  "id": 246,
+  "key": "larvitar",
+  "en": "Larvitar",
+  "zh": "幼基拉斯",
+  "national": 246,
+  "types": [
+   5,
+   4
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 64,
+   "def": 50,
+   "spa": 45,
+   "spd": 50,
+   "spe": 41
+  },
+  "abilities": [
+   "Guts"
+  ]
+ },
+ "247": {
+  "id": 247,
+  "key": "pupitar",
+  "en": "Pupitar",
+  "zh": "沙基拉斯",
+  "national": 247,
+  "types": [
+   5,
+   4
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 84,
+   "def": 70,
+   "spa": 65,
+   "spd": 70,
+   "spe": 51
+  },
+  "abilities": [
+   "Shed Skin"
+  ]
+ },
+ "248": {
+  "id": 248,
+  "key": "tyranitar",
+  "en": "Tyranitar",
+  "zh": "班基拉斯",
+  "national": 248,
+  "types": [
+   5,
+   17
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 134,
+   "def": 110,
+   "spa": 95,
+   "spd": 100,
+   "spe": 61
+  },
+  "abilities": [
+   "Sand Stream"
+  ]
+ },
+ "249": {
+  "id": 249,
+  "key": "lugia",
+  "en": "Lugia",
+  "zh": "洛奇亚",
+  "national": 249,
+  "types": [
+   14,
+   2
+  ],
+  "base": {
+   "hp": 106,
+   "atk": 90,
+   "def": 130,
+   "spa": 90,
+   "spd": 154,
+   "spe": 110
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "250": {
+  "id": 250,
+  "key": "hooh",
+  "en": "Ho-Oh",
+  "zh": "凤王",
+  "national": 250,
+  "types": [
+   10,
+   2
+  ],
+  "base": {
+   "hp": 106,
+   "atk": 130,
+   "def": 90,
+   "spa": 110,
+   "spd": 154,
+   "spe": 90
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "251": {
+  "id": 251,
+  "key": "celebi",
+  "en": "Celebi",
+  "zh": "时拉比",
+  "national": 251,
+  "types": [
+   14,
+   12
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 100,
+   "def": 100,
+   "spa": 100,
+   "spd": 100,
+   "spe": 100
+  },
+  "abilities": [
+   "Natural Cure"
+  ]
+ },
+ "277": {
+  "id": 277,
+  "key": "treecko",
+  "en": "Treecko",
+  "zh": "木守宫",
+  "national": 252,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 45,
+   "def": 35,
+   "spa": 65,
+   "spd": 55,
+   "spe": 70
+  },
+  "abilities": [
+   "Overgrow"
+  ]
+ },
+ "278": {
+  "id": 278,
+  "key": "grovyle",
+  "en": "Grovyle",
+  "zh": "森林蜥蜴",
+  "national": 253,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 65,
+   "def": 45,
+   "spa": 85,
+   "spd": 65,
+   "spe": 95
+  },
+  "abilities": [
+   "Overgrow"
+  ]
+ },
+ "279": {
+  "id": 279,
+  "key": "sceptile",
+  "en": "Sceptile",
+  "zh": "蜥蜴王",
+  "national": 254,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 85,
+   "def": 65,
+   "spa": 105,
+   "spd": 85,
+   "spe": 120
+  },
+  "abilities": [
+   "Overgrow"
+  ]
+ },
+ "280": {
+  "id": 280,
+  "key": "torchic",
+  "en": "Torchic",
+  "zh": "火稚鸡",
+  "national": 255,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 60,
+   "def": 40,
+   "spa": 70,
+   "spd": 50,
+   "spe": 45
+  },
+  "abilities": [
+   "Blaze"
+  ]
+ },
+ "281": {
+  "id": 281,
+  "key": "combusken",
+  "en": "Combusken",
+  "zh": "力壮鸡",
+  "national": 256,
+  "types": [
+   10,
+   1
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 85,
+   "def": 60,
+   "spa": 85,
+   "spd": 60,
+   "spe": 55
+  },
+  "abilities": [
+   "Blaze"
+  ]
+ },
+ "282": {
+  "id": 282,
+  "key": "blaziken",
+  "en": "Blaziken",
+  "zh": "火焰鸡",
+  "national": 257,
+  "types": [
+   10,
+   1
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 120,
+   "def": 70,
+   "spa": 110,
+   "spd": 70,
+   "spe": 80
+  },
+  "abilities": [
+   "Blaze"
+  ]
+ },
+ "283": {
+  "id": 283,
+  "key": "mudkip",
+  "en": "Mudkip",
+  "zh": "水跃鱼",
+  "national": 258,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 70,
+   "def": 50,
+   "spa": 50,
+   "spd": 50,
+   "spe": 40
+  },
+  "abilities": [
+   "Torrent"
+  ]
+ },
+ "284": {
+  "id": 284,
+  "key": "marshtomp",
+  "en": "Marshtomp",
+  "zh": "沼跃鱼",
+  "national": 259,
+  "types": [
+   11,
+   4
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 85,
+   "def": 70,
+   "spa": 60,
+   "spd": 70,
+   "spe": 50
+  },
+  "abilities": [
+   "Torrent"
+  ]
+ },
+ "285": {
+  "id": 285,
+  "key": "swampert",
+  "en": "Swampert",
+  "zh": "巨沼怪",
+  "national": 260,
+  "types": [
+   11,
+   4
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 110,
+   "def": 90,
+   "spa": 85,
+   "spd": 90,
+   "spe": 60
+  },
+  "abilities": [
+   "Torrent"
+  ]
+ },
+ "286": {
+  "id": 286,
+  "key": "poochyena",
+  "en": "Poochyena",
+  "zh": "土狼犬",
+  "national": 261,
+  "types": [
+   17,
+   17
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 55,
+   "def": 35,
+   "spa": 30,
+   "spd": 30,
+   "spe": 35
+  },
+  "abilities": [
+   "Run Away",
+   "Quick Feet"
+  ]
+ },
+ "287": {
+  "id": 287,
+  "key": "mightyena",
+  "en": "Mightyena",
+  "zh": "大狼犬",
+  "national": 262,
+  "types": [
+   17,
+   17
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 90,
+   "def": 70,
+   "spa": 60,
+   "spd": 60,
+   "spe": 70
+  },
+  "abilities": [
+   "Intimidate",
+   "Quick Feet"
+  ]
+ },
+ "288": {
+  "id": 288,
+  "key": "zigzagoon",
+  "en": "Zigzagoon",
+  "zh": "蛇纹熊",
+  "national": 263,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 38,
+   "atk": 30,
+   "def": 41,
+   "spa": 30,
+   "spd": 41,
+   "spe": 60
+  },
+  "abilities": [
+   "Pickup",
+   "Gluttony"
+  ]
+ },
+ "289": {
+  "id": 289,
+  "key": "linoone",
+  "en": "Linoone",
+  "zh": "直冲熊",
+  "national": 264,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 78,
+   "atk": 70,
+   "def": 61,
+   "spa": 50,
+   "spd": 61,
+   "spe": 100
+  },
+  "abilities": [
+   "Pickup",
+   "Gluttony"
+  ]
+ },
+ "290": {
+  "id": 290,
+  "key": "wurmple",
+  "en": "Wurmple",
+  "zh": "刺尾虫",
+  "national": 265,
+  "types": [
+   6,
+   6
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 45,
+   "def": 35,
+   "spa": 20,
+   "spd": 30,
+   "spe": 20
+  },
+  "abilities": [
+   "Shield Dust"
+  ]
+ },
+ "291": {
+  "id": 291,
+  "key": "silcoon",
+  "en": "Silcoon",
+  "zh": "甲壳茧",
+  "national": 266,
+  "types": [
+   6,
+   6
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 35,
+   "def": 55,
+   "spa": 25,
+   "spd": 25,
+   "spe": 15
+  },
+  "abilities": [
+   "Shed Skin"
+  ]
+ },
+ "292": {
+  "id": 292,
+  "key": "beautifly",
+  "en": "Beautifly",
+  "zh": "狩猎凤蝶",
+  "national": 267,
+  "types": [
+   6,
+   2
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 70,
+   "def": 50,
+   "spa": 90,
+   "spd": 50,
+   "spe": 65
+  },
+  "abilities": [
+   "Swarm"
+  ]
+ },
+ "293": {
+  "id": 293,
+  "key": "cascoon",
+  "en": "Cascoon",
+  "zh": "盾甲茧",
+  "national": 268,
+  "types": [
+   6,
+   6
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 35,
+   "def": 55,
+   "spa": 25,
+   "spd": 25,
+   "spe": 15
+  },
+  "abilities": [
+   "Shed Skin"
+  ]
+ },
+ "294": {
+  "id": 294,
+  "key": "dustox",
+  "en": "Dustox",
+  "zh": "毒粉蛾",
+  "national": 269,
+  "types": [
+   6,
+   3
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 50,
+   "def": 70,
+   "spa": 50,
+   "spd": 90,
+   "spe": 65
+  },
+  "abilities": [
+   "Shield Dust"
+  ]
+ },
+ "295": {
+  "id": 295,
+  "key": "lotad",
+  "en": "Lotad",
+  "zh": "莲叶童子",
+  "national": 270,
+  "types": [
+   11,
+   12
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 30,
+   "def": 30,
+   "spa": 40,
+   "spd": 50,
+   "spe": 30
+  },
+  "abilities": [
+   "Swift Swim",
+   "Rain Dish"
+  ]
+ },
+ "296": {
+  "id": 296,
+  "key": "lombre",
+  "en": "Lombre",
+  "zh": "莲帽小童",
+  "national": 271,
+  "types": [
+   11,
+   12
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 50,
+   "def": 50,
+   "spa": 60,
+   "spd": 70,
+   "spe": 50
+  },
+  "abilities": [
+   "Swift Swim",
+   "Rain Dish"
+  ]
+ },
+ "297": {
+  "id": 297,
+  "key": "ludicolo",
+  "en": "Ludicolo",
+  "zh": "乐天河童",
+  "national": 272,
+  "types": [
+   11,
+   12
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 70,
+   "def": 70,
+   "spa": 90,
+   "spd": 100,
+   "spe": 70
+  },
+  "abilities": [
+   "Swift Swim",
+   "Rain Dish"
+  ]
+ },
+ "298": {
+  "id": 298,
+  "key": "seedot",
+  "en": "Seedot",
+  "zh": "橡实果",
+  "national": 273,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 40,
+   "def": 50,
+   "spa": 30,
+   "spd": 30,
+   "spe": 30
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Early Bird"
+  ]
+ },
+ "299": {
+  "id": 299,
+  "key": "nuzleaf",
+  "en": "Nuzleaf",
+  "zh": "长鼻叶",
+  "national": 274,
+  "types": [
+   12,
+   17
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 70,
+   "def": 40,
+   "spa": 60,
+   "spd": 40,
+   "spe": 60
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Early Bird"
+  ]
+ },
+ "300": {
+  "id": 300,
+  "key": "shiftry",
+  "en": "Shiftry",
+  "zh": "狡猾天狗",
+  "national": 275,
+  "types": [
+   12,
+   17
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 100,
+   "def": 60,
+   "spa": 90,
+   "spd": 60,
+   "spe": 80
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Early Bird"
+  ]
+ },
+ "301": {
+  "id": 301,
+  "key": "nincada",
+  "en": "Nincada",
+  "zh": "土居忍士",
+  "national": 290,
+  "types": [
+   6,
+   4
+  ],
+  "base": {
+   "hp": 31,
+   "atk": 45,
+   "def": 90,
+   "spa": 30,
+   "spd": 30,
+   "spe": 40
+  },
+  "abilities": [
+   "Compound Eyes"
+  ]
+ },
+ "302": {
+  "id": 302,
+  "key": "ninjask",
+  "en": "Ninjask",
+  "zh": "铁面忍者",
+  "national": 291,
+  "types": [
+   6,
+   2
+  ],
+  "base": {
+   "hp": 61,
+   "atk": 90,
+   "def": 45,
+   "spa": 50,
+   "spd": 50,
+   "spe": 160
+  },
+  "abilities": [
+   "Speed Boost"
+  ]
+ },
+ "303": {
+  "id": 303,
+  "key": "shedinja",
+  "en": "Shedinja",
+  "zh": "脱壳忍者",
+  "national": 292,
+  "types": [
+   6,
+   7
+  ],
+  "base": {
+   "hp": 1,
+   "atk": 90,
+   "def": 45,
+   "spa": 30,
+   "spd": 30,
+   "spe": 40
+  },
+  "abilities": [
+   "Wonder Guard"
+  ]
+ },
+ "304": {
+  "id": 304,
+  "key": "taillow",
+  "en": "Taillow",
+  "zh": "傲骨燕",
+  "national": 276,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 55,
+   "def": 30,
+   "spa": 30,
+   "spd": 30,
+   "spe": 85
+  },
+  "abilities": [
+   "Guts"
+  ]
+ },
+ "305": {
+  "id": 305,
+  "key": "swellow",
+  "en": "Swellow",
+  "zh": "大王燕",
+  "national": 277,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 85,
+   "def": 60,
+   "spa": 50,
+   "spd": 50,
+   "spe": 125
+  },
+  "abilities": [
+   "Guts"
+  ]
+ },
+ "306": {
+  "id": 306,
+  "key": "shroomish",
+  "en": "Shroomish",
+  "zh": "蘑蘑菇",
+  "national": 285,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 40,
+   "def": 60,
+   "spa": 40,
+   "spd": 60,
+   "spe": 35
+  },
+  "abilities": [
+   "Effect Spore",
+   "Poison Heal"
+  ]
+ },
+ "307": {
+  "id": 307,
+  "key": "breloom",
+  "en": "Breloom",
+  "zh": "斗笠菇",
+  "national": 286,
+  "types": [
+   12,
+   1
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 130,
+   "def": 80,
+   "spa": 60,
+   "spd": 60,
+   "spe": 70
+  },
+  "abilities": [
+   "Effect Spore",
+   "Poison Heal"
+  ]
+ },
+ "308": {
+  "id": 308,
+  "key": "spinda",
+  "en": "Spinda",
+  "zh": "晃晃斑",
+  "national": 327,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 60,
+   "def": 60,
+   "spa": 60,
+   "spd": 60,
+   "spe": 60
+  },
+  "abilities": [
+   "Own Tempo",
+   "Tangled Feet"
+  ]
+ },
+ "309": {
+  "id": 309,
+  "key": "wingull",
+  "en": "Wingull",
+  "zh": "长翅鸥",
+  "national": 278,
+  "types": [
+   11,
+   2
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 30,
+   "def": 30,
+   "spa": 55,
+   "spd": 30,
+   "spe": 85
+  },
+  "abilities": [
+   "Keen Eye"
+  ]
+ },
+ "310": {
+  "id": 310,
+  "key": "pelipper",
+  "en": "Pelipper",
+  "zh": "大嘴鸥",
+  "national": 279,
+  "types": [
+   11,
+   2
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 50,
+   "def": 100,
+   "spa": 85,
+   "spd": 70,
+   "spe": 65
+  },
+  "abilities": [
+   "Keen Eye"
+  ]
+ },
+ "311": {
+  "id": 311,
+  "key": "surskit",
+  "en": "Surskit",
+  "zh": "溜溜糖球",
+  "national": 283,
+  "types": [
+   6,
+   11
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 30,
+   "def": 32,
+   "spa": 50,
+   "spd": 52,
+   "spe": 65
+  },
+  "abilities": [
+   "Swift Swim"
+  ]
+ },
+ "312": {
+  "id": 312,
+  "key": "masquerain",
+  "en": "Masquerain",
+  "zh": "雨翅蛾",
+  "national": 284,
+  "types": [
+   6,
+   2
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 60,
+   "def": 62,
+   "spa": 80,
+   "spd": 82,
+   "spe": 60
+  },
+  "abilities": [
+   "Intimidate"
+  ]
+ },
+ "313": {
+  "id": 313,
+  "key": "wailmer",
+  "en": "Wailmer",
+  "zh": "吼吼鲸",
+  "national": 320,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 130,
+   "atk": 70,
+   "def": 35,
+   "spa": 70,
+   "spd": 35,
+   "spe": 60
+  },
+  "abilities": [
+   "Water Veil",
+   "Oblivious"
+  ]
+ },
+ "314": {
+  "id": 314,
+  "key": "wailord",
+  "en": "Wailord",
+  "zh": "吼鲸王",
+  "national": 321,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 170,
+   "atk": 90,
+   "def": 45,
+   "spa": 90,
+   "spd": 45,
+   "spe": 60
+  },
+  "abilities": [
+   "Water Veil",
+   "Oblivious"
+  ]
+ },
+ "315": {
+  "id": 315,
+  "key": "skitty",
+  "en": "Skitty",
+  "zh": "向尾喵",
+  "national": 300,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 45,
+   "def": 45,
+   "spa": 35,
+   "spd": 35,
+   "spe": 50
+  },
+  "abilities": [
+   "Cute Charm",
+   "Normalize"
+  ]
+ },
+ "316": {
+  "id": 316,
+  "key": "delcatty",
+  "en": "Delcatty",
+  "zh": "优雅猫",
+  "national": 301,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 65,
+   "def": 65,
+   "spa": 55,
+   "spd": 55,
+   "spe": 70
+  },
+  "abilities": [
+   "Cute Charm",
+   "Normalize"
+  ]
+ },
+ "317": {
+  "id": 317,
+  "key": "kecleon",
+  "en": "Kecleon",
+  "zh": "变隐龙",
+  "national": 352,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 90,
+   "def": 70,
+   "spa": 60,
+   "spd": 120,
+   "spe": 40
+  },
+  "abilities": [
+   "Color Change"
+  ]
+ },
+ "318": {
+  "id": 318,
+  "key": "baltoy",
+  "en": "Baltoy",
+  "zh": "天秤偶",
+  "national": 343,
+  "types": [
+   4,
+   14
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 40,
+   "def": 55,
+   "spa": 40,
+   "spd": 70,
+   "spe": 55
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "319": {
+  "id": 319,
+  "key": "claydol",
+  "en": "Claydol",
+  "zh": "念力土偶",
+  "national": 344,
+  "types": [
+   4,
+   14
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 70,
+   "def": 105,
+   "spa": 70,
+   "spd": 120,
+   "spe": 75
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "320": {
+  "id": 320,
+  "key": "nosepass",
+  "en": "Nosepass",
+  "zh": "朝北鼻",
+  "national": 299,
+  "types": [
+   5,
+   5
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 45,
+   "def": 135,
+   "spa": 45,
+   "spd": 90,
+   "spe": 30
+  },
+  "abilities": [
+   "Sturdy",
+   "Magnet Pull"
+  ]
+ },
+ "321": {
+  "id": 321,
+  "key": "torkoal",
+  "en": "Torkoal",
+  "zh": "煤炭龟",
+  "national": 324,
+  "types": [
+   10,
+   10
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 85,
+   "def": 140,
+   "spa": 85,
+   "spd": 70,
+   "spe": 20
+  },
+  "abilities": [
+   "White Smoke"
+  ]
+ },
+ "322": {
+  "id": 322,
+  "key": "sableye",
+  "en": "Sableye",
+  "zh": "勾魂眼",
+  "national": 302,
+  "types": [
+   17,
+   7
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 75,
+   "def": 75,
+   "spa": 65,
+   "spd": 65,
+   "spe": 50
+  },
+  "abilities": [
+   "Keen Eye",
+   "Stall"
+  ]
+ },
+ "323": {
+  "id": 323,
+  "key": "barboach",
+  "en": "Barboach",
+  "zh": "泥泥鳅",
+  "national": 339,
+  "types": [
+   11,
+   4
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 48,
+   "def": 43,
+   "spa": 46,
+   "spd": 41,
+   "spe": 60
+  },
+  "abilities": [
+   "Oblivious",
+   "Anticipation"
+  ]
+ },
+ "324": {
+  "id": 324,
+  "key": "whiscash",
+  "en": "Whiscash",
+  "zh": "鲶鱼王",
+  "national": 340,
+  "types": [
+   11,
+   4
+  ],
+  "base": {
+   "hp": 110,
+   "atk": 78,
+   "def": 73,
+   "spa": 76,
+   "spd": 71,
+   "spe": 60
+  },
+  "abilities": [
+   "Oblivious",
+   "Anticipation"
+  ]
+ },
+ "325": {
+  "id": 325,
+  "key": "luvdisc",
+  "en": "Luvdisc",
+  "zh": "爱心鱼",
+  "national": 370,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 43,
+   "atk": 30,
+   "def": 55,
+   "spa": 40,
+   "spd": 65,
+   "spe": 97
+  },
+  "abilities": [
+   "Swift Swim"
+  ]
+ },
+ "326": {
+  "id": 326,
+  "key": "corphish",
+  "en": "Corphish",
+  "zh": "龙虾小兵",
+  "national": 341,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 43,
+   "atk": 80,
+   "def": 65,
+   "spa": 50,
+   "spd": 35,
+   "spe": 35
+  },
+  "abilities": [
+   "Hyper Cutter",
+   "Shell Armor"
+  ]
+ },
+ "327": {
+  "id": 327,
+  "key": "crawdaunt",
+  "en": "Crawdaunt",
+  "zh": "铁螯龙虾",
+  "national": 342,
+  "types": [
+   11,
+   17
+  ],
+  "base": {
+   "hp": 63,
+   "atk": 120,
+   "def": 85,
+   "spa": 90,
+   "spd": 55,
+   "spe": 55
+  },
+  "abilities": [
+   "Hyper Cutter",
+   "Shell Armor"
+  ]
+ },
+ "328": {
+  "id": 328,
+  "key": "feebas",
+  "en": "Feebas",
+  "zh": "丑丑鱼",
+  "national": 349,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 20,
+   "atk": 15,
+   "def": 20,
+   "spa": 10,
+   "spd": 55,
+   "spe": 80
+  },
+  "abilities": [
+   "Swift Swim"
+  ]
+ },
+ "329": {
+  "id": 329,
+  "key": "milotic",
+  "en": "Milotic",
+  "zh": "美纳斯",
+  "national": 350,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 60,
+   "def": 79,
+   "spa": 100,
+   "spd": 125,
+   "spe": 81
+  },
+  "abilities": [
+   "Marvel Scale"
+  ]
+ },
+ "330": {
+  "id": 330,
+  "key": "carvanha",
+  "en": "Carvanha",
+  "zh": "利牙鱼",
+  "national": 318,
+  "types": [
+   11,
+   17
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 90,
+   "def": 20,
+   "spa": 65,
+   "spd": 20,
+   "spe": 65
+  },
+  "abilities": [
+   "Rough Skin"
+  ]
+ },
+ "331": {
+  "id": 331,
+  "key": "sharpedo",
+  "en": "Sharpedo",
+  "zh": "巨牙鲨",
+  "national": 319,
+  "types": [
+   11,
+   17
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 120,
+   "def": 40,
+   "spa": 95,
+   "spd": 40,
+   "spe": 95
+  },
+  "abilities": [
+   "Rough Skin"
+  ]
+ },
+ "332": {
+  "id": 332,
+  "key": "trapinch",
+  "en": "Trapinch",
+  "zh": "大颚蚁",
+  "national": 328,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 100,
+   "def": 45,
+   "spa": 45,
+   "spd": 45,
+   "spe": 10
+  },
+  "abilities": [
+   "Hyper Cutter",
+   "Arena Trap"
+  ]
+ },
+ "333": {
+  "id": 333,
+  "key": "vibrava",
+  "en": "Vibrava",
+  "zh": "超音波幼虫",
+  "national": 329,
+  "types": [
+   4,
+   16
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 70,
+   "def": 50,
+   "spa": 50,
+   "spd": 50,
+   "spe": 70
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "334": {
+  "id": 334,
+  "key": "flygon",
+  "en": "Flygon",
+  "zh": "沙漠蜻蜓",
+  "national": 330,
+  "types": [
+   4,
+   16
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 100,
+   "def": 80,
+   "spa": 80,
+   "spd": 80,
+   "spe": 100
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "335": {
+  "id": 335,
+  "key": "makuhita",
+  "en": "Makuhita",
+  "zh": "幕下力士",
+  "national": 296,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 72,
+   "atk": 60,
+   "def": 30,
+   "spa": 20,
+   "spd": 30,
+   "spe": 25
+  },
+  "abilities": [
+   "Thick Fat",
+   "Guts"
+  ]
+ },
+ "336": {
+  "id": 336,
+  "key": "hariyama",
+  "en": "Hariyama",
+  "zh": "铁掌力士",
+  "national": 297,
+  "types": [
+   1,
+   1
+  ],
+  "base": {
+   "hp": 144,
+   "atk": 120,
+   "def": 60,
+   "spa": 40,
+   "spd": 60,
+   "spe": 50
+  },
+  "abilities": [
+   "Thick Fat",
+   "Guts"
+  ]
+ },
+ "337": {
+  "id": 337,
+  "key": "electrike",
+  "en": "Electrike",
+  "zh": "落雷兽",
+  "national": 309,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 45,
+   "def": 40,
+   "spa": 65,
+   "spd": 40,
+   "spe": 65
+  },
+  "abilities": [
+   "Static",
+   "Lightning Rod"
+  ]
+ },
+ "338": {
+  "id": 338,
+  "key": "manectric",
+  "en": "Manectric",
+  "zh": "雷电兽",
+  "national": 310,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 75,
+   "def": 60,
+   "spa": 105,
+   "spd": 60,
+   "spe": 105
+  },
+  "abilities": [
+   "Static",
+   "Lightning Rod"
+  ]
+ },
+ "339": {
+  "id": 339,
+  "key": "numel",
+  "en": "Numel",
+  "zh": "呆火驼",
+  "national": 322,
+  "types": [
+   10,
+   4
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 60,
+   "def": 40,
+   "spa": 65,
+   "spd": 45,
+   "spe": 35
+  },
+  "abilities": [
+   "Oblivious",
+   "Simple"
+  ]
+ },
+ "340": {
+  "id": 340,
+  "key": "camerupt",
+  "en": "Camerupt",
+  "zh": "喷火驼",
+  "national": 323,
+  "types": [
+   10,
+   4
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 100,
+   "def": 70,
+   "spa": 105,
+   "spd": 75,
+   "spe": 40
+  },
+  "abilities": [
+   "Magma Armor",
+   "Solid Rock"
+  ]
+ },
+ "341": {
+  "id": 341,
+  "key": "spheal",
+  "en": "Spheal",
+  "zh": "海豹球",
+  "national": 363,
+  "types": [
+   15,
+   11
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 40,
+   "def": 50,
+   "spa": 55,
+   "spd": 50,
+   "spe": 25
+  },
+  "abilities": [
+   "Thick Fat",
+   "Ice Body"
+  ]
+ },
+ "342": {
+  "id": 342,
+  "key": "sealeo",
+  "en": "Sealeo",
+  "zh": "海魔狮",
+  "national": 364,
+  "types": [
+   15,
+   11
+  ],
+  "base": {
+   "hp": 90,
+   "atk": 60,
+   "def": 70,
+   "spa": 75,
+   "spd": 70,
+   "spe": 45
+  },
+  "abilities": [
+   "Thick Fat",
+   "Ice Body"
+  ]
+ },
+ "343": {
+  "id": 343,
+  "key": "walrein",
+  "en": "Walrein",
+  "zh": "帝牙海狮",
+  "national": 365,
+  "types": [
+   15,
+   11
+  ],
+  "base": {
+   "hp": 110,
+   "atk": 80,
+   "def": 90,
+   "spa": 95,
+   "spd": 90,
+   "spe": 65
+  },
+  "abilities": [
+   "Thick Fat",
+   "Ice Body"
+  ]
+ },
+ "344": {
+  "id": 344,
+  "key": "cacnea",
+  "en": "Cacnea",
+  "zh": "刺球仙人掌",
+  "national": 331,
+  "types": [
+   12,
+   12
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 85,
+   "def": 40,
+   "spa": 85,
+   "spd": 40,
+   "spe": 35
+  },
+  "abilities": [
+   "Sand Veil"
+  ]
+ },
+ "345": {
+  "id": 345,
+  "key": "cacturne",
+  "en": "Cacturne",
+  "zh": "梦歌仙人掌",
+  "national": 332,
+  "types": [
+   12,
+   17
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 115,
+   "def": 60,
+   "spa": 115,
+   "spd": 60,
+   "spe": 55
+  },
+  "abilities": [
+   "Sand Veil"
+  ]
+ },
+ "346": {
+  "id": 346,
+  "key": "snorunt",
+  "en": "Snorunt",
+  "zh": "雪童子",
+  "national": 361,
+  "types": [
+   15,
+   15
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 50,
+   "def": 50,
+   "spa": 50,
+   "spd": 50,
+   "spe": 50
+  },
+  "abilities": [
+   "Inner Focus",
+   "Ice Body"
+  ]
+ },
+ "347": {
+  "id": 347,
+  "key": "glalie",
+  "en": "Glalie",
+  "zh": "冰鬼护",
+  "national": 362,
+  "types": [
+   15,
+   15
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 80,
+   "def": 80,
+   "spa": 80,
+   "spd": 80,
+   "spe": 80
+  },
+  "abilities": [
+   "Inner Focus",
+   "Ice Body"
+  ]
+ },
+ "348": {
+  "id": 348,
+  "key": "lunatone",
+  "en": "Lunatone",
+  "zh": "月石",
+  "national": 337,
+  "types": [
+   5,
+   14
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 55,
+   "def": 65,
+   "spa": 95,
+   "spd": 85,
+   "spe": 70
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "349": {
+  "id": 349,
+  "key": "solrock",
+  "en": "Solrock",
+  "zh": "太阳岩",
+  "national": 338,
+  "types": [
+   5,
+   14
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 95,
+   "def": 85,
+   "spa": 55,
+   "spd": 65,
+   "spe": 70
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "350": {
+  "id": 350,
+  "key": "azurill",
+  "en": "Azurill",
+  "zh": "露力丽",
+  "national": 298,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 20,
+   "def": 40,
+   "spa": 20,
+   "spd": 40,
+   "spe": 20
+  },
+  "abilities": [
+   "Thick Fat",
+   "Huge Power"
+  ]
+ },
+ "351": {
+  "id": 351,
+  "key": "spoink",
+  "en": "Spoink",
+  "zh": "跳跳猪",
+  "national": 325,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 25,
+   "def": 35,
+   "spa": 70,
+   "spd": 80,
+   "spe": 60
+  },
+  "abilities": [
+   "Thick Fat",
+   "Own Tempo"
+  ]
+ },
+ "352": {
+  "id": 352,
+  "key": "grumpig",
+  "en": "Grumpig",
+  "zh": "噗噗猪",
+  "national": 326,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 45,
+   "def": 65,
+   "spa": 90,
+   "spd": 110,
+   "spe": 80
+  },
+  "abilities": [
+   "Thick Fat",
+   "Own Tempo"
+  ]
+ },
+ "353": {
+  "id": 353,
+  "key": "plusle",
+  "en": "Plusle",
+  "zh": "正电拍拍",
+  "national": 311,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 50,
+   "def": 40,
+   "spa": 85,
+   "spd": 75,
+   "spe": 95
+  },
+  "abilities": [
+   "Plus"
+  ]
+ },
+ "354": {
+  "id": 354,
+  "key": "minun",
+  "en": "Minun",
+  "zh": "負电拍拍",
+  "national": 312,
+  "types": [
+   13,
+   13
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 40,
+   "def": 50,
+   "spa": 75,
+   "spd": 85,
+   "spe": 95
+  },
+  "abilities": [
+   "Minus"
+  ]
+ },
+ "355": {
+  "id": 355,
+  "key": "mawile",
+  "en": "Mawile",
+  "zh": "大嘴娃",
+  "national": 303,
+  "types": [
+   8,
+   8
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 85,
+   "def": 85,
+   "spa": 55,
+   "spd": 55,
+   "spe": 50
+  },
+  "abilities": [
+   "Hyper Cutter",
+   "Intimidate"
+  ]
+ },
+ "356": {
+  "id": 356,
+  "key": "meditite",
+  "en": "Meditite",
+  "zh": "玛沙那",
+  "national": 307,
+  "types": [
+   1,
+   14
+  ],
+  "base": {
+   "hp": 30,
+   "atk": 40,
+   "def": 55,
+   "spa": 40,
+   "spd": 55,
+   "spe": 60
+  },
+  "abilities": [
+   "Pure Power"
+  ]
+ },
+ "357": {
+  "id": 357,
+  "key": "medicham",
+  "en": "Medicham",
+  "zh": "恰雷姆",
+  "national": 308,
+  "types": [
+   1,
+   14
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 60,
+   "def": 75,
+   "spa": 60,
+   "spd": 75,
+   "spe": 80
+  },
+  "abilities": [
+   "Pure Power"
+  ]
+ },
+ "358": {
+  "id": 358,
+  "key": "swablu",
+  "en": "Swablu",
+  "zh": "青绵鸟",
+  "national": 333,
+  "types": [
+   0,
+   2
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 40,
+   "def": 60,
+   "spa": 40,
+   "spd": 75,
+   "spe": 50
+  },
+  "abilities": [
+   "Natural Cure"
+  ]
+ },
+ "359": {
+  "id": 359,
+  "key": "altaria",
+  "en": "Altaria",
+  "zh": "七夕青鸟",
+  "national": 334,
+  "types": [
+   16,
+   2
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 70,
+   "def": 90,
+   "spa": 70,
+   "spd": 105,
+   "spe": 80
+  },
+  "abilities": [
+   "Natural Cure"
+  ]
+ },
+ "360": {
+  "id": 360,
+  "key": "wynaut",
+  "en": "Wynaut",
+  "zh": "小果然",
+  "national": 360,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 23,
+   "def": 48,
+   "spa": 23,
+   "spd": 48,
+   "spe": 23
+  },
+  "abilities": [
+   "Shadow Tag"
+  ]
+ },
+ "361": {
+  "id": 361,
+  "key": "duskull",
+  "en": "Duskull",
+  "zh": "夜巡灵",
+  "national": 355,
+  "types": [
+   7,
+   7
+  ],
+  "base": {
+   "hp": 20,
+   "atk": 40,
+   "def": 90,
+   "spa": 30,
+   "spd": 90,
+   "spe": 25
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "362": {
+  "id": 362,
+  "key": "dusclops",
+  "en": "Dusclops",
+  "zh": "彷徨夜灵",
+  "national": 356,
+  "types": [
+   7,
+   7
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 70,
+   "def": 130,
+   "spa": 60,
+   "spd": 130,
+   "spe": 25
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "363": {
+  "id": 363,
+  "key": "roselia",
+  "en": "Roselia",
+  "zh": "毒蔷薇",
+  "national": 315,
+  "types": [
+   12,
+   3
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 60,
+   "def": 45,
+   "spa": 100,
+   "spd": 80,
+   "spe": 65
+  },
+  "abilities": [
+   "Natural Cure",
+   "Poison Point"
+  ]
+ },
+ "364": {
+  "id": 364,
+  "key": "slakoth",
+  "en": "Slakoth",
+  "zh": "懒人獭",
+  "national": 287,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 60,
+   "def": 60,
+   "spa": 35,
+   "spd": 35,
+   "spe": 30
+  },
+  "abilities": [
+   "Truant"
+  ]
+ },
+ "365": {
+  "id": 365,
+  "key": "vigoroth",
+  "en": "Vigoroth",
+  "zh": "过动猿",
+  "national": 288,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 80,
+   "def": 80,
+   "spa": 55,
+   "spd": 55,
+   "spe": 90
+  },
+  "abilities": [
+   "Vital Spirit"
+  ]
+ },
+ "366": {
+  "id": 366,
+  "key": "slaking",
+  "en": "Slaking",
+  "zh": "请假王",
+  "national": 289,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 150,
+   "atk": 160,
+   "def": 100,
+   "spa": 95,
+   "spd": 65,
+   "spe": 100
+  },
+  "abilities": [
+   "Truant"
+  ]
+ },
+ "367": {
+  "id": 367,
+  "key": "gulpin",
+  "en": "Gulpin",
+  "zh": "溶食兽",
+  "national": 316,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 43,
+   "def": 53,
+   "spa": 43,
+   "spd": 53,
+   "spe": 40
+  },
+  "abilities": [
+   "Liquid Ooze",
+   "Sticky Hold"
+  ]
+ },
+ "368": {
+  "id": 368,
+  "key": "swalot",
+  "en": "Swalot",
+  "zh": "吞食兽",
+  "national": 317,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 73,
+   "def": 83,
+   "spa": 73,
+   "spd": 83,
+   "spe": 55
+  },
+  "abilities": [
+   "Liquid Ooze",
+   "Sticky Hold"
+  ]
+ },
+ "369": {
+  "id": 369,
+  "key": "tropius",
+  "en": "Tropius",
+  "zh": "热带龙",
+  "national": 357,
+  "types": [
+   12,
+   2
+  ],
+  "base": {
+   "hp": 99,
+   "atk": 68,
+   "def": 83,
+   "spa": 72,
+   "spd": 87,
+   "spe": 51
+  },
+  "abilities": [
+   "Chlorophyll",
+   "Solar Power"
+  ]
+ },
+ "370": {
+  "id": 370,
+  "key": "whismur",
+  "en": "Whismur",
+  "zh": "咕妞妞",
+  "national": 293,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 64,
+   "atk": 51,
+   "def": 23,
+   "spa": 51,
+   "spd": 23,
+   "spe": 28
+  },
+  "abilities": [
+   "Soundproof"
+  ]
+ },
+ "371": {
+  "id": 371,
+  "key": "loudred",
+  "en": "Loudred",
+  "zh": "吼爆弹",
+  "national": 294,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 84,
+   "atk": 71,
+   "def": 43,
+   "spa": 71,
+   "spd": 43,
+   "spe": 48
+  },
+  "abilities": [
+   "Soundproof"
+  ]
+ },
+ "372": {
+  "id": 372,
+  "key": "exploud",
+  "en": "Exploud",
+  "zh": "爆音怪",
+  "national": 295,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 104,
+   "atk": 91,
+   "def": 63,
+   "spa": 91,
+   "spd": 63,
+   "spe": 68
+  },
+  "abilities": [
+   "Soundproof"
+  ]
+ },
+ "373": {
+  "id": 373,
+  "key": "clamperl",
+  "en": "Clamperl",
+  "zh": "珍珠贝",
+  "national": 366,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 35,
+   "atk": 64,
+   "def": 85,
+   "spa": 74,
+   "spd": 55,
+   "spe": 32
+  },
+  "abilities": [
+   "Shell Armor"
+  ]
+ },
+ "374": {
+  "id": 374,
+  "key": "huntail",
+  "en": "Huntail",
+  "zh": "猎斑鱼",
+  "national": 367,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 104,
+   "def": 105,
+   "spa": 94,
+   "spd": 75,
+   "spe": 52
+  },
+  "abilities": [
+   "Swift Swim"
+  ]
+ },
+ "375": {
+  "id": 375,
+  "key": "gorebyss",
+  "en": "Gorebyss",
+  "zh": "樱花鱼",
+  "national": 368,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 55,
+   "atk": 84,
+   "def": 105,
+   "spa": 114,
+   "spd": 75,
+   "spe": 52
+  },
+  "abilities": [
+   "Swift Swim"
+  ]
+ },
+ "376": {
+  "id": 376,
+  "key": "absol",
+  "en": "Absol",
+  "zh": "阿勃梭鲁",
+  "national": 359,
+  "types": [
+   17,
+   17
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 130,
+   "def": 60,
+   "spa": 75,
+   "spd": 60,
+   "spe": 75
+  },
+  "abilities": [
+   "Pressure",
+   "Super Luck"
+  ]
+ },
+ "377": {
+  "id": 377,
+  "key": "shuppet",
+  "en": "Shuppet",
+  "zh": "怨影娃娃",
+  "national": 353,
+  "types": [
+   7,
+   7
+  ],
+  "base": {
+   "hp": 44,
+   "atk": 75,
+   "def": 35,
+   "spa": 63,
+   "spd": 33,
+   "spe": 45
+  },
+  "abilities": [
+   "Insomnia",
+   "Frisk"
+  ]
+ },
+ "378": {
+  "id": 378,
+  "key": "banette",
+  "en": "Banette",
+  "zh": "诅咒娃娃",
+  "national": 354,
+  "types": [
+   7,
+   7
+  ],
+  "base": {
+   "hp": 64,
+   "atk": 115,
+   "def": 65,
+   "spa": 83,
+   "spd": 63,
+   "spe": 65
+  },
+  "abilities": [
+   "Insomnia",
+   "Frisk"
+  ]
+ },
+ "379": {
+  "id": 379,
+  "key": "seviper",
+  "en": "Seviper",
+  "zh": "饭匙蛇",
+  "national": 336,
+  "types": [
+   3,
+   3
+  ],
+  "base": {
+   "hp": 73,
+   "atk": 100,
+   "def": 60,
+   "spa": 100,
+   "spd": 60,
+   "spe": 65
+  },
+  "abilities": [
+   "Shed Skin"
+  ]
+ },
+ "380": {
+  "id": 380,
+  "key": "zangoose",
+  "en": "Zangoose",
+  "zh": "猫鼬斩",
+  "national": 335,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 73,
+   "atk": 115,
+   "def": 60,
+   "spa": 60,
+   "spd": 60,
+   "spe": 90
+  },
+  "abilities": [
+   "Immunity"
+  ]
+ },
+ "381": {
+  "id": 381,
+  "key": "relicanth",
+  "en": "Relicanth",
+  "zh": "古空棘鱼",
+  "national": 369,
+  "types": [
+   11,
+   5
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 90,
+   "def": 130,
+   "spa": 45,
+   "spd": 65,
+   "spe": 55
+  },
+  "abilities": [
+   "Swift Swim",
+   "Rock Head"
+  ]
+ },
+ "382": {
+  "id": 382,
+  "key": "aron",
+  "en": "Aron",
+  "zh": "可可多拉",
+  "national": 304,
+  "types": [
+   8,
+   5
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 70,
+   "def": 100,
+   "spa": 40,
+   "spd": 40,
+   "spe": 30
+  },
+  "abilities": [
+   "Sturdy",
+   "Rock Head"
+  ]
+ },
+ "383": {
+  "id": 383,
+  "key": "lairon",
+  "en": "Lairon",
+  "zh": "可多拉",
+  "national": 305,
+  "types": [
+   8,
+   5
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 90,
+   "def": 140,
+   "spa": 50,
+   "spd": 50,
+   "spe": 40
+  },
+  "abilities": [
+   "Sturdy",
+   "Rock Head"
+  ]
+ },
+ "384": {
+  "id": 384,
+  "key": "aggron",
+  "en": "Aggron",
+  "zh": "波士可多拉",
+  "national": 306,
+  "types": [
+   8,
+   5
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 110,
+   "def": 180,
+   "spa": 60,
+   "spd": 60,
+   "spe": 50
+  },
+  "abilities": [
+   "Sturdy",
+   "Rock Head"
+  ]
+ },
+ "385": {
+  "id": 385,
+  "key": "castform",
+  "en": "Castform",
+  "zh": "飘浮泡泡",
+  "national": 351,
+  "types": [
+   0,
+   0
+  ],
+  "base": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "spa": 70,
+   "spd": 70,
+   "spe": 70
+  },
+  "abilities": [
+   "Forecast"
+  ]
+ },
+ "386": {
+  "id": 386,
+  "key": "volbeat",
+  "en": "Volbeat",
+  "zh": "电萤虫",
+  "national": 313,
+  "types": [
+   6,
+   6
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 73,
+   "def": 55,
+   "spa": 47,
+   "spd": 75,
+   "spe": 85
+  },
+  "abilities": [
+   "Illuminate",
+   "Swarm"
+  ]
+ },
+ "387": {
+  "id": 387,
+  "key": "illumise",
+  "en": "Illumise",
+  "zh": "甜甜萤",
+  "national": 314,
+  "types": [
+   6,
+   6
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 47,
+   "def": 55,
+   "spa": 73,
+   "spd": 75,
+   "spe": 85
+  },
+  "abilities": [
+   "Oblivious",
+   "Tinted Lens"
+  ]
+ },
+ "388": {
+  "id": 388,
+  "key": "lileep",
+  "en": "Lileep",
+  "zh": "触手百合",
+  "national": 345,
+  "types": [
+   5,
+   12
+  ],
+  "base": {
+   "hp": 66,
+   "atk": 41,
+   "def": 77,
+   "spa": 61,
+   "spd": 87,
+   "spe": 23
+  },
+  "abilities": [
+   "Suction Cups"
+  ]
+ },
+ "389": {
+  "id": 389,
+  "key": "cradily",
+  "en": "Cradily",
+  "zh": "摇篮百合",
+  "national": 346,
+  "types": [
+   5,
+   12
+  ],
+  "base": {
+   "hp": 86,
+   "atk": 81,
+   "def": 97,
+   "spa": 81,
+   "spd": 107,
+   "spe": 43
+  },
+  "abilities": [
+   "Suction Cups"
+  ]
+ },
+ "390": {
+  "id": 390,
+  "key": "anorith",
+  "en": "Anorith",
+  "zh": "太古羽虫",
+  "national": 347,
+  "types": [
+   5,
+   6
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 95,
+   "def": 50,
+   "spa": 40,
+   "spd": 50,
+   "spe": 75
+  },
+  "abilities": [
+   "Battle Armor"
+  ]
+ },
+ "391": {
+  "id": 391,
+  "key": "armaldo",
+  "en": "Armaldo",
+  "zh": "太古盔甲",
+  "national": 348,
+  "types": [
+   5,
+   6
+  ],
+  "base": {
+   "hp": 75,
+   "atk": 125,
+   "def": 100,
+   "spa": 70,
+   "spd": 80,
+   "spe": 45
+  },
+  "abilities": [
+   "Battle Armor"
+  ]
+ },
+ "392": {
+  "id": 392,
+  "key": "ralts",
+  "en": "Ralts",
+  "zh": "拉鲁拉丝",
+  "national": 280,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 28,
+   "atk": 25,
+   "def": 25,
+   "spa": 45,
+   "spd": 35,
+   "spe": 40
+  },
+  "abilities": [
+   "Synchronize",
+   "Trace"
+  ]
+ },
+ "393": {
+  "id": 393,
+  "key": "kirlia",
+  "en": "Kirlia",
+  "zh": "奇鲁莉安",
+  "national": 281,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 38,
+   "atk": 35,
+   "def": 35,
+   "spa": 65,
+   "spd": 55,
+   "spe": 50
+  },
+  "abilities": [
+   "Synchronize",
+   "Trace"
+  ]
+ },
+ "394": {
+  "id": 394,
+  "key": "gardevoir",
+  "en": "Gardevoir",
+  "zh": "沙奈朵",
+  "national": 282,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 68,
+   "atk": 65,
+   "def": 65,
+   "spa": 125,
+   "spd": 115,
+   "spe": 80
+  },
+  "abilities": [
+   "Synchronize",
+   "Trace"
+  ]
+ },
+ "395": {
+  "id": 395,
+  "key": "bagon",
+  "en": "Bagon",
+  "zh": "宝贝龙",
+  "national": 371,
+  "types": [
+   16,
+   16
+  ],
+  "base": {
+   "hp": 45,
+   "atk": 75,
+   "def": 60,
+   "spa": 40,
+   "spd": 30,
+   "spe": 50
+  },
+  "abilities": [
+   "Rock Head"
+  ]
+ },
+ "396": {
+  "id": 396,
+  "key": "shelgon",
+  "en": "Shelgon",
+  "zh": "甲壳龙",
+  "national": 372,
+  "types": [
+   16,
+   16
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 95,
+   "def": 100,
+   "spa": 60,
+   "spd": 50,
+   "spe": 50
+  },
+  "abilities": [
+   "Rock Head"
+  ]
+ },
+ "397": {
+  "id": 397,
+  "key": "salamence",
+  "en": "Salamence",
+  "zh": "暴飞龙",
+  "national": 373,
+  "types": [
+   16,
+   2
+  ],
+  "base": {
+   "hp": 95,
+   "atk": 135,
+   "def": 80,
+   "spa": 110,
+   "spd": 80,
+   "spe": 100
+  },
+  "abilities": [
+   "Intimidate"
+  ]
+ },
+ "398": {
+  "id": 398,
+  "key": "beldum",
+  "en": "Beldum",
+  "zh": "铁哑铃",
+  "national": 374,
+  "types": [
+   8,
+   14
+  ],
+  "base": {
+   "hp": 40,
+   "atk": 55,
+   "def": 80,
+   "spa": 35,
+   "spd": 60,
+   "spe": 30
+  },
+  "abilities": [
+   "Clear Body"
+  ]
+ },
+ "399": {
+  "id": 399,
+  "key": "metang",
+  "en": "Metang",
+  "zh": "金属怪",
+  "national": 375,
+  "types": [
+   8,
+   14
+  ],
+  "base": {
+   "hp": 60,
+   "atk": 75,
+   "def": 100,
+   "spa": 55,
+   "spd": 80,
+   "spe": 50
+  },
+  "abilities": [
+   "Clear Body"
+  ]
+ },
+ "400": {
+  "id": 400,
+  "key": "metagross",
+  "en": "Metagross",
+  "zh": "巨金怪",
+  "national": 376,
+  "types": [
+   8,
+   14
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 135,
+   "def": 130,
+   "spa": 95,
+   "spd": 90,
+   "spe": 70
+  },
+  "abilities": [
+   "Clear Body"
+  ]
+ },
+ "401": {
+  "id": 401,
+  "key": "regirock",
+  "en": "Regirock",
+  "zh": "雷吉洛克",
+  "national": 377,
+  "types": [
+   5,
+   5
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 100,
+   "def": 200,
+   "spa": 50,
+   "spd": 100,
+   "spe": 50
+  },
+  "abilities": [
+   "Clear Body"
+  ]
+ },
+ "402": {
+  "id": 402,
+  "key": "regice",
+  "en": "Regice",
+  "zh": "雷吉艾斯",
+  "national": 378,
+  "types": [
+   15,
+   15
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 50,
+   "def": 100,
+   "spa": 100,
+   "spd": 200,
+   "spe": 50
+  },
+  "abilities": [
+   "Clear Body"
+  ]
+ },
+ "403": {
+  "id": 403,
+  "key": "registeel",
+  "en": "Registeel",
+  "zh": "雷吉斯奇鲁",
+  "national": 379,
+  "types": [
+   8,
+   8
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 75,
+   "def": 150,
+   "spa": 75,
+   "spd": 150,
+   "spe": 50
+  },
+  "abilities": [
+   "Clear Body"
+  ]
+ },
+ "404": {
+  "id": 404,
+  "key": "kyogre",
+  "en": "Kyogre",
+  "zh": "盖欧卡",
+  "national": 382,
+  "types": [
+   11,
+   11
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 100,
+   "def": 90,
+   "spa": 150,
+   "spd": 140,
+   "spe": 90
+  },
+  "abilities": [
+   "Drizzle"
+  ]
+ },
+ "405": {
+  "id": 405,
+  "key": "groudon",
+  "en": "Groudon",
+  "zh": "固拉多",
+  "national": 383,
+  "types": [
+   4,
+   4
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 150,
+   "def": 140,
+   "spa": 100,
+   "spd": 90,
+   "spe": 90
+  },
+  "abilities": [
+   "Drought"
+  ]
+ },
+ "406": {
+  "id": 406,
+  "key": "rayquaza",
+  "en": "Rayquaza",
+  "zh": "烈空坐",
+  "national": 384,
+  "types": [
+   16,
+   2
+  ],
+  "base": {
+   "hp": 105,
+   "atk": 150,
+   "def": 90,
+   "spa": 150,
+   "spd": 90,
+   "spe": 95
+  },
+  "abilities": [
+   "Air Lock"
+  ]
+ },
+ "407": {
+  "id": 407,
+  "key": "latias",
+  "en": "Latias",
+  "zh": "拉帝亚斯",
+  "national": 380,
+  "types": [
+   16,
+   14
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 80,
+   "def": 90,
+   "spa": 110,
+   "spd": 130,
+   "spe": 110
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "408": {
+  "id": 408,
+  "key": "latios",
+  "en": "Latios",
+  "zh": "拉帝欧斯",
+  "national": 381,
+  "types": [
+   16,
+   14
+  ],
+  "base": {
+   "hp": 80,
+   "atk": 90,
+   "def": 80,
+   "spa": 130,
+   "spd": 110,
+   "spe": 110
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ },
+ "409": {
+  "id": 409,
+  "key": "jirachi",
+  "en": "Jirachi",
+  "zh": "基拉祈",
+  "national": 385,
+  "types": [
+   8,
+   14
+  ],
+  "base": {
+   "hp": 100,
+   "atk": 100,
+   "def": 100,
+   "spa": 100,
+   "spd": 100,
+   "spe": 100
+  },
+  "abilities": [
+   "Serene Grace"
+  ]
+ },
+ "410": {
+  "id": 410,
+  "key": "deoxys",
+  "en": "Deoxys",
+  "zh": "代欧奇希斯",
+  "national": 386,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 50,
+   "atk": 150,
+   "def": 50,
+   "spa": 150,
+   "spd": 50,
+   "spe": 150
+  },
+  "abilities": [
+   "Pressure"
+  ]
+ },
+ "411": {
+  "id": 411,
+  "key": "chimecho",
+  "en": "Chimecho",
+  "zh": "风铃铃",
+  "national": 358,
+  "types": [
+   14,
+   14
+  ],
+  "base": {
+   "hp": 65,
+   "atk": 50,
+   "def": 70,
+   "spa": 95,
+   "spd": 80,
+   "spe": 65
+  },
+  "abilities": [
+   "Levitate"
+  ]
+ }
+}

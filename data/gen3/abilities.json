@@ -1,0 +1,458 @@
+{
+ "1": {
+  "id": 1,
+  "key": "stench",
+  "en": "Stench",
+  "zh": "恶臭"
+ },
+ "2": {
+  "id": 2,
+  "key": "drizzle",
+  "en": "Drizzle",
+  "zh": "降雨"
+ },
+ "3": {
+  "id": 3,
+  "key": "speedboost",
+  "en": "Speed Boost",
+  "zh": "加速"
+ },
+ "4": {
+  "id": 4,
+  "key": "battlearmor",
+  "en": "Battle Armor",
+  "zh": "战斗盔甲"
+ },
+ "5": {
+  "id": 5,
+  "key": "sturdy",
+  "en": "Sturdy",
+  "zh": "结实"
+ },
+ "6": {
+  "id": 6,
+  "key": "damp",
+  "en": "Damp",
+  "zh": "湿气"
+ },
+ "7": {
+  "id": 7,
+  "key": "limber",
+  "en": "Limber",
+  "zh": "柔软"
+ },
+ "8": {
+  "id": 8,
+  "key": "sandveil",
+  "en": "Sand Veil",
+  "zh": "沙隐"
+ },
+ "9": {
+  "id": 9,
+  "key": "static",
+  "en": "Static",
+  "zh": "静电"
+ },
+ "10": {
+  "id": 10,
+  "key": "voltabsorb",
+  "en": "Volt Absorb",
+  "zh": "蓄电"
+ },
+ "11": {
+  "id": 11,
+  "key": "waterabsorb",
+  "en": "Water Absorb",
+  "zh": "储水"
+ },
+ "12": {
+  "id": 12,
+  "key": "oblivious",
+  "en": "Oblivious",
+  "zh": "迟钝"
+ },
+ "13": {
+  "id": 13,
+  "key": "cloudnine",
+  "en": "Cloud Nine",
+  "zh": "无关天气"
+ },
+ "14": {
+  "id": 14,
+  "key": "compoundeyes",
+  "en": "Compound Eyes",
+  "zh": "复眼"
+ },
+ "15": {
+  "id": 15,
+  "key": "insomnia",
+  "en": "Insomnia",
+  "zh": "不眠"
+ },
+ "16": {
+  "id": 16,
+  "key": "colorchange",
+  "en": "Color Change",
+  "zh": "变色"
+ },
+ "17": {
+  "id": 17,
+  "key": "immunity",
+  "en": "Immunity",
+  "zh": "免疫"
+ },
+ "18": {
+  "id": 18,
+  "key": "flashfire",
+  "en": "Flash Fire",
+  "zh": "引火"
+ },
+ "19": {
+  "id": 19,
+  "key": "shielddust",
+  "en": "Shield Dust",
+  "zh": "鳞粉"
+ },
+ "20": {
+  "id": 20,
+  "key": "owntempo",
+  "en": "Own Tempo",
+  "zh": "我行我素"
+ },
+ "21": {
+  "id": 21,
+  "key": "suctioncups",
+  "en": "Suction Cups",
+  "zh": "吸盘"
+ },
+ "22": {
+  "id": 22,
+  "key": "intimidate",
+  "en": "Intimidate",
+  "zh": "威吓"
+ },
+ "23": {
+  "id": 23,
+  "key": "shadowtag",
+  "en": "Shadow Tag",
+  "zh": "踩影"
+ },
+ "24": {
+  "id": 24,
+  "key": "roughskin",
+  "en": "Rough Skin",
+  "zh": "粗糙皮肤"
+ },
+ "25": {
+  "id": 25,
+  "key": "wonderguard",
+  "en": "Wonder Guard",
+  "zh": "神奇守护"
+ },
+ "26": {
+  "id": 26,
+  "key": "levitate",
+  "en": "Levitate",
+  "zh": "飘浮"
+ },
+ "27": {
+  "id": 27,
+  "key": "effectspore",
+  "en": "Effect Spore",
+  "zh": "孢子"
+ },
+ "28": {
+  "id": 28,
+  "key": "synchronize",
+  "en": "Synchronize",
+  "zh": "同步"
+ },
+ "29": {
+  "id": 29,
+  "key": "clearbody",
+  "en": "Clear Body",
+  "zh": "恒净之躯"
+ },
+ "30": {
+  "id": 30,
+  "key": "naturalcure",
+  "en": "Natural Cure",
+  "zh": "自然回复"
+ },
+ "31": {
+  "id": 31,
+  "key": "lightningrod",
+  "en": "Lightning Rod",
+  "zh": "避雷针"
+ },
+ "32": {
+  "id": 32,
+  "key": "serenegrace",
+  "en": "Serene Grace",
+  "zh": "天恩"
+ },
+ "33": {
+  "id": 33,
+  "key": "swiftswim",
+  "en": "Swift Swim",
+  "zh": "悠游自如"
+ },
+ "34": {
+  "id": 34,
+  "key": "chlorophyll",
+  "en": "Chlorophyll",
+  "zh": "叶绿素"
+ },
+ "35": {
+  "id": 35,
+  "key": "illuminate",
+  "en": "Illuminate",
+  "zh": "发光"
+ },
+ "36": {
+  "id": 36,
+  "key": "trace",
+  "en": "Trace",
+  "zh": "复制"
+ },
+ "37": {
+  "id": 37,
+  "key": "hugepower",
+  "en": "Huge Power",
+  "zh": "大力士"
+ },
+ "38": {
+  "id": 38,
+  "key": "poisonpoint",
+  "en": "Poison Point",
+  "zh": "毒刺"
+ },
+ "39": {
+  "id": 39,
+  "key": "innerfocus",
+  "en": "Inner Focus",
+  "zh": "精神力"
+ },
+ "40": {
+  "id": 40,
+  "key": "magmaarmor",
+  "en": "Magma Armor",
+  "zh": "熔岩铠甲"
+ },
+ "41": {
+  "id": 41,
+  "key": "waterveil",
+  "en": "Water Veil",
+  "zh": "水幕"
+ },
+ "42": {
+  "id": 42,
+  "key": "magnetpull",
+  "en": "Magnet Pull",
+  "zh": "磁力"
+ },
+ "43": {
+  "id": 43,
+  "key": "soundproof",
+  "en": "Soundproof",
+  "zh": "隔音"
+ },
+ "44": {
+  "id": 44,
+  "key": "raindish",
+  "en": "Rain Dish",
+  "zh": "雨盘"
+ },
+ "45": {
+  "id": 45,
+  "key": "sandstream",
+  "en": "Sand Stream",
+  "zh": "扬沙"
+ },
+ "46": {
+  "id": 46,
+  "key": "pressure",
+  "en": "Pressure",
+  "zh": "压迫感"
+ },
+ "47": {
+  "id": 47,
+  "key": "thickfat",
+  "en": "Thick Fat",
+  "zh": "厚脂肪"
+ },
+ "48": {
+  "id": 48,
+  "key": "earlybird",
+  "en": "Early Bird",
+  "zh": "早起"
+ },
+ "49": {
+  "id": 49,
+  "key": "flamebody",
+  "en": "Flame Body",
+  "zh": "火焰之躯"
+ },
+ "50": {
+  "id": 50,
+  "key": "runaway",
+  "en": "Run Away",
+  "zh": "逃跑"
+ },
+ "51": {
+  "id": 51,
+  "key": "keeneye",
+  "en": "Keen Eye",
+  "zh": "锐利目光"
+ },
+ "52": {
+  "id": 52,
+  "key": "hypercutter",
+  "en": "Hyper Cutter",
+  "zh": "怪力钳"
+ },
+ "53": {
+  "id": 53,
+  "key": "pickup",
+  "en": "Pickup",
+  "zh": "捡拾"
+ },
+ "54": {
+  "id": 54,
+  "key": "truant",
+  "en": "Truant",
+  "zh": "懒惰"
+ },
+ "55": {
+  "id": 55,
+  "key": "hustle",
+  "en": "Hustle",
+  "zh": "活力"
+ },
+ "56": {
+  "id": 56,
+  "key": "cutecharm",
+  "en": "Cute Charm",
+  "zh": "迷人之躯"
+ },
+ "57": {
+  "id": 57,
+  "key": "plus",
+  "en": "Plus",
+  "zh": "正电"
+ },
+ "58": {
+  "id": 58,
+  "key": "minus",
+  "en": "Minus",
+  "zh": "负电"
+ },
+ "59": {
+  "id": 59,
+  "key": "forecast",
+  "en": "Forecast",
+  "zh": "阴晴不定"
+ },
+ "60": {
+  "id": 60,
+  "key": "stickyhold",
+  "en": "Sticky Hold",
+  "zh": "黏着"
+ },
+ "61": {
+  "id": 61,
+  "key": "shedskin",
+  "en": "Shed Skin",
+  "zh": "蜕皮"
+ },
+ "62": {
+  "id": 62,
+  "key": "guts",
+  "en": "Guts",
+  "zh": "毅力"
+ },
+ "63": {
+  "id": 63,
+  "key": "marvelscale",
+  "en": "Marvel Scale",
+  "zh": "神奇鳞片"
+ },
+ "64": {
+  "id": 64,
+  "key": "liquidooze",
+  "en": "Liquid Ooze",
+  "zh": "污泥浆"
+ },
+ "65": {
+  "id": 65,
+  "key": "overgrow",
+  "en": "Overgrow",
+  "zh": "茂盛"
+ },
+ "66": {
+  "id": 66,
+  "key": "blaze",
+  "en": "Blaze",
+  "zh": "猛火"
+ },
+ "67": {
+  "id": 67,
+  "key": "torrent",
+  "en": "Torrent",
+  "zh": "激流"
+ },
+ "68": {
+  "id": 68,
+  "key": "swarm",
+  "en": "Swarm",
+  "zh": "虫之预感"
+ },
+ "69": {
+  "id": 69,
+  "key": "rockhead",
+  "en": "Rock Head",
+  "zh": "坚硬脑袋"
+ },
+ "70": {
+  "id": 70,
+  "key": "drought",
+  "en": "Drought",
+  "zh": "日照"
+ },
+ "71": {
+  "id": 71,
+  "key": "arenatrap",
+  "en": "Arena Trap",
+  "zh": "沙穴"
+ },
+ "72": {
+  "id": 72,
+  "key": "vitalspirit",
+  "en": "Vital Spirit",
+  "zh": "干劲"
+ },
+ "73": {
+  "id": 73,
+  "key": "whitesmoke",
+  "en": "White Smoke",
+  "zh": "白色烟雾"
+ },
+ "74": {
+  "id": 74,
+  "key": "purepower",
+  "en": "Pure Power",
+  "zh": "瑜伽之力"
+ },
+ "75": {
+  "id": 75,
+  "key": "shellarmor",
+  "en": "Shell Armor",
+  "zh": "硬壳盔甲"
+ },
+ "77": {
+  "id": 77,
+  "key": "airlock",
+  "en": "Air Lock",
+  "zh": "气闸"
+ }
+}

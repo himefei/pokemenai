@@ -1,0 +1,36 @@
+# 依赖 / 构建产物
+node_modules/
+web/dist/
+web/public/core/
+*.tsbuildinfo
+.vite/
+
+# 隐私：模型 endpoint 与 API key 只放在本地设置里
+config/settings.local.json
+config/*.local.json
+.env
+.env.*
+
+# 运行日志（含完整的模型输入输出）、存档备份
+runs/
+backup/
+*.log
+
+# 游戏文件：ROM、存档、存档点都不能上传，需要自己准备
+*.gba
+*.gbc
+*.gb
+*.sav
+*.srm
+*.state
+*.ss[0-9]
+*.zip
+*.7z
+
+# 项目计划与开发笔记（本地留存，不公开）
+pokemon-battle-agent-plan.md
+DEV-NOTES.local.md
+*.local.md
+
+.DS_Store
+.claude/
