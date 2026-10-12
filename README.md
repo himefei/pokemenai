@@ -123,4 +123,9 @@ runs/     运行日志（不进 git）
 
 - 模拟器核心：[mGBA](https://mgba.io/)（MPL-2.0）及其 WebAssembly 构建 [`@thenick775/mgba-wasm`](https://www.npmjs.com/package/@thenick775/mgba-wasm)，通过 npm 安装，不随仓库分发。
 - 内存地址来自 [pret/pokeemerald](https://github.com/pret/pokeemerald) 的符号表（经 [40Cakes/pokebot-gen3](https://github.com/40Cakes/pokebot-gen3) 整理）。
+- 第 3 世代数据表（`data/gen3`）由 `npm run gen:data` 生成：内部编号来自 pret/pokeemerald，数值来自 [`@pkmn/dex`](https://github.com/pkmn/ps)（MIT），中文名来自 [PokeAPI](https://github.com/PokeAPI/pokeapi) 的数据表。
 - 这是一个非官方的个人研究项目，与任天堂、Game Freak、The Pokémon Company 无关。仓库不包含、也不应上传任何游戏 ROM、存档或存档点。
+
+## 许可证
+
+本项目的代码以 [Apache License 2.0](LICENSE) 发布。上面列出的第三方组件和数据来源各自遵循它们自己的许可；“Pokémon”及相关名称是各自权利人的商标，游戏 ROM 不在本许可范围内，也不随仓库分发。
