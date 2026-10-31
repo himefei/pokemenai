@@ -1,10 +1,11 @@
-// Anthropic Messages API（流式）。支持 extended thinking 预算。
+// Anthropic Messages API（流式）。
 
-import { LlmError, deepMerge } from "./types.js";
+import { LlmError } from "./types.js";
 import type { LlmClient, LlmCompletion, LlmRequest, ProviderConfig } from "./types.js";
 import { readSse } from "./sse.js";
 
 export const ANTHROPIC_VERSION = "2023-06-01";
+export const ANTHROPIC_MAX_TOKENS = 8192;
 
 export class AnthropicClient implements LlmClient {
 	constructor(private readonly cfg: ProviderConfig) {}
@@ -14,25 +15,20 @@ export class AnthropicClient implements LlmClient {
 		const t0 = performance.now();
 		const system = req.messages.filter((m) => m.role === "system").map((m) => m.content).join("\n\n");
 		const messages = req.messages.filter((m) => m.role !== "system").map((m) => ({ role: m.role, content: m.content }));
-		const thinking = params.thinkingBudget ? { type: "enabled", budget_tokens: params.thinkingBudget } : undefined;
 
-		let body: Record<string, unknown> = {
+		// Anthropic 接口规定 max_tokens 必填，没有“交给 endpoint 决定”的选项：给一个宽松的上限（回答只是一小段 JSON），不去限制模型。
+		// 除此之外不带任何采样 / 思考参数。
+		const body: Record<string, unknown> = {
 			model: this.cfg.model,
-			// Anthropic 接口要求必须带 max_tokens：没指定时给一个宽松的兜底，不去限制思考
-			max_tokens: params.maxTokens ?? (thinking ? (params.thinkingBudget ?? 0) + 4096 : 8192),
+			max_tokens: ANTHROPIC_MAX_TOKENS,
 			messages,
 			stream: true,
 		};
 		if (system) body.system = system;
-		if (thinking) body.thinking = thinking;
-		// 开启 thinking 时 Anthropic 要求 temperature 为默认值，所以不发送
-		else if (params.temperature !== undefined) body.temperature = params.temperature;
-		body = deepMerge(body, params.extraBody);
 
 		const headers: Record<string, string> = {
 			"content-type": "application/json",
 			"anthropic-version": ANTHROPIC_VERSION,
-			...(params.extraHeaders ?? {}),
 		};
 		if (this.cfg.apiKey) headers["x-api-key"] = this.cfg.apiKey;
 

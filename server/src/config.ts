@@ -3,6 +3,8 @@
 import { chmodSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { DEFAULT_CONTEXT_WINDOW } from "./agent/context.js";
+import type { ContextMode } from "./agent/context.js";
 import type { LlmParams, ProviderConfig } from "./llm/types.js";
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
@@ -17,7 +19,11 @@ export interface AgentSettings {
 	preset: string;
 	/** 第 3 世代规则提示（评测变量，默认关） */
 	rulesHint: boolean;
-	/** 保留完整对话的最近回合数 */
+	/** 上下文管理方式：window = 窗口 + 摘要（每回合重发）；continuous = 一场战斗一个连续会话（只追加）；continuous-server = 连续会话且对话存在后端（/v1/responses） */
+	contextMode: ContextMode;
+	/** 手动后备的上下文长度（tokens）：先从 endpoint 读取这个模型的窗口，读不到才用它 */
+	contextWindow: number;
+	/** 保留完整对话的最近回合数（只用于 window 模式） */
 	keepFull: number;
 	/** 格式错误后带错误信息重试的次数；耗尽就如实报错，没有兜底 */
 	maxRetries: number;
@@ -26,13 +32,13 @@ export interface AgentSettings {
 }
 
 export interface Settings {
-	llm: ProviderConfig & { params?: LlmParams; extraBody?: Record<string, unknown> };
+	llm: ProviderConfig & { params?: LlmParams };
 	agent: AgentSettings;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
 	llm: { kind: "openai-compat", baseUrl: "http://127.0.0.1:1234", apiKey: "", model: "", params: { timeoutMs: 600000 } },
-	agent: { policy: "llm", preset: "default", rulesHint: false, keepFull: 30, maxRetries: 2, confirmMode: false },
+	agent: { policy: "llm", preset: "default", rulesHint: false, contextMode: "window", contextWindow: DEFAULT_CONTEXT_WINDOW, keepFull: 30, maxRetries: 2, confirmMode: false },
 };
 
 export type SlotId = "a" | "b";
@@ -43,18 +49,20 @@ export interface AppSettings {
 	slots: Record<SlotId, Settings>;
 }
 
-/** 去掉值为 null / undefined / NaN 的参数：没设就不发，由 endpoint 自己的配置决定。 */
+/** 模型参数全部由 endpoint 决定，本地只保留“请求超时”这一项（本地自己的行为）。其余一律丢弃，不会发给 endpoint。 */
 export function cleanParams(p: LlmParams | undefined): LlmParams {
-	const out: Record<string, unknown> = {};
-	for (const [k, v] of Object.entries(p ?? {})) if (v !== null && v !== undefined && !(typeof v === "number" && Number.isNaN(v))) out[k] = v;
-	return out as LlmParams;
+	const t = p?.timeoutMs;
+	return typeof t === "number" && Number.isFinite(t) && t > 0 ? { timeoutMs: t } : {};
 }
 
 function mergeSettings(base: Settings, j: Partial<Settings> | undefined): Settings {
-	return {
-		llm: { ...base.llm, ...(j?.llm ?? {}), params: cleanParams({ ...base.llm.params, ...(j?.llm?.params ?? {}) }) },
-		agent: { ...base.agent, ...(j?.agent ?? {}) },
-	};
+	const { extraBody, ...llm } = { ...base.llm, ...(j?.llm ?? {}) } as Settings["llm"] & { extraBody?: Record<string, unknown> };
+	const legacy = Object.keys(j?.llm?.params ?? {}).filter((k) => k !== "timeoutMs");
+	if (legacy.length || (extraBody && Object.keys(extraBody).length)) console.warn(`[settings] 本地不再传任何模型参数，已忽略设置文件里的：${[...legacy, ...(extraBody && Object.keys(extraBody).length ? ["extraBody"] : [])].join("、")}（由 endpoint 自己的配置决定）`);
+	const agent = { ...base.agent, ...(j?.agent ?? {}) };
+	// 手动后备值缺失 / 无效（含旧版本存的 null = “自动”）就用默认值
+	if (!(Number.isInteger(agent.contextWindow) && agent.contextWindow >= 512)) agent.contextWindow = DEFAULT_CONTEXT_WINDOW;
+	return { llm: { ...llm, params: cleanParams({ ...base.llm.params, ...(j?.llm?.params ?? {}) }) }, agent };
 }
 
 /**

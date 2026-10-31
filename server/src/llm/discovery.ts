@@ -19,6 +19,38 @@ export interface Endpoint {
 	models: ModelInfo[];
 }
 
+/**
+ * 从 /v1/models 的一项里读上下文长度。不同后端用不同字段：优先“实际加载/运行”的窗口，其次才是模型的最大值。
+ *   LM Studio loaded_context_length ｜ llama.cpp meta.n_ctx ｜ vLLM / omlx max_model_len ｜ 其他 context_length / context_window / max_input_tokens …
+ */
+const CONTEXT_FIELDS: string[][] = [
+	["loaded_context_length"],
+	["meta", "n_ctx"],
+	["n_ctx"],
+	["max_model_len"],
+	["context_length"],
+	["context_window"],
+	["max_context_length"],
+	["max_input_tokens"],
+	["meta", "n_ctx_train"],
+];
+
+export function positiveInt(v: unknown): number | null {
+	const n = typeof v === "string" ? Number(v) : v;
+	return typeof n === "number" && Number.isFinite(n) && n > 0 ? Math.floor(n) : null;
+}
+
+export function contextFromModelEntry(entry: unknown): { max: number; field: string } | null {
+	if (!entry || typeof entry !== "object") return null;
+	for (const path of CONTEXT_FIELDS) {
+		let cur: any = entry;
+		for (const k of path) cur = cur?.[k];
+		const n = positiveInt(cur);
+		if (n) return { max: n, field: path.join(".") };
+	}
+	return null;
+}
+
 /** 默认探测的本地端口 */
 export const DEFAULT_LOCAL_PROBES: Array<{ port: number; product: Endpoint["product"] }> = [
 	{ port: 1234, product: "lmstudio" },
@@ -27,7 +59,7 @@ export const DEFAULT_LOCAL_PROBES: Array<{ port: number; product: Endpoint["prod
 	{ port: 8000, product: "vllm" },
 ];
 
-async function getJson(url: string, headers: Record<string, string> = {}, timeoutMs = 500): Promise<any | null> {
+export async function getJson(url: string, headers: Record<string, string> = {}, timeoutMs = 500): Promise<any | null> {
 	try {
 		const res = await fetch(url, { headers, signal: AbortSignal.timeout(timeoutMs) });
 		if (!res.ok) return null;
@@ -39,7 +71,7 @@ async function getJson(url: string, headers: Record<string, string> = {}, timeou
 	}
 }
 
-async function postJson(url: string, body: unknown, timeoutMs = 1500): Promise<any | null> {
+export async function postJson(url: string, body: unknown, timeoutMs = 1500): Promise<any | null> {
 	try {
 		const res = await fetch(url, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body), signal: AbortSignal.timeout(timeoutMs) });
 		return res.ok ? await res.json() : null;
@@ -55,7 +87,7 @@ export async function listOpenAiCompatModels(baseUrl: string, apiKey?: string, p
 	let models: ModelInfo[] | null = null;
 
 	const v1 = await getJson(`${base}/v1/models`, headers, timeoutMs);
-	if (v1 && Array.isArray(v1.data)) models = v1.data.map((m: any) => ({ id: String(m.id), tags: [] }));
+	if (v1 && Array.isArray(v1.data)) models = v1.data.map((m: any) => ({ id: String(m.id), tags: [], contextLength: contextFromModelEntry(m)?.max }));
 
 	if (!models && product === "ollama") {
 		const tags = await getJson(`${base}/api/tags`, headers, timeoutMs);

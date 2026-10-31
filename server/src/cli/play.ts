@@ -40,7 +40,6 @@ const { values: args } = parseArgs({
 		preset: { type: "string", default: "default" },
 		"rules-hint": { type: "boolean", default: false },
 		retries: { type: "string", default: "2" },
-		"extra-body": { type: "string" },
 		keep: { type: "string", default: "30" },
 	},
 });
@@ -90,11 +89,10 @@ const policy: Policy = (() => {
 	if (args.policy === "random") return new RandomPolicy(seed);
 	if (args.policy === "llm") {
 		const settings = loadSettings();
-		const extraBody = { ...(settings.llm.extraBody ?? {}), ...(args["extra-body"] ? (JSON.parse(args["extra-body"]) as Record<string, unknown>) : {}) };
 		return new LlmPolicy({
 			client: createClient(settings.llm),
 			model: settings.llm.model,
-			params: { ...(settings.llm.params ?? {}), extraBody },
+			params: { timeoutMs: settings.llm.params?.timeoutMs },
 			prompt: { preset: loadPreset(args.preset), rulesHint: args["rules-hint"] ?? false },
 			keepFull: Number(args.keep),
 			maxRetries: Number(args.retries),

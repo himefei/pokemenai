@@ -67,3 +67,14 @@ describe("buildRunReport", () => {
 		expect(md).not.toMatch(/api[_-]?key/i);
 	});
 });
+
+describe("report · model parameters", () => {
+	it("a current log says every parameter came from the endpoint; an old log shows the override it recorded", () => {
+		const current = buildRunReport([{ ...records[0], model: { model: "m-x", kind: "openai-compat", params: { timeoutMs: 600000 } } }, ...records.slice(1)]);
+		expect(current).toContain("全部由 endpoint 自己的配置决定");
+		expect(current).not.toContain("timeoutMs");
+		const old = buildRunReport(records);
+		expect(old).toContain('"temperature":0.6');
+		expect(old).toContain("旧日志里记录的本地覆盖");
+	});
+});

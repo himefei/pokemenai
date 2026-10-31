@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import type { Preset, RunListItem, ModelInfo, ServerStatus, Settings, AgentEvent } from "./types";
+import type { Preset, RunListItem, ModelInfo, ServerStatus, Settings, AgentEvent, ContextWindowInfo, StateProbeResult } from "./types";
 
 export type SlotId = "a" | "b";
 
@@ -22,6 +22,8 @@ export function makeApi(slot: SlotId) {
 		saveSettings: (patch: { llm?: Partial<Settings["llm"]>; agent?: Partial<Settings["agent"]> }) => put(`${s}/settings`, patch).then((r) => j<Settings>(r)),
 		models: (body: { kind?: string; baseUrl?: string; apiKey?: string }) => post(`${s}/models/list`, body) as Promise<{ models: ModelInfo[] | null }>,
 		testLlm: () => post(`${s}/llm/test`) as Promise<{ ok: boolean; latencyMs?: number; reply?: string; error?: string }>,
+		contextWindow: () => fetch(`${s}/llm/context`).then((r) => j<ContextWindowInfo>(r)),
+		testServerState: () => post(`${s}/llm/state-test`) as unknown as Promise<StateProbeResult>,
 		takeover: () => post(`${s}/control/takeover`),
 		arm: () => post(`${s}/control/arm`),
 		release: () => post(`${s}/control/release`),

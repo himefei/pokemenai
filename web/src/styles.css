@@ -1108,3 +1108,98 @@ a.btn.primary {
 .replay-wrap {
 	grid-column: 2;
 }
+
+/* ---- 上下文占用 ---- */
+.ctx-line {
+	display: flex;
+	align-items: baseline;
+	gap: 4px;
+	font-size: 15px;
+}
+
+.ctx-pct {
+	margin-left: auto;
+	font-size: 13px;
+	font-weight: 650;
+	color: var(--good);
+}
+
+.ctx-pct.warn {
+	color: var(--warn);
+}
+
+.ctx-pct.full {
+	color: var(--bad);
+}
+
+.ctx-track {
+	position: relative;
+	height: 10px;
+	border-radius: 999px;
+	background: var(--code-bg);
+	overflow: hidden;
+	box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.ctx-fill {
+	height: 100%;
+	border-radius: 999px;
+	background: var(--accent);
+	transition: width 0.4s ease;
+}
+
+.ctx-fill.warn {
+	background: var(--warn);
+}
+
+.ctx-fill.full {
+	background: var(--bad);
+}
+
+.ctx-stop {
+	position: absolute;
+	left: 95%;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	border-left: 1px dashed var(--muted);
+}
+
+.ctx-spark {
+	width: 100%;
+	height: 34px;
+	display: block;
+}
+
+.ctx-spark rect {
+	fill: var(--muted);
+	opacity: 0.45;
+}
+
+.ctx-spark rect.on {
+	fill: var(--accent);
+	opacity: 1;
+}
+
+.ctx-box {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 8px 10px;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--panel-2);
+}
+
+.ctx-box .btns {
+	margin: 0;
+}
+
+/* 对比分屏里每个槽位的高度有限：上下文卡片只留“已用 / 最大”和进度条 */
+.slot.compact .ctx .opt {
+	display: none;
+}
+
+.kv b.warn {
+	color: var(--warn);
+}

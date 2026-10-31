@@ -71,6 +71,8 @@ export async function buildServer(target: SessionManager | Session, assets = new
 	app.get("/api/models/discover", async () => ({ endpoints: await manager.get("a")!.discover() }));
 	slotRoute("post", "/models/list", async (req, _reply, s) => ({ models: await s.models((req.body ?? {}) as never) }));
 	slotRoute("post", "/llm/test", async (_req, _reply, s) => s.testLlm());
+	slotRoute("get", "/llm/context", async (_req, _reply, s) => s.contextWindow());
+	slotRoute("post", "/llm/state-test", async (_req, _reply, s) => s.testServerState());
 
 	// ---- 提示词预设（全局，两个槽位共用） ----
 	app.get("/api/presets", async () => ({ presets: manager.get("a")!.listPresets() }));

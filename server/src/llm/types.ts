@@ -5,17 +5,12 @@ export interface ChatMessage {
 	content: string;
 }
 
+/**
+ * 模型参数全部由 endpoint 自己的配置决定：本地不传、也不覆盖任何采样参数（temperature / top_k / min_p / max_tokens / 思考开关……）。
+ * 这里只剩本地自己的行为：请求超时。
+ */
 export interface LlmParams {
-	temperature?: number;
-	maxTokens?: number;
-	/** OpenAI 兼容：reasoning_effort（low/medium/high…）；null/undefined 不发送 */
-	reasoningEffort?: string | null;
-	/** Anthropic：extended thinking 的 token 预算；null/undefined 关闭思考 */
-	thinkingBudget?: number | null;
 	timeoutMs?: number;
-	/** 额外请求体 JSON，会深度合并到请求体（本地模型常用：chat_template_kwargs、response_format…） */
-	extraBody?: Record<string, unknown>;
-	extraHeaders?: Record<string, string>;
 }
 
 export interface LlmDelta {
@@ -28,13 +23,18 @@ export interface LlmCompletion {
 	content: string;
 	/** 思考内容：reasoning_content / thinking 块 / <think> 标签里的文字 */
 	reasoning: string;
-	usage: { inputTokens?: number; outputTokens?: number };
+	usage: { inputTokens?: number; outputTokens?: number; /** 后端报告的前缀缓存命中 token 数（有的后端不报） */ cachedTokens?: number };
 	latencyMs: number;
 	finishReason?: string;
+	/** /v1/responses：这次回复的 id，下一次用 previous_response_id 接着聊 */
+	responseId?: string;
 }
 
 export interface LlmRequest {
+	/** 完整对话（日志、无状态接口都用它） */
 	messages: ChatMessage[];
+	/** 后端保存对话时（/v1/responses）：接着 previousResponseId 那次回复继续，只发 messages 里第 `sent` 条之后的新消息 */
+	chain?: { previousResponseId: string; sent: number };
 	params: LlmParams;
 	signal?: AbortSignal;
 	onDelta?: (d: LlmDelta) => void;
@@ -62,17 +62,4 @@ export class LlmError extends Error {
 	) {
 		super(message);
 	}
-}
-
-export function deepMerge<T extends Record<string, unknown>>(a: T, b: Record<string, unknown> | undefined): T {
-	if (!b) return a;
-	const out: Record<string, unknown> = { ...a };
-	for (const [k, v] of Object.entries(b)) {
-		const cur = out[k];
-		out[k] =
-			v && typeof v === "object" && !Array.isArray(v) && cur && typeof cur === "object" && !Array.isArray(cur)
-				? deepMerge(cur as Record<string, unknown>, v as Record<string, unknown>)
-				: v;
-	}
-	return out as T;
 }

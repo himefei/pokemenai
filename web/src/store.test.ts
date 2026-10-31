@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildTimeline, foldEvents } from "./store";
+import { buildTimeline, contextUsage, foldEvents } from "./store";
 import type { AgentEvent, Observation } from "./types";
 
 const obs = (turn: number, oppHp: number, myHp: number, opp = "大狼犬"): Observation => ({
@@ -110,5 +110,63 @@ describe("buildTimeline", () => {
 	it("does not compare HP across different opponents", () => {
 		const s = foldEvents([...turn1, { type: "battle.state", turn: 2, observation: obs(2, 100, 100, "狡猾天狗"), truth: {} }]);
 		expect(buildTimeline(s.records)[0]!.oppAfter).toBeNull();
+	});
+});
+
+describe("context usage", () => {
+	const decision = (turn: number, tokens: number, extra: Partial<Extract<AgentEvent, { type: "llm.response" }>> = {}): AgentEvent[] => [
+		{ type: "battle.state", turn, observation: obs(turn, 100, 120), truth: {} },
+		{ type: "llm.request", turn, attempt: 1, model: "m", messages: [], sent: 2 },
+		{ type: "llm.response", turn, attempt: 1, content: "{}", reasoning: "", usage: { inputTokens: tokens, outputTokens: 40, cachedTokens: tokens - 100 }, latencyMs: 1, ...extra },
+	];
+	const info: AgentEvent = { type: "context.info", mode: "continuous", max: 20000, source: "/v1/models → max_model_len" };
+
+	it("is empty before any call, but already knows the window once the run has announced it", () => {
+		expect(contextUsage(foldEvents([])).used).toBeNull();
+		const u = contextUsage(foldEvents([info]));
+		expect(u).toMatchObject({ max: 20000, used: null, pct: null, mode: "continuous" });
+	});
+
+	it("used / max comes from the backend's own prompt_tokens of the latest call", () => {
+		const u = contextUsage(foldEvents([info, ...decision(1, 2000), ...decision(2, 3600), ...decision(3, 5200)]));
+		expect(u).toMatchObject({ used: 5200, output: 40, cached: 5100, max: 20000, level: "ok" });
+		expect(u.pct).toBeCloseTo(26);
+		expect(u.series.map((s) => s.tokens)).toEqual([2000, 3600, 5200]);
+		expect(u.perTurn).toBe(1600);
+		expect(u.turnsLeft).toBe(Math.floor((20000 * 0.95 - 5200) / 1600)); // 照这个速度还能撑几个决策
+	});
+
+	it("uses the last attempt of a decision (retries add to the context)", () => {
+		const s = foldEvents([
+			info,
+			{ type: "battle.state", turn: 1, observation: obs(1, 100, 120), truth: {} },
+			{ type: "llm.request", turn: 1, attempt: 1, model: "m", messages: [] },
+			{ type: "llm.response", turn: 1, attempt: 1, content: "x", reasoning: "", usage: { inputTokens: 2000 }, latencyMs: 1, parseError: "bad" },
+			{ type: "llm.request", turn: 1, attempt: 2, model: "m", messages: [] },
+			{ type: "llm.response", turn: 1, attempt: 2, content: "y", reasoning: "", usage: { inputTokens: 2300 }, latencyMs: 1 },
+		]);
+		expect(contextUsage(s)).toMatchObject({ used: 2300 });
+		expect(contextUsage(s).series).toHaveLength(1);
+	});
+
+	it("flags 80% and 95%; an unknown window gives no percentage and no verdict", () => {
+		expect(contextUsage(foldEvents([info, ...decision(1, 16500)])).level).toBe("warn");
+		expect(contextUsage(foldEvents([info, ...decision(1, 19200)])).level).toBe("full");
+		const unknown = contextUsage(foldEvents([{ ...info, max: null }, ...decision(1, 16500)]));
+		expect(unknown).toMatchObject({ used: 16500, max: null, pct: null, level: "ok", turnsLeft: null });
+	});
+
+	it("surfaces the latest truncation warning; window mode has no growth estimate", () => {
+		const u = contextUsage(foldEvents([info, ...decision(1, 3000), ...decision(2, 2900, { warning: "prompt_tokens 没有增长" })]));
+		expect(u.warning).toEqual({ turn: 2, text: "prompt_tokens 没有增长" });
+		const w = contextUsage(foldEvents([{ ...info, mode: "window" }, ...decision(1, 2000), ...decision(2, 3600)]));
+		expect(w.perTurn).toBeNull();
+	});
+
+	it("remembers the window across battles in the same takeover and keeps `sent` for server-held conversations", () => {
+		const s = foldEvents([info, ...decision(1, 2000), ...decision(2, 3000), ...decision(1, 2000)]);
+		expect(s.records).toHaveLength(1); // 新的一场
+		expect(s.context).toMatchObject({ max: 20000 });
+		expect(s.records[0]!.attempts[0]!.sent).toBe(2);
 	});
 });

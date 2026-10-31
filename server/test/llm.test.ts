@@ -4,8 +4,9 @@ import { AnthropicClient } from "../src/llm/anthropic.js";
 import { discoverLocalEndpoints, listModels, listOpenAiCompatModels } from "../src/llm/discovery.js";
 import { createClient } from "../src/llm/factory.js";
 import { OpenAiCompatClient } from "../src/llm/openai-compat.js";
+import { OpenAiResponsesClient } from "../src/llm/openai-responses.js";
 import { ThinkRouter } from "../src/llm/sse.js";
-import { LlmError, deepMerge } from "../src/llm/types.js";
+import { LlmError } from "../src/llm/types.js";
 import { FakeLlm } from "./helpers/fake-llm.js";
 
 let fake: FakeLlm | undefined;
@@ -20,13 +21,13 @@ const msgs = [
 ];
 
 describe("OpenAiCompatClient", () => {
-	it("streams content and reasoning_content separately, sends auth + extra body", async () => {
+	it("streams content and reasoning_content separately and sends the key", async () => {
 		fake = new FakeLlm({ openaiDeltas: [{ reasoning_content: "thinking " }, { reasoning_content: "hard" }, { content: "答案是 " }, { content: '{"choice":"move:0"}' }] });
 		const base = await fake.start();
 		const deltas: string[] = [];
 		const r = await new OpenAiCompatClient({ kind: "openai-compat", baseUrl: base, apiKey: "sk-test", model: "m" }).complete({
 			messages: msgs,
-			params: { temperature: 0.2, maxTokens: 100, extraBody: { chat_template_kwargs: { enable_thinking: false } }, extraHeaders: { "x-foo": "1" } },
+			params: { timeoutMs: 5000 },
 			onDelta: (d) => deltas.push(`${d.kind}:${d.text}`),
 		});
 		expect(r.content).toBe('答案是 {"choice":"move:0"}');
@@ -35,8 +36,7 @@ describe("OpenAiCompatClient", () => {
 		expect(deltas[0]).toBe("reasoning:thinking ");
 		const req = fake.requests[0]!;
 		expect(req.headers.authorization).toBe("Bearer sk-test");
-		expect(req.headers["x-foo"]).toBe("1");
-		expect(req.body).toMatchObject({ model: "m", stream: true, temperature: 0.2, max_tokens: 100, chat_template_kwargs: { enable_thinking: false } });
+		expect(req.body).toMatchObject({ model: "m", stream: true });
 	});
 
 	it("routes <think>…</think> inside content to reasoning, even when tags are split across chunks", async () => {
@@ -67,13 +67,26 @@ describe("OpenAiCompatClient", () => {
 	});
 });
 
-describe("sampling parameters are not sent unless set (the endpoint's own config decides)", () => {
-	it("openai-compat: no temperature / max_tokens / reasoning_effort in the body by default", async () => {
+describe("no model parameters are ever sent — the endpoint's own config decides (temperature, top_k, min_p, max_tokens, thinking switches …)", () => {
+	it("openai-compat chat/completions: only model, messages and the streaming/usage switches", async () => {
 		fake = new FakeLlm({ openaiDeltas: [{ content: "ok" }] });
 		await new OpenAiCompatClient({ kind: "openai-compat", baseUrl: await fake.start(), model: "m" }).complete({ messages: msgs, params: { timeoutMs: 5000 } });
+		expect(Object.keys(fake.requests[0]!.body).sort()).toEqual(["messages", "model", "stream", "stream_options"]);
+		expect(fake.requests[0]!.body.stream_options).toEqual({ include_usage: true });
+	});
+
+	it("openai responses: only model, input and the streaming / store switches", async () => {
+		fake = new FakeLlm();
+		await new OpenAiResponsesClient({ kind: "openai-compat", baseUrl: await fake.start(), model: "m" }).complete({ messages: msgs, params: { timeoutMs: 5000 } });
+		expect(Object.keys(fake.requests[0]!.body).sort()).toEqual(["input", "model", "store", "stream"]);
+	});
+
+	it("anthropic: max_tokens is mandatory in that API (a generous constant); nothing else beyond the conversation", async () => {
+		fake = new FakeLlm({ anthropicEvents: [{ type: "content_block_delta", delta: { type: "text_delta", text: "x" } }] });
+		await new AnthropicClient({ kind: "anthropic", baseUrl: await fake.start(), apiKey: "ak", model: "m" }).complete({ messages: msgs, params: { timeoutMs: 5000 } });
 		const body = fake.requests[0]!.body;
-		for (const k of ["temperature", "max_tokens", "reasoning_effort", "top_p"]) expect(body).not.toHaveProperty(k);
-		expect(body).toMatchObject({ model: "m", stream: true });
+		expect(Object.keys(body).sort()).toEqual(["max_tokens", "messages", "model", "stream", "system"]);
+		expect(body.max_tokens).toBe(8192);
 	});
 });
 
@@ -86,7 +99,7 @@ describe("empty replies are reported honestly", () => {
 });
 
 describe("AnthropicClient", () => {
-	it("streams text + thinking, sends system separately and omits temperature when thinking", async () => {
+	it("streams text + thinking blocks the model produced and sends system separately", async () => {
 		fake = new FakeLlm({
 			anthropicEvents: [
 				{ type: "message_start", message: { usage: { input_tokens: 21 } } },
@@ -97,34 +110,23 @@ describe("AnthropicClient", () => {
 			],
 		});
 		const base = await fake.start();
-		const r = await new AnthropicClient({ kind: "anthropic", baseUrl: base, apiKey: "ak", model: "claude-x" }).complete({ messages: msgs, params: { temperature: 0.3, thinkingBudget: 2000 } });
+		const r = await new AnthropicClient({ kind: "anthropic", baseUrl: base, apiKey: "ak", model: "claude-x" }).complete({ messages: msgs, params: {} });
 		expect(r).toMatchObject({ content: "选 move:1", reasoning: "嗯…", usage: { inputTokens: 21, outputTokens: 9 }, finishReason: "end_turn" });
 		const req = fake.requests[0]!;
 		expect(req.headers["x-api-key"]).toBe("ak");
 		expect(req.headers["anthropic-version"]).toBe("2023-06-01");
 		expect(req.body.system).toBe("sys");
 		expect(req.body.messages).toEqual([{ role: "user", content: "hi" }]);
-		expect(req.body.thinking).toEqual({ type: "enabled", budget_tokens: 2000 });
-		expect(req.body).not.toHaveProperty("temperature");
 	});
 
-	it("sends temperature when thinking is off", async () => {
-		fake = new FakeLlm({ anthropicEvents: [{ type: "content_block_delta", delta: { type: "text_delta", text: "x" } }] });
-		await new AnthropicClient({ kind: "anthropic", baseUrl: await fake.start(), apiKey: "ak", model: "m" }).complete({ messages: msgs, params: { temperature: 0.3 } });
-		expect(fake.requests[0]!.body.temperature).toBe(0.3);
-		expect(fake.requests[0]!.body).not.toHaveProperty("thinking");
-	});
 });
 
-describe("ThinkRouter / deepMerge", () => {
+describe("ThinkRouter", () => {
 	it("holds back a partial tag until it is resolved", () => {
 		const r = new ThinkRouter();
 		expect(r.feed("abc<th")).toEqual([{ kind: "content", text: "abc" }]);
 		expect(r.feed("ink>x")).toEqual([{ kind: "reasoning", text: "x" }]);
 		expect(r.flush()).toEqual([]);
-	});
-	it("deep merges nested objects but replaces arrays", () => {
-		expect(deepMerge({ a: { b: 1, c: 2 }, d: [1] }, { a: { c: 3 }, d: [2] })).toEqual({ a: { b: 1, c: 3 }, d: [2] });
 	});
 });
 

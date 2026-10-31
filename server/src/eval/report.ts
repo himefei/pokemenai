@@ -32,6 +32,12 @@ interface Decision {
 
 const pct = (n: number) => `${n}%`;
 
+const CONTEXT_MODE_NAME: Record<string, string> = {
+	window: "窗口 + 摘要（每回合重发最近几回合，更早的压成一行）",
+	continuous: "连续会话（一场战斗一个对话，只追加不摘要，每次重发完整记录）",
+	"continuous-server": "连续会话 · 后端保存（/v1/responses，只发新消息）",
+};
+
 function monLine(o: Observation): string[] {
 	const me = o.you.active;
 	const e = o.opponent;
@@ -48,9 +54,11 @@ function monLine(o: Observation): string[] {
 	];
 }
 
-function collect(records: Rec[]): { start?: Rec; end?: Rec; decisions: Decision[]; errors: string[] } {
+function collect(records: Rec[]): { start?: Rec; end?: Rec; context?: Rec; decisions: Decision[]; errors: string[]; warnings: string[] } {
 	const decisions: Decision[] = [];
 	const errors: string[] = [];
+	const warnings: string[] = [];
+	let context: Rec | undefined;
 	let cur: Decision | undefined;
 	let start: Rec | undefined;
 	let end: Rec | undefined;
@@ -66,12 +74,16 @@ function collect(records: Rec[]): { start?: Rec; end?: Rec; decisions: Decision[
 				cur = { turn: r.turn, obs: r.observation as Observation, attempts: [] };
 				decisions.push(cur);
 				break;
+			case "context.info":
+				context = r;
+				break;
 			case "llm.request":
 				cur?.attempts.push({ n: r.attempt, model: r.model, content: "", reasoning: "", usage: {}, latencyMs: 0 });
 				break;
 			case "llm.response": {
 				const a = cur?.attempts.find((x) => x.n === r.attempt);
 				if (a) Object.assign(a, { content: r.content, reasoning: r.reasoning, usage: r.usage ?? {}, latencyMs: r.latencyMs, parseError: r.parseError });
+				if (r.warning) warnings.push(`T${cur?.turn ?? "?"}：${r.warning}`);
 				break;
 			}
 			case "action.parsed":
@@ -85,13 +97,13 @@ function collect(records: Rec[]): { start?: Rec; end?: Rec; decisions: Decision[
 				break;
 		}
 	}
-	return { start, end, decisions, errors };
+	return { start, end, context, decisions, errors, warnings };
 }
 
 export function buildRunReport(records: Rec[], opts: ReportOptions = {}): string {
 	const withThinking = opts.thinking ?? true;
 	const withObsJson = opts.observationJson ?? true;
-	const { start, end, decisions, errors } = collect(records);
+	const { start, end, context, decisions, errors, warnings } = collect(records);
 	const lines: string[] = [];
 	const push = (...l: string[]) => lines.push(...l);
 
@@ -113,9 +125,14 @@ export function buildRunReport(records: Rec[], opts: ReportOptions = {}): string
 	push("## 1. 概要", "");
 	push(`- 时间：${start?.startedAt ?? "?"}`);
 	push(`- 决策者：${start?.policy === "llm" ? `大模型 \`${model.model ?? "?"}\`（${model.kind ?? "?"}）` : (start?.policy ?? "?")}`);
-	if (model.params) push(`- 模型参数：\`${JSON.stringify(model.params)}\`${model.extraBody && Object.keys(model.extraBody).length ? `，额外请求体 \`${JSON.stringify(model.extraBody)}\`` : ""}`);
+	push(`- 模型参数：${model.params && Object.keys(model.params).some((k) => k !== "timeoutMs") ? `\`${JSON.stringify(model.params)}\`${model.extraBody && Object.keys(model.extraBody).length ? `，额外请求体 \`${JSON.stringify(model.extraBody)}\`` : ""}（旧日志里记录的本地覆盖）` : "全部由 endpoint 自己的配置决定（本地没有传任何参数）"}`);
 	if (prompt.preset) push(`- Prompt 预设：${prompt.preset}；规则提示（第 3 世代规则）：${prompt.rulesHint ? "开" : "关"}`);
-	if (flags.keepFull !== undefined) push(`- 保留完整对话回合数：${flags.keepFull}；格式错误重试次数：${flags.maxRetries}`);
+	if (flags.keepFull !== undefined) push(`- ${!context || context.mode === "window" ? `保留完整对话回合数：${flags.keepFull}；` : ""}格式错误重试次数：${flags.maxRetries}`);
+	if (context) {
+		const peak = Math.max(0, ...attemptsAll.map((a) => a.usage.inputTokens ?? 0));
+		push(`- 上下文：${CONTEXT_MODE_NAME[String(context.mode)] ?? context.mode}；窗口 ${context.max ? `${context.max} tokens（${context.source}）` : `未识别（${context.source}）`}；单次请求 prompt 峰值 ${peak || "?"} tokens${context.max && peak ? `（${((peak / context.max) * 100).toFixed(1)}%）` : ""}`);
+	}
+	for (const w of warnings.slice(0, 5)) push(`- ⚠ ${w}`);
 	push(`- 结果：**${summary?.outcomeName ?? (end?.needsHuman ? "出错退出" : "未结束")}**${summary ? `，${summary.turns} 回合，我方剩余 ${summary.partyAlive} 只，${summary.frames} 帧` : ""}`);
 	if (end?.needsHuman) push(`- 退出原因：${end.needsHuman}`);
 	push(`- 决策 ${decisions.length} 次；需要重试的 ${retried} 次；格式/解析失败的尝试 ${formatFailures} 次；动作被游戏拒绝或执行失败 ${rejected} 次`);

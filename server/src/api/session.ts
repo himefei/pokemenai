@@ -3,6 +3,7 @@
 import { readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { RandomPolicy } from "../agent/baselines.js";
+import { CONTEXT_MODES, DEFAULT_CONTEXT_WINDOW } from "../agent/context.js";
 import { Controller } from "../agent/controller.js";
 import type { AgentEvent, EventSink } from "../agent/events.js";
 import { LlmPolicy } from "../agent/llm-policy.js";
@@ -22,8 +23,12 @@ import { listRuns, readRun, readRunRaw } from "../eval/run-log.js";
 import { TextLog } from "../gen3/battle-text.js";
 import { Gen3Data } from "../gen3/data.js";
 import { SymbolTable } from "../gen3/symbols.js";
+import { resolveContextWindow } from "../llm/context-window.js";
+import type { ResolvedContext } from "../llm/context-window.js";
 import { discoverLocalEndpoints, listModels } from "../llm/discovery.js";
 import { createClient } from "../llm/factory.js";
+import { probeServerState } from "../llm/state-probe.js";
+import type { StateProbeResult } from "../llm/state-probe.js";
 import type { ProviderKind } from "../llm/types.js";
 
 export interface SessionOptions {
@@ -39,6 +44,7 @@ export interface SessionOptions {
 }
 
 const MASK = "********";
+const NO_PARAMS = "本地不传也不覆盖任何模型参数（temperature、top_k、min_p、max_tokens、思考开关……），全部由 endpoint 自己的配置决定";
 
 export class Session {
 	readonly slot: SlotId;
@@ -176,9 +182,20 @@ export class Session {
 			Object.assign(next.llm, rest);
 			if (typeof apiKey === "string" && apiKey !== "" && !apiKey.startsWith(MASK)) next.llm.apiKey = apiKey;
 			// 参数是可选覆盖：传 null / 空 = 去掉，不发给 endpoint
+			// 模型参数全部由 endpoint 决定：本地不传、不覆盖。只接受“请求超时”
+			if ((patch.llm as { extraBody?: unknown }).extraBody !== undefined) throw new Error(NO_PARAMS);
+			const extra = Object.keys(patch.llm.params ?? {}).filter((k) => k !== "timeoutMs");
+			if (extra.length) throw new Error(`${NO_PARAMS}（收到：${extra.join("、")}）`);
 			if (patch.llm.params) next.llm.params = cleanParams({ ...this.settings.llm.params, ...patch.llm.params });
 		}
-		if (patch.agent) Object.assign(next.agent, patch.agent);
+		if (patch.agent) {
+			const { contextMode, contextWindow } = patch.agent;
+			if (contextMode !== undefined && !CONTEXT_MODES.includes(contextMode)) throw new Error(`未知的上下文模式：${String(contextMode)}`);
+			if (contextWindow !== undefined && contextWindow !== null && !(Number.isInteger(contextWindow) && contextWindow >= 512)) throw new Error("手动后备的上下文长度必须是 ≥ 512 的整数（tokens）");
+			Object.assign(next.agent, patch.agent);
+			if (next.agent.contextWindow === null || next.agent.contextWindow === undefined) next.agent.contextWindow = DEFAULT_CONTEXT_WINDOW; // 清空 = 恢复默认
+		}
+		if (next.agent.contextMode === "continuous-server" && next.llm.kind !== "openai-compat") throw new Error("“后端保存对话”用的是 /v1/responses，只适用于 OpenAI 兼容接口；Anthropic Messages 没有这个接口");
 		this.settings = next;
 		saveSlotSettings(this.slot, next, this.opts.settingsPath ?? SETTINGS_PATH);
 		this.controller.setConfirmMode(next.agent.confirmMode);
@@ -201,12 +218,24 @@ export class Session {
 		try {
 			const r = await createClient(llm).complete({
 				messages: [{ role: "user", content: "回复 ok 两个字母即可。" }],
-				params: { ...(llm.params ?? {}), maxTokens: 64, extraBody: llm.extraBody, timeoutMs: 30000 },
+				params: { timeoutMs: llm.params?.timeoutMs },
 			});
 			return { ok: true, latencyMs: Math.round(r.latencyMs), reply: (r.content || r.reasoning).slice(0, 80) };
 		} catch (e) {
 			return { ok: false, error: (e as Error).message + ((e as { body?: string }).body ? ` — ${(e as { body?: string }).body}` : "") };
 		}
+	}
+
+	/** 当前设置下这个模型的上下文长度：先从 endpoint 读取；读不到才用手动后备值。 */
+	async contextWindow(): Promise<ResolvedContext & { model: string }> {
+		const { llm, agent } = this.settings;
+		return { ...(await resolveContextWindow(llm, agent.contextWindow)), model: llm.model };
+	}
+
+	/** 测这个后端能不能把对话存在后端（/v1/responses + previous_response_id，要真的能回忆起内容才算）。 */
+	async testServerState(): Promise<StateProbeResult> {
+		const llm = this.settings.llm;
+		return probeServerState(llm, { timeoutMs: llm.params?.timeoutMs });
 	}
 
 	/** 一次接管开始时快照当前模型与参数，保证结果可追溯。 */
@@ -218,12 +247,14 @@ export class Session {
 		}
 		const preset = loadPreset(s.agent.preset);
 		const policy = new LlmPolicy({
-			client: createClient(s.llm),
+			client: createClient(s.llm, s.agent.contextMode === "continuous-server" ? "responses" : "chat"),
 			model: s.llm.model,
-			params: { ...(s.llm.params ?? {}), extraBody: s.llm.extraBody },
+			params: { timeoutMs: s.llm.params?.timeoutMs },
 			prompt: { preset, rulesHint: s.agent.rulesHint },
 			keepFull: s.agent.keepFull,
 			maxRetries: s.agent.maxRetries,
+			contextMode: s.agent.contextMode,
+			resolveContext: async () => (await resolveContextWindow(s.llm, s.agent.contextWindow)).effective,
 			sink,
 		});
 		const { apiKey: _omit, ...llmNoKey } = s.llm;

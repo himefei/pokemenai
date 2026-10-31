@@ -55,13 +55,15 @@ describe("REST API", () => {
 		expect(session.getSettings().llm.apiKey).toBe("sk-new");
 	});
 
-	it("params are optional overrides: null/empty removes them so nothing is forced on the endpoint", async () => {
-		expect(session.getSettings().llm.params).toEqual({ timeoutMs: 600000 }); // 默认只有本地超时，没有 temperature / max_tokens
-		await app.inject({ method: "PUT", url: "/api/settings", payload: { llm: { params: { temperature: 0.2, maxTokens: 512 } } } });
-		expect(session.getSettings().llm.params).toMatchObject({ temperature: 0.2, maxTokens: 512 });
-		await app.inject({ method: "PUT", url: "/api/settings", payload: { llm: { params: { temperature: null, maxTokens: null } } } });
+	it("no model parameters are stored or sent — only the local request timeout is a setting", async () => {
+		expect(session.getSettings().llm.params).toEqual({ timeoutMs: 600000 });
+		const r = await app.inject({ method: "PUT", url: "/api/settings", payload: { llm: { params: { temperature: 0.2, maxTokens: 512 } } } });
+		expect(r.statusCode).toBe(400);
 		expect(session.getSettings().llm.params).toEqual({ timeoutMs: 600000 });
 		expect(JSON.parse(readFileSync(settingsPath, "utf8")).slots.a.llm.params).toEqual({ timeoutMs: 600000 });
+		const test = await app.inject({ method: "POST", url: "/api/llm/test" });
+		expect(test.json().ok).toBe(true);
+		expect(Object.keys(llm.requests.at(-1)!.body).sort()).toEqual(["messages", "model", "stream", "stream_options"]);
 	});
 
 	it("lists models and tests the connection with the stored key", async () => {

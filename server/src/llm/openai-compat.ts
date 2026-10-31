@@ -1,6 +1,6 @@
 // OpenAI 兼容 /v1/chat/completions：LM Studio / Ollama / llama.cpp / vLLM / 各类云端。
 
-import { LlmError, deepMerge } from "./types.js";
+import { LlmError } from "./types.js";
 import type { LlmClient, LlmCompletion, LlmRequest, ProviderConfig } from "./types.js";
 import { ThinkRouter, readSse } from "./sse.js";
 
@@ -10,18 +10,16 @@ export class OpenAiCompatClient implements LlmClient {
 	async complete(req: LlmRequest): Promise<LlmCompletion> {
 		const { params } = req;
 		const t0 = performance.now();
-		let body: Record<string, unknown> = {
+		// 只发对话本身：不带任何采样参数，temperature / top_k / max_tokens / 思考开关等都由 endpoint 自己的配置决定。
+		// stream_options.include_usage 不是模型参数，只是让后端在流末尾报告 token 用量（上下文用量显示要用）。
+		const body: Record<string, unknown> = {
 			model: this.cfg.model,
 			messages: req.messages,
 			stream: true,
 			stream_options: { include_usage: true },
 		};
-		if (params.temperature !== undefined) body.temperature = params.temperature;
-		if (params.maxTokens !== undefined) body.max_tokens = params.maxTokens;
-		if (params.reasoningEffort) body.reasoning_effort = params.reasoningEffort;
-		body = deepMerge(body, params.extraBody);
 
-		const headers: Record<string, string> = { "content-type": "application/json", ...(params.extraHeaders ?? {}) };
+		const headers: Record<string, string> = { "content-type": "application/json" };
 		if (this.cfg.apiKey) headers.authorization = `Bearer ${this.cfg.apiKey}`;
 
 		const ctrl = new AbortController();
@@ -62,6 +60,7 @@ export class OpenAiCompatClient implements LlmClient {
 					if (j.usage) {
 						usage.inputTokens = j.usage.prompt_tokens ?? usage.inputTokens;
 						usage.outputTokens = j.usage.completion_tokens ?? usage.outputTokens;
+						usage.cachedTokens = j.usage.prompt_tokens_details?.cached_tokens ?? usage.cachedTokens;
 					}
 					const choice = j.choices?.[0];
 					if (!choice) continue;
@@ -84,6 +83,7 @@ export class OpenAiCompatClient implements LlmClient {
 				}
 				usage.inputTokens = j.usage?.prompt_tokens;
 				usage.outputTokens = j.usage?.completion_tokens;
+				usage.cachedTokens = j.usage?.prompt_tokens_details?.cached_tokens;
 				finishReason = j.choices?.[0]?.finish_reason;
 			}
 			if (!content.trim() && !reasoning.trim()) {

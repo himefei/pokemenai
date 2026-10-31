@@ -70,6 +70,13 @@ export interface Observation {
 	last_turn: string[];
 }
 
+export interface Usage {
+	inputTokens?: number;
+	outputTokens?: number;
+	/** 后端报告的前缀缓存命中 token 数（有的后端不报） */
+	cachedTokens?: number;
+}
+
 export type ExecResult = { ok: true; note?: string } | { ok: false; reason: string; detail: string };
 
 export interface BattleSummary {
@@ -85,6 +92,9 @@ export interface BattleSummary {
 	rngSeed: number | null;
 }
 
+/** 上下文管理方式（见 server/src/agent/context.ts） */
+export type ContextMode = "window" | "continuous" | "continuous-server";
+
 export type ControllerState = "idle" | "armed" | "waiting" | "deciding" | "executing" | "paused" | "needs_human" | "finished";
 
 export type AgentEvent =
@@ -94,9 +104,10 @@ export type AgentEvent =
 	| { type: "battle.state"; turn: number; observation: Observation; truth: unknown }
 	| { type: "battle.text"; frame: number; text: string }
 	| { type: "turn.start"; turn: number }
-	| { type: "llm.request"; turn: number; attempt: number; model: string; messages: ChatMessage[]; ts?: number }
+	| { type: "context.info"; mode: ContextMode; max: number | null; source: string }
+	| { type: "llm.request"; turn: number; attempt: number; model: string; messages: ChatMessage[]; ts?: number; sent?: number }
 	| { type: "llm.delta"; turn: number; attempt: number; kind: "content" | "reasoning"; text: string }
-	| { type: "llm.response"; turn: number; attempt: number; content: string; reasoning: string; usage: { inputTokens?: number; outputTokens?: number }; latencyMs: number; parseError?: string }
+	| { type: "llm.response"; turn: number; attempt: number; content: string; reasoning: string; usage: Usage; latencyMs: number; parseError?: string; warning?: string }
 	| { type: "action.parsed"; turn: number; choice: string; label: string; reason: string; attempts: number }
 	| { type: "action.confirm"; turn: number; choice: string; label: string }
 	| { type: "action.executing"; turn: number; choice: string; label: string }
@@ -117,14 +128,17 @@ export interface LlmSettings {
 	baseUrl: string;
 	apiKey: string;
 	model: string;
-	params?: { temperature?: number; maxTokens?: number; timeoutMs?: number; reasoningEffort?: string | null; thinkingBudget?: number | null };
-	extraBody?: Record<string, unknown>;
+	/** 模型参数全部由 endpoint 决定，本地只有请求超时 */
+	params?: { timeoutMs?: number };
 }
 
 export interface AgentSettings {
 	policy: "llm" | "random";
 	preset: string;
 	rulesHint: boolean;
+	contextMode: ContextMode;
+	/** 手动后备的上下文长度（tokens）：先从 endpoint 读取，读不到才用它（默认 65535） */
+	contextWindow: number;
 	keepFull: number;
 	maxRetries: number;
 	confirmMode: boolean;
@@ -140,6 +154,23 @@ export interface ModelInfo {
 	tags: string[];
 	loaded?: boolean;
 	contextLength?: number;
+}
+
+export interface ContextWindowInfo {
+	model: string;
+	/** 从 endpoint 读到的（max 为 null = 没读到） */
+	detected: { max: number | null; source: string };
+	/** 手动后备值：只在 endpoint 没报告时才用 */
+	fallback: number;
+	/** 实际使用的窗口 */
+	effective: { max: number; source: string };
+	usedFallback: boolean;
+}
+
+export interface StateProbeResult {
+	supported: boolean;
+	reason: string;
+	latencyMs?: number;
 }
 
 export interface Preset {

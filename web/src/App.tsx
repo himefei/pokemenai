@@ -3,6 +3,7 @@ import type { CSSProperties } from "react";
 import { SlotContext, compareApi, makeApi } from "./api";
 import type { SlotId } from "./api";
 import { BattlePanel } from "./components/BattlePanel";
+import { ContextMeter } from "./components/ContextMeter";
 import { EmulatorPane, GBA_W } from "./components/EmulatorPane";
 import { EvalTab, HistoryTab, StatsTab } from "./components/History";
 import { LeftPanel, stateLabel } from "./components/LeftPanel";
@@ -190,6 +191,7 @@ function SlotView({ slot, label, compact, focused, onFocus }: { slot: SlotId; la
 									跟随最新回合
 								</label>
 							)}
+							<ContextMeter state={state} selectedId={rec?.id ?? null} />
 							<ModelIO rec={rec} live confirmable onConfirm={(ok) => void api.confirm(ok).then(refreshServer)} />
 						</div>
 						{/* 游戏画面放在最右侧：16:9 的屏幕上竖向内容已经很多，横向空间更宽裕 */}

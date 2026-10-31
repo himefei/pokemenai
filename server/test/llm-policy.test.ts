@@ -53,7 +53,7 @@ describe("LlmPolicy", () => {
 		const p = policy({ base: await fake.start() }, events);
 		const d = await p.decide(ctx(1));
 		expect(d).toMatchObject({ choice: "move:1", reason: "二连踢克制恶系" });
-		expect(events.map((e) => e.type)).toEqual(["llm.request", "llm.delta", "llm.delta", "llm.response", "action.parsed"]);
+		expect(events.map((e) => e.type)).toEqual(["context.info", "llm.request", "llm.delta", "llm.delta", "llm.response", "action.parsed"]);
 		expect(p.history.length).toBe(1);
 		// 发出去的是：system + 当前状态 JSON
 		const sent = fake.requests[0]!.body.messages;
@@ -131,4 +131,122 @@ describe("prompt + history", () => {
 		expect(msgs.at(-1)!.content).toContain("第 5 回合");
 	});
 
+});
+
+// ---------------------------------------------------------------------------------------------------------------
+// 连续会话：一场战斗一个对话，只追加
+
+const growing = (body: any) => ({ prompt_tokens: Math.ceil(JSON.stringify(body.messages).length / 2), completion_tokens: 20 });
+const RAW = '先想一想。对手是恶系，二连踢更好。\n{"choice":"move:1","reason":"二连踢克制恶系"}';
+
+describe("LlmPolicy · 连续会话（continuous）", () => {
+	it("every request = previous request + the model's raw reply, verbatim + the new state; nothing summarised or dropped", async () => {
+		fake = new FakeLlm({ openaiDeltas: [{ content: RAW }], openaiUsage: growing });
+		const p = policy({ base: await fake.start(), contextMode: "continuous", keepFull: 1 }); // keepFull 在连续模式下不起作用
+		for (let t = 1; t <= 4; t++) await p.decide(ctx(t, obs(t, 100 - t * 10)));
+		const msgs = fake.requests.map((r) => r.body.messages as Array<{ role: string; content: string }>);
+		expect(msgs.map((m) => m.length)).toEqual([2, 4, 6, 8]);
+		for (let i = 1; i < msgs.length; i++) {
+			expect(msgs[i]!.slice(0, msgs[i - 1]!.length)).toEqual(msgs[i - 1]); // 前缀逐字不变
+			expect(msgs[i]![msgs[i - 1]!.length]).toEqual({ role: "assistant", content: RAW }); // 回复原样，不是被规整过的 {choice, reason}
+		}
+		expect(JSON.stringify(msgs[3])).not.toContain("更早回合摘要");
+		expect(msgs[3]!.filter((m) => m.role === "system")).toHaveLength(1);
+		expect(msgs[3]!.at(-1)!.content).toContain("第 4 回合");
+		expect(msgs[3]![1]!.content).toContain("第 1 回合"); // 第一回合的完整观测还在
+	});
+
+	it("window mode is unchanged: the reply is stored as the normalised {choice, reason}", async () => {
+		fake = new FakeLlm({ openaiDeltas: [{ content: RAW }] });
+		const p = policy({ base: await fake.start() });
+		await p.decide(ctx(1));
+		await p.decide(ctx(2));
+		const second = fake.requests[1]!.body.messages;
+		expect(second[2]).toEqual({ role: "assistant", content: '{"choice":"move:1","reason":"二连踢克制恶系"}' });
+	});
+
+	it("a failed answer and the feedback stay in the conversation (they really happened); the accepted answer closes the exchange", async () => {
+		fake = new FakeLlm({ openaiSequence: [[{ content: "我选 move:9" }], [{ content: RAW }], [{ content: RAW }]], openaiUsage: growing });
+		const p = policy({ base: await fake.start(), contextMode: "continuous" });
+		await p.decide(ctx(1));
+		await p.decide(ctx(2));
+		const third = fake.requests[2]!.body.messages as Array<{ role: string; content: string }>;
+		// system, state1, bad reply, feedback, good reply, state2
+		expect(third.map((m) => m.role)).toEqual(["system", "user", "assistant", "user", "assistant", "user"]);
+		expect(third[2]!.content).toBe("我选 move:9");
+		expect(third[3]!.content).toContain("无法使用");
+		expect(third[4]!.content).toBe(RAW);
+	});
+
+	it("a new battle starts a new conversation (reset), with the same system message", async () => {
+		fake = new FakeLlm({ openaiDeltas: [{ content: RAW }], openaiUsage: growing });
+		const p = policy({ base: await fake.start(), contextMode: "continuous" });
+		await p.decide(ctx(1));
+		await p.decide(ctx(2));
+		p.reset();
+		await p.decide(ctx(1));
+		const [a, , c] = fake.requests.map((r) => r.body.messages as Array<{ role: string; content: string }>);
+		expect(c).toHaveLength(2);
+		expect(c![0]).toEqual(a![0]);
+	});
+
+	it("announces the context window once (detected size + where it came from) and stops BEFORE the next request would not fit — no silent truncation, no fallback", async () => {
+		fake = new FakeLlm({ openaiDeltas: [{ content: RAW }], openaiUsage: growing });
+		const events: AgentEvent[] = [];
+		let resolved = 0;
+		const p = policy({ base: await fake.start(), contextMode: "continuous", resolveContext: async () => (resolved++, { max: 4000, source: "测试" }) }, events);
+		let done = 0;
+		let failure: unknown;
+		try {
+			for (let t = 1; t <= 20; t++) {
+				await p.decide(ctx(t));
+				done++;
+			}
+		} catch (e) {
+			failure = e;
+		}
+		expect(failure).toBeInstanceOf(PolicyFailure);
+		expect((failure as Error).message).toContain("上下文快满了");
+		expect(done).toBeGreaterThanOrEqual(1);
+		expect(done).toBeLessThan(20);
+		expect(fake.requests.length).toBe(done); // 放不下的那一次没有发出去
+		expect(resolved).toBe(1);
+		expect(events.filter((e) => e.type === "context.info")).toEqual([{ type: "context.info", mode: "continuous", max: 4000, source: "测试" }]);
+		// 最后一次发出去的请求，用量在窗口之内
+		const lastUsage = events.filter((e) => e.type === "llm.response").at(-1) as Extract<AgentEvent, { type: "llm.response" }>;
+		expect(lastUsage.usage.inputTokens!).toBeLessThan(4000);
+	});
+
+	it("without a known window there is no fullness check (the meter says 'unknown'), and the backend's own error still surfaces", async () => {
+		fake = new FakeLlm({ openaiDeltas: [{ content: RAW }], openaiUsage: growing });
+		const events: AgentEvent[] = [];
+		const p = policy({ base: await fake.start(), contextMode: "continuous", resolveContext: async () => ({ max: null, source: "没读到" }) }, events);
+		for (let t = 1; t <= 5; t++) await p.decide(ctx(t));
+		expect(events.find((e) => e.type === "context.info")).toMatchObject({ max: null });
+	});
+
+	it("flags a possibly truncating backend when prompt_tokens does not grow in an append-only conversation", async () => {
+		fake = new FakeLlm({ openaiDeltas: [{ content: RAW }] }); // 固定 11 / 7：不随对话增长
+		const events: AgentEvent[] = [];
+		const p = policy({ base: await fake.start(), contextMode: "continuous" }, events);
+		await p.decide(ctx(1));
+		await p.decide(ctx(2));
+		const responses = events.filter((e): e is Extract<AgentEvent, { type: "llm.response" }> => e.type === "llm.response");
+		expect(responses[0]!.warning).toBeUndefined();
+		expect(responses[1]!.warning).toContain("没有比上一次");
+	});
+
+	it("no warning when prompt_tokens grows; and none in window mode (the window slides, shrinking is normal there)", async () => {
+		fake = new FakeLlm({ openaiDeltas: [{ content: RAW }], openaiUsage: growing });
+		const events: AgentEvent[] = [];
+		const p = policy({ base: await fake.start(), contextMode: "continuous" }, events);
+		await p.decide(ctx(1));
+		await p.decide(ctx(2));
+		expect(events.some((e) => e.type === "llm.response" && e.warning)).toBe(false);
+		const e2: AgentEvent[] = [];
+		const w = policy({ base: fake.baseUrl }, e2);
+		await w.decide(ctx(1));
+		await w.decide(ctx(2));
+		expect(e2.some((e) => e.type === "llm.response" && e.warning)).toBe(false);
+	});
 });

@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { useApi } from "../api";
 import type { AgentState } from "../store";
-import type { LlmSettings, ModelInfo, Preset, ServerStatus, Settings } from "../types";
+import type { ContextWindowInfo, LlmSettings, ModelInfo, Preset, ServerStatus, Settings, StateProbeResult } from "../types";
 import { Card, ExportButtons, Field } from "./bits";
+import { CONTEXT_MODE_LABEL, fmt } from "./ContextMeter";
+
+const kilo = (n: number) => (n >= 1000 ? `${Math.round(n / 1000)}k` : String(n));
 
 const STATE_LABEL: Record<string, string> = { idle: "空闲", armed: "已武装（等待战斗开始）", waiting: "等待可操作界面", deciding: "模型思考中", executing: "正在按键", paused: "等待你确认", needs_human: "需要人工处理", finished: "已结束" };
 export const stateLabel = (s: string) => STATE_LABEL[s] ?? s;
@@ -13,6 +16,7 @@ export function LeftPanel({ state, server, refresh, pendingConfirm }: { state: A
 			<ConnectionCard state={state} />
 			<ControlCard state={state} server={server} refresh={refresh} pendingConfirm={pendingConfirm} />
 			{server && <ModelCard settings={server.settings} refresh={refresh} />}
+				{server && <ConversationCard settings={server.settings} refresh={refresh} />}
 			{server && <PromptCard settings={server.settings} refresh={refresh} />}
 		</div>
 	);
@@ -141,7 +145,6 @@ function ModelCard({ settings, refresh }: { settings: Settings; refresh: () => v
 	const [llm, setLlm] = useState<LlmSettings>(settings.llm);
 	const [policy, setPolicy] = useState(settings.agent.policy);
 	const [keyInput, setKeyInput] = useState("");
-	const [extra, setExtra] = useState(JSON.stringify(settings.llm.extraBody ?? {}, null, 1));
 	const [models, setModels] = useState<ModelInfo[]>([]);
 	const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
 	const [busy, setBusy] = useState("");
@@ -152,18 +155,10 @@ function ModelCard({ settings, refresh }: { settings: Settings; refresh: () => v
 	}, [settings]);
 
 	const set = (patch: Partial<LlmSettings>) => setLlm((x) => ({ ...x, ...patch }));
-	const setParam = (k: string, v: number | string | null) => setLlm((x) => ({ ...x, params: { ...x.params, [k]: v } }));
 
 	const save = async (): Promise<boolean> => {
-		let extraBody: Record<string, unknown> = {};
 		try {
-			extraBody = extra.trim() ? (JSON.parse(extra) as Record<string, unknown>) : {};
-		} catch {
-			setMsg({ ok: false, text: "额外请求体不是合法 JSON" });
-			return false;
-		}
-		try {
-			await api.saveSettings({ llm: { kind: llm.kind, baseUrl: llm.baseUrl, model: llm.model, params: llm.params, extraBody, ...(keyInput ? { apiKey: keyInput } : {}) }, agent: { policy } });
+			await api.saveSettings({ llm: { kind: llm.kind, baseUrl: llm.baseUrl, model: llm.model, params: { timeoutMs: llm.params?.timeoutMs }, ...(keyInput ? { apiKey: keyInput } : {}) }, agent: { policy } });
 			setKeyInput("");
 			refresh();
 			return true;
@@ -243,11 +238,11 @@ function ModelCard({ settings, refresh }: { settings: Settings; refresh: () => v
 					</Field>
 					<Field label="模型">
 						<div className="row">
-							<input list="model-list" value={llm.model} onChange={(e) => set({ model: e.target.value })} spellCheck={false} />
-							<datalist id="model-list">
+							<input list={`model-list-${api.slot}`} value={llm.model} onChange={(e) => set({ model: e.target.value })} spellCheck={false} />
+							<datalist id={`model-list-${api.slot}`}>
 								{models.map((m) => (
 									<option key={m.id} value={m.id}>
-										{[...m.tags, m.loaded === false ? "未加载" : ""].filter(Boolean).join(" · ")}
+										{[...m.tags, m.contextLength ? `${kilo(m.contextLength)} ctx` : "", m.loaded === false ? "未加载" : ""].filter(Boolean).join(" · ")}
 									</option>
 								))}
 							</datalist>
@@ -265,35 +260,16 @@ function ModelCard({ settings, refresh }: { settings: Settings; refresh: () => v
 								<button key={m.id} className={`chip pick ${m.id === llm.model ? "on" : ""}`} onClick={() => set({ model: m.id })}>
 									{m.id}
 									{m.tags.map((t) => ` ·${t}`).join("")}
+										{m.contextLength ? ` ·${kilo(m.contextLength)}` : ""}
 								</button>
 							))}
 						</div>
 					)}
-					<p className="hint">采样参数默认**不发**，由 endpoint 自己的配置决定（比如 omlx 里调好的最优参数）。下面是可选覆盖，留空 = 不覆盖。</p>
-					<div className="grid2">
-						<Field label="temperature（可选）">
-							<input type="number" step="0.1" min="0" max="2" placeholder="由 endpoint 决定" value={llm.params?.temperature ?? ""} onChange={(e) => setParam("temperature", e.target.value === "" ? null : Number(e.target.value))} />
+					<p className="hint">模型参数（temperature、top_k、min_p、max_tokens、思考开关……）全部由 endpoint 自己的配置决定——这里**不传、也不覆盖任何参数**（比如 omlx 里给这个模型调好的参数）。</p>
+						<Field label="请求超时（秒）" hint="本地设置：等多久没回就当失败（不重试）">
+							<input type="number" min="5" value={Math.round((llm.params?.timeoutMs ?? 600000) / 1000)} onChange={(e) => set({ params: { timeoutMs: Number(e.target.value) * 1000 } })} />
 						</Field>
-						<Field label="max_tokens（可选）">
-							<input type="number" step="256" min="64" placeholder="由 endpoint 决定" value={llm.params?.maxTokens ?? ""} onChange={(e) => setParam("maxTokens", e.target.value === "" ? null : Number(e.target.value))} />
-						</Field>
-						<Field label="请求超时（秒，本地设置）">
-							<input type="number" min="5" value={Math.round((llm.params?.timeoutMs ?? 180000) / 1000)} onChange={(e) => setParam("timeoutMs", Number(e.target.value) * 1000)} />
-						</Field>
-						{llm.kind === "anthropic" ? (
-							<Field label="思考预算（tokens，可选）" hint="留空 = 不开思考">
-								<input type="number" min="1024" step="512" placeholder="不开思考" value={llm.params?.thinkingBudget ?? ""} onChange={(e) => setParam("thinkingBudget", e.target.value === "" ? null : Number(e.target.value))} />
-							</Field>
-						) : (
-							<Field label="reasoning_effort（可选）" hint="留空 = 不发送">
-								<input value={llm.params?.reasoningEffort ?? ""} onChange={(e) => setParam("reasoningEffort", e.target.value || null)} placeholder="由 endpoint 决定" />
-							</Field>
-						)}
-					</div>
-					<Field label="额外请求体 JSON" hint="本地模型常需要，例如 {&quot;chat_template_kwargs&quot;:{&quot;enable_thinking&quot;:false}}">
-						<textarea rows={3} value={extra} onChange={(e) => setExtra(e.target.value)} spellCheck={false} />
-					</Field>
-				</>
+					</>
 			)}
 			<div className="btns">
 				<button className="primary" onClick={async () => setMsg((await save()) ? { ok: true, text: "已保存" } : null)}>
@@ -395,6 +371,121 @@ function PromptCard({ settings, refresh }: { settings: Settings; refresh: () => 
 				</Field>
 			</div>
 			<p className="hint">信息原则：我方全知，对手只给感知（用过的招式、屏幕上读到的文字）；不给属性表、种族值、伤害计算。</p>
+		</Card>
+	);
+}
+
+const MODE_HINT: Record<Settings["agent"]["contextMode"], string> = {
+	window: "每回合重发：system + 最近几回合的完整对话 + 更早回合的一行摘要（你选了什么、之后读到什么原文）。省 token，但模型看不到太早的细节。",
+	continuous:
+		"整场战斗是一个越来越长的对话：每次请求 = 上一次请求（逐字不变）+ 模型的原始回复 + 新的状态。不摘要、不丢弃，可以用来观察模型的上下文记忆、召回和被旧内容干扰的情况。后端有前缀缓存的话，重发的前面部分几乎不用重新计算。",
+	"continuous-server":
+		"内容和“连续会话”完全一样，区别是对话存在后端：第一次发完整内容，之后只发新消息 + previous_response_id。需要后端支持（用下面的按钮实测）；不支持就报错，不会悄悄改成整段重发。",
+};
+
+function ConversationCard({ settings, refresh }: { settings: Settings; refresh: () => void }) {
+	const api = useApi();
+	const a = settings.agent;
+	const llm = settings.llm;
+	const [info, setInfo] = useState<ContextWindowInfo | null>(null);
+	const [detecting, setDetecting] = useState(false);
+	const [manual, setManual] = useState(String(a.contextWindow));
+	const [probe, setProbe] = useState<{ busy: boolean; result?: StateProbeResult }>({ busy: false });
+	const [err, setErr] = useState("");
+
+	const detect = async () => {
+		setDetecting(true);
+		try {
+			setInfo(await api.contextWindow());
+		} catch (e) {
+			setErr((e as Error).message);
+		} finally {
+			setDetecting(false);
+		}
+	};
+	// 模型 / 地址 / 手动值变了就重新识别——同一个 endpoint 上换一个模型，窗口大小也会跟着变
+	useEffect(() => {
+		void detect();
+		setProbe({ busy: false });
+	}, [llm.baseUrl, llm.model, llm.kind, a.contextWindow]);
+	useEffect(() => setManual(String(a.contextWindow)), [a.contextWindow]);
+
+	const patch = async (agent: Partial<Settings["agent"]>) => {
+		setErr("");
+		try {
+			await api.saveSettings({ agent });
+			refresh();
+		} catch (e) {
+			setErr((e as Error).message);
+		}
+	};
+	// 清空 = 恢复默认 65535（服务端处理）
+	const applyManual = () => patch({ contextWindow: manual.trim() === "" ? (null as unknown as number) : Number(manual) });
+
+	const runProbe = async () => {
+		setProbe({ busy: true });
+		try {
+			setProbe({ busy: false, result: await api.testServerState() });
+		} catch (e) {
+			setProbe({ busy: false, result: { supported: false, reason: (e as Error).message } });
+		}
+	};
+
+	if (a.policy === "random") return null;
+	const eff = info?.effective;
+	return (
+		<Card title="上下文与会话" right={<span className="pill">{CONTEXT_MODE_LABEL[a.contextMode]}</span>}>
+			<Field label="上下文管理方式">
+				<select value={a.contextMode} onChange={(e) => patch({ contextMode: e.target.value as Settings["agent"]["contextMode"] })}>
+					<option value="window">窗口 + 摘要（默认）</option>
+					<option value="continuous">连续会话（每次重发完整记录）</option>
+					<option value="continuous-server">连续会话 · 后端保存（/v1/responses）</option>
+				</select>
+			</Field>
+			<p className="hint">{MODE_HINT[a.contextMode]}</p>
+			{a.contextMode === "window" && (
+				<Field label="保留完整对话的回合数" hint="更早的回合压成一行摘要">
+					<input type="number" min="1" max="30" value={a.keepFull} onChange={(e) => patch({ keepFull: Math.max(1, Number(e.target.value)) })} />
+				</Field>
+			)}
+			<div className="ctx-box">
+				<div className="kv">
+					<span>模型</span>
+					<b>{llm.model || "（未选）"}</b>
+					<span>上下文长度</span>
+					<b className={info?.usedFallback ? "warn" : ""}>{detecting && !info ? "读取中…" : eff ? `${fmt(eff.max)} tokens` : "—"}</b>
+				</div>
+				{eff && (
+					<p className={info?.usedFallback ? "warn-text" : "hint"}>
+						{info?.usedFallback ? "⚠ " : "来自 endpoint："}
+						{eff.source}
+					</p>
+				)}
+				<Field label="手动后备值（tokens）" hint="只在 endpoint 读不到这个模型的窗口时才用；endpoint 报告了就一律以它为准">
+					<div className="row">
+						<input type="number" min="512" step="1024" placeholder="65535" value={manual} onChange={(e) => setManual(e.target.value)} onKeyDown={(e) => e.key === "Enter" && void applyManual()} />
+						<button onClick={() => void applyManual()} disabled={manual === String(a.contextWindow)}>
+							应用
+						</button>
+						<button onClick={() => void detect()} disabled={detecting} title="重新从 endpoint 读取这个模型的窗口大小">
+							{detecting ? "…" : "重新读取"}
+						</button>
+					</div>
+				</Field>
+				<p className="hint">快用满（预计下一次请求超过窗口的 95%）时程序会先停下报错，不会让后端悄悄截断前面的内容。</p>
+			</div>
+			{a.contextMode === "continuous-server" && (
+				<div className="ctx-box">
+					<div className="btns">
+						<button onClick={() => void runProbe()} disabled={probe.busy}>
+							{probe.busy ? "测试中…" : "测试这个后端是否保存对话"}
+						</button>
+					</div>
+					{probe.result && <p className={probe.result.supported ? "ok-text" : "warn-text"}>{probe.result.supported ? "✓ 支持：" : "✗ 不支持："}{probe.result.reason}</p>}
+					<p className="hint">测试会让模型记一个随机数，第二轮只发新问题 + previous_response_id，看它能不能答出来（花几百个 token）。</p>
+				</div>
+			)}
+			{err && <p className="warn-text">{err}</p>}
 		</Card>
 	);
 }
